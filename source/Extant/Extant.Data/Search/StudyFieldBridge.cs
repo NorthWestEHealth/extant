@@ -30,7 +30,7 @@ namespace Extant.Data.Search
             var fieldValue = basicFields + publications + dataItems + StudySamplesFieldBridge.SamplesSearchTerms(study);
 
             var field = new Field(name, fieldValue, store, index);
-            field.SetBoost(boost ?? 1);
+            field.Boost = boost ?? 1;
             document.Add(field);
         }
     }

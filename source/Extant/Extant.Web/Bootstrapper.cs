@@ -31,7 +31,7 @@ namespace Extant.Web
 
             var container = new Container();
 
-            var mapperConfig = new MapperConfiguration(cfg =>
+            Mapper.Initialize(cfg =>
             {
                 cfg.AddProfile<ExtantMappingProfile>();
                 cfg.ConstructServicesUsing(container.GetInstance);

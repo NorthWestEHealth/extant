@@ -14,7 +14,7 @@ namespace Extant.Data.Search
         public void Set(string name, object value, Document document, Field.Store store, Field.Index index, float? boost)
         {
             var field = new Field(name, value.ToString().ToLower(), store, index);
-            field.SetBoost(boost ?? 1);
+            field.Boost = boost ?? 1;
             document.Add(field);
         }
     }

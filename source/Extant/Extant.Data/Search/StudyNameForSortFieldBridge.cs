@@ -16,7 +16,7 @@ namespace Extant.Data.Search
         {
             var study = (Study)value;
             var field = new Field(name, study.StudyName.ToLower(), store, index);
-            field.SetBoost(boost ?? 1);
+            field.Boost = boost ?? 1;
             document.Add(field);
         }
     }

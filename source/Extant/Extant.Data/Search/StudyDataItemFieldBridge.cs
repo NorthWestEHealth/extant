@@ -17,7 +17,7 @@ namespace Extant.Data.Search
             var sdi = value as StudyDataItem;
             if (null == sdi) return;
             var field = new Field(name, sdi.DataItem.DataItemName, store, index);
-            field.SetBoost(boost ?? 1);
+            field.Boost = boost ?? 1;
             document.Add(field);
         }
     }
