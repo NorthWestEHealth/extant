@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using StructureMap;
+using Context = System.Web.HttpContext;
 
 namespace Extant.Web.Infrastructure
 {
@@ -15,11 +16,18 @@ namespace Extant.Web.Infrastructure
     {
         private readonly IContainer _container;
 
-        private IContainer getCurrentContainer()
+        // context scoping keys for nested containers/special uses.
+        private const string ScopedContainerKey = "StructureMapRequestScopedContainer";
+        private const string PubmedServiceInstanceKey = "SessionScopedPubmedServiceInstance";
+
+        private IContainer getContainer()
         {
-            // detects if a context-scoped nested container is available; if not uses the global container.
+            // detects if a context-scoped nested container is available; if not it creates one.
             // using this methods of scoping allows all registrations to be transient or singleton.
-            return (IContainer) (System.Web.HttpContext.Current.Items[ScopedContainerKey] ?? _container);
+
+            if (!Context.Current.Items.Contains(ScopedContainerKey)) Context.Current.Items.Add(ScopedContainerKey, _container.GetNestedContainer());
+
+            return (IContainer) Context.Current.Items[ScopedContainerKey];
         }
         
 
@@ -28,13 +36,17 @@ namespace Extant.Web.Infrastructure
             _container = container;
         }
 
-        // context scoping key for per request nested containers.
-        public const string ScopedContainerKey = "StructureMapRequestScopedContainer";
 
         public object GetService(Type serviceType)
         {
-
-            IContainer current = getCurrentContainer();
+            // special handling of IPubMedService due to need to cache results between requests.
+            if (serviceType == typeof(Pubmed.IPubmedService))
+            {
+                if(Context.Current.Session[PubmedServiceInstanceKey] == null) Context.Current.Session.Add(PubmedServiceInstanceKey, _container.GetInstance(typeof(Pubmed.IPubmedService)));
+                return Context.Current.Session[PubmedServiceInstanceKey];
+            }
+            
+            IContainer current = getContainer();
             
             if (serviceType == typeof(IContainer)) return current;
 
@@ -51,7 +63,15 @@ namespace Extant.Web.Infrastructure
 
         public IEnumerable<object> GetServices(Type serviceType)
         {
-            return getCurrentContainer().GetAllInstances(serviceType).Cast<object>();
+            // special handling of IPubMedService due to need to cache results between requests.
+            if (serviceType == typeof(Pubmed.IPubmedService))
+            {
+                if (Context.Current.Session[PubmedServiceInstanceKey] == null) Context.Current.Session.Add(PubmedServiceInstanceKey, _container.GetInstance(typeof(Pubmed.IPubmedService)));
+                return new List<object> { Context.Current.Session[PubmedServiceInstanceKey] };
+            }
+
+            return getContainer().GetAllInstances(serviceType).Cast<object>();
         }
+
     }
 }

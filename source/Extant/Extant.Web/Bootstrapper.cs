@@ -42,7 +42,7 @@ namespace Extant.Web
                    cfg.AddRegistry(new NHibernateRegistry());
                    cfg.AddRegistry(new RepositoryRegistry());
                    cfg.For<IMailer>().Singleton().Use(Mailer.GetMailer(smtpServer, fromEmail));
-                   cfg.For<IPubmedService>().Singleton().Use<PubmedService>();
+                   cfg.For<IPubmedService>().Use<EBIPubmedService>();
                    cfg.For<IModelBinderProvider>().Use<StructureMapModelBinderProvider>();
                    cfg.For<ModelBinderTypeMappingDictionary>().Use(modelBinderTypeMappingDictionary);
                });

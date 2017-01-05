@@ -48,11 +48,17 @@
     <Compile Include="..\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="EBIPubmedService.cs" />
     <Compile Include="DemoPubmedService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PubmedDetails.cs" />
     <Compile Include="PubmedResult.cs" />
     <Compile Include="PubmedService.cs" />
+    <Compile Include="Service References\EBIPublicationsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\eFetchPubmed\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -69,6 +75,52 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getBookXMLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getCitationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getDatabaseLinksResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getFulltextXMLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getLabsLinksResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getReferencesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getTextMinedTermsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.listSearchFieldsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.profilePublicationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.responseWrapper.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.searchPublicationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EBIPublicationsService\soap.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EBIPublicationsService\swaref.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EBIPublicationsService\WSCitationImplService.wsdl" />
     <None Include="Service References\eFetchPubmed\efetch_db_pubmed.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -103,6 +155,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EBIPublicationsService\" />
     <WCFMetadataStorage Include="Service References\eFetchPubmed\" />
     <WCFMetadataStorage Include="Service References\eUtils\" />
   </ItemGroup>
@@ -126,6 +179,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\eFetchPubmed\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EBIPublicationsService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EBIPublicationsService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EBIPublicationsService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
