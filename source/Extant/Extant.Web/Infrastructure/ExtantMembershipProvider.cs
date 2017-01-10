@@ -10,7 +10,7 @@ using System.Web;
 using System.Web.Security;
 using Extant.Data.Entities;
 using Extant.Data.Repositories;
-using StructureMap;
+using RX = System.Text.RegularExpressions.Regex;
 
 namespace Extant.Web.Infrastructure
 {
@@ -21,6 +21,7 @@ namespace Extant.Web.Infrastructure
         private int passwordAttemptWindow;
         private int minRequiredNonAlphanumericCharacters;
         private int minRequiredPasswordLength;
+        private string passwordStrengthRegularExpression;
 
         protected IUserRepository UserRepo
         {
@@ -32,8 +33,9 @@ namespace Extant.Web.Infrastructure
             applicationName = MembershipHelper.GetConfigValue(config["applicationName"], System.Web.Hosting.HostingEnvironment.ApplicationVirtualPath);
             maxInvalidPasswordAttempts = Convert.ToInt32(MembershipHelper.GetConfigValue(config["maxInvalidPasswordAttempts"], "5"));
             passwordAttemptWindow = Convert.ToInt32(MembershipHelper.GetConfigValue(config["passwordAttemptWindow"], "10"));
-            minRequiredNonAlphanumericCharacters = Convert.ToInt32(MembershipHelper.GetConfigValue(config["minRequiredNonAlphanumericCharacters"], "0"));
-            minRequiredPasswordLength = Convert.ToInt32(MembershipHelper.GetConfigValue(config["minRequiredPasswordLength"], "8"));
+            minRequiredNonAlphanumericCharacters = Convert.ToInt32(MembershipHelper.GetConfigValue(config["minRequiredNonAlphanumericCharacters"], "1"));
+            minRequiredPasswordLength = Convert.ToInt32(MembershipHelper.GetConfigValue(config["minRequiredPasswordLength"], "11"));
+            passwordStrengthRegularExpression = MembershipHelper.GetConfigValue(config["passwordStrengthRegularExpression"], @"(?=[A-Z])(?=[a-z])(?=[!@#$%^+=/?[\].,_~-])(?=[0-9].*[0-9])(?!\s).{11,16}");
             
             base.Initialize(name, config);
         }
@@ -50,7 +52,7 @@ namespace Extant.Web.Infrastructure
             }
 
             //check password
-            if ( password.Length < minRequiredPasswordLength )
+            if (!ValidatePasswordStrength(password))
             {
                 status = MembershipCreateStatus.InvalidPassword;
                 return null;
@@ -110,6 +112,8 @@ namespace Extant.Web.Infrastructure
         public override bool ChangePassword(string username, string oldPassword, string newPassword)
         {
             if (!ValidateUser(username, oldPassword)) return false;
+            if (!ValidatePasswordStrength(newPassword)) return false;
+
             ChangeUserPassword(username, newPassword);
             return true;
         }
@@ -130,6 +134,7 @@ namespace Extant.Web.Infrastructure
 
         public override string ResetPassword(string username, string newPassword)
         {
+            if (!ValidatePasswordStrength(newPassword)) throw new ArgumentException("Password Strength Requirements not met.", "newPassword");
             ChangeUserPassword(username, newPassword);
             return null;
         }
@@ -284,7 +289,23 @@ namespace Extant.Web.Infrastructure
 
         public override string PasswordStrengthRegularExpression
         {
-            get { return null; }
+            get { return passwordStrengthRegularExpression; }
+        }
+
+        private bool ValidatePasswordStrength(string password)
+        {
+            // min length
+            if (password.Length < MinRequiredPasswordLength) return false;
+
+            // min non-alphanumeric characters
+            //System.Text.RegularExpressions.Regex alphanums = new System.Text.RegularExpressions.Regex("[A-Za-z0-9]");
+            if (RX.Replace(password, "[A-Za-z0-9]+", "").Length < MinRequiredNonAlphanumericCharacters) return false;
+
+            // strength regexp
+            //System.Text.RegularExpressions.Regex pwstrength = new System.Text.RegularExpressions.Regex(PasswordStrengthRegularExpression);
+            if (!RX.IsMatch(password, PasswordStrengthRegularExpression)) return false;
+
+            return true;
         }
 
     }
