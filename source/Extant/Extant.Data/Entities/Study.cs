@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using Extant.Data.Search;
 using NHibernate.Search.Attributes;
 
@@ -90,21 +91,6 @@ namespace Extant.Data.Entities
 
         public virtual string ContactEmail { get; set; }
 
-        public virtual FileUpload PatientInformationLeaflet { get; set; }
-
-        public virtual FileUpload ConsentForm { get; set; }
-
-        public virtual bool HasDataAccessPolicy { get; set; }
-
-        public virtual FileUpload DataAccessPolicy { get; set; }
-
-        private IList<AdditionalDocument> additionalDocuments = new List<AdditionalDocument>();
-        public virtual IList<AdditionalDocument> AdditionalDocuments
-        {
-            get { return additionalDocuments; }
-            set { additionalDocuments = value; }
-        }
-
         public virtual bool IsLongitudinal { get; set; }
 
         private IList<TimePoint> timePoints = new List<TimePoint>();
@@ -159,6 +145,39 @@ namespace Extant.Data.Entities
         {
             get { return samples; }
             set { samples = value; }
+        }
+
+        #endregion
+
+        #region Documents
+
+        public virtual FileUpload PatientInformationLeaflet { get; set; }
+        
+        public virtual FileUpload ConsentForm { get; set; }
+
+        public virtual bool HasDataAccessPolicy { get; set; }
+
+        public virtual FileUpload DataAccessPolicy { get; set; }
+
+        private IList<AdditionalDocument> additionalDocuments = new List<AdditionalDocument>();
+        [IndexedEmbedded]
+        public virtual IList<AdditionalDocument> AdditionalDocuments
+        {
+            get { return additionalDocuments; }
+            set { additionalDocuments = value; }
+        }
+
+        public virtual bool DocumentsRequireApproval {
+            get {
+                if (PatientInformationLeaflet != null && !PatientInformationLeaflet.IsApproved) return true;
+                if (ConsentForm != null && !ConsentForm.IsApproved) return true;
+                if (DataAccessPolicy != null && !DataAccessPolicy.IsApproved) return true;
+                foreach(AdditionalDocument ad in AdditionalDocuments)
+                {
+                    if (!ad.File.IsApproved) return true;
+                }
+                return false;
+            }
         }
 
         #endregion

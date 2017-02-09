@@ -35,7 +35,7 @@ namespace Extant.Web.Infrastructure
             passwordAttemptWindow = Convert.ToInt32(MembershipHelper.GetConfigValue(config["passwordAttemptWindow"], "10"));
             minRequiredNonAlphanumericCharacters = Convert.ToInt32(MembershipHelper.GetConfigValue(config["minRequiredNonAlphanumericCharacters"], "1"));
             minRequiredPasswordLength = Convert.ToInt32(MembershipHelper.GetConfigValue(config["minRequiredPasswordLength"], "11"));
-            passwordStrengthRegularExpression = MembershipHelper.GetConfigValue(config["passwordStrengthRegularExpression"], @"(?=[A-Z])(?=[a-z])(?=[!@#$%^+=/?[\].,_~-])(?=[0-9].*[0-9])(?!\s).{11,16}");
+            passwordStrengthRegularExpression = MembershipHelper.GetConfigValue(config["passwordStrengthRegularExpression"], @"(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^+=/?[\].,_~-])(?=.*[0-9].*[0-9])(?!.*\s).{11,16}");
             
             base.Initialize(name, config);
         }
@@ -302,7 +302,6 @@ namespace Extant.Web.Infrastructure
             if (RX.Replace(password, "[A-Za-z0-9]+", "").Length < MinRequiredNonAlphanumericCharacters) return false;
 
             // strength regexp
-            //System.Text.RegularExpressions.Regex pwstrength = new System.Text.RegularExpressions.Regex(PasswordStrengthRegularExpression);
             if (!RX.IsMatch(password, PasswordStrengthRegularExpression)) return false;
 
             return true;

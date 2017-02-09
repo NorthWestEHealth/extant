@@ -82,6 +82,10 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Web.Mvc, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.Futures.5.0.0\lib\net40\Microsoft.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
       <Private>True</Private>
@@ -156,6 +160,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MembershipController.cs" />
     <Compile Include="Controllers\PubmedController.cs" />
+    <Compile Include="Controllers\SetupController.cs" />
     <Compile Include="Controllers\StudyController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -168,6 +173,7 @@
     <Compile Include="Helpers\InbankFormExtensions.cs" />
     <Compile Include="Helpers\DataItemExtensions.cs" />
     <Compile Include="Helpers\JsCssExtensions.cs" />
+    <Compile Include="Helpers\KeyValueCollectionExtensions.cs" />
     <Compile Include="Helpers\SampleHelper.cs" />
     <Compile Include="Infrastructure\AjaxAuthorizeAttribute.cs" />
     <Compile Include="Infrastructure\AllowAnonymousAttribute.cs" />
@@ -187,6 +193,7 @@
     <Compile Include="Infrastructure\HelpTextAttribute.cs" />
     <Compile Include="Infrastructure\ICurrentUser.cs" />
     <Compile Include="Infrastructure\IntToDiseaseAreaConverter.cs" />
+    <Compile Include="Infrastructure\LocalAccessOnlyAttribute.cs" />
     <Compile Include="Infrastructure\LogErrorAttribute.cs" />
     <Compile Include="Infrastructure\LogonAuthorizeAttribute.cs" />
     <Compile Include="Infrastructure\Mailer.cs" />
@@ -209,6 +216,7 @@
     <Compile Include="Models\AdminUserModel.cs" />
     <Compile Include="Models\DiseaseAreaContentModel.cs" />
     <Compile Include="Models\DiseaseAreasModel.cs" />
+    <Compile Include="Models\DocumentApprovalModel.cs" />
     <Compile Include="Models\PagedStudyListModel.cs" />
     <Compile Include="Models\SearchAdvancedResultsModel.cs" />
     <Compile Include="Models\ByDiseaseAreaModel.cs" />
@@ -228,6 +236,7 @@
     <Compile Include="Models\SearchAdvancedModel.cs" />
     <Compile Include="Models\SearchBoxModel.cs" />
     <Compile Include="Models\SearchResultsModel.cs" />
+    <Compile Include="Models\SetupModel.cs" />
     <Compile Include="Models\StudiesByDataItemModel.cs" />
     <Compile Include="Models\StudyBasicModel.cs" />
     <Compile Include="Models\StudyDataItemModel.cs" />
@@ -243,82 +252,82 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Controllers\Content\ie7.css" />
-    <Content Include="Controllers\Content\dynatree\jquery.dynatree.min.js" />
-    <Content Include="Controllers\Content\dynatree\skin\icons.gif" />
-    <Content Include="Controllers\Content\dynatree\skin\loading.gif" />
-    <Content Include="Controllers\Content\dynatree\skin\ui.dynatree.css" />
-    <Content Include="Controllers\Content\dynatree\skin\vline.gif" />
-    <Content Include="Controllers\Content\fancybox\blank.gif" />
-    <Content Include="Controllers\Content\fancybox\fancybox-x.png" />
-    <Content Include="Controllers\Content\fancybox\fancybox-y.png" />
-    <Content Include="Controllers\Content\fancybox\fancybox.png" />
-    <Content Include="Controllers\Content\fancybox\fancy_close.png" />
-    <Content Include="Controllers\Content\fancybox\fancy_loading.png" />
-    <Content Include="Controllers\Content\fancybox\fancy_nav_left.png" />
-    <Content Include="Controllers\Content\fancybox\fancy_nav_right.png" />
-    <Content Include="Controllers\Content\fancybox\fancy_shadow_e.png" />
-    <Content Include="Controllers\Content\fancybox\fancy_shadow_n.png" />
-    <Content Include="Controllers\Content\fancybox\fancy_shadow_ne.png" />
-    <Content Include="Controllers\Content\fancybox\fancy_shadow_nw.png" />
-    <Content Include="Controllers\Content\fancybox\fancy_shadow_s.png" />
-    <Content Include="Controllers\Content\fancybox\fancy_shadow_se.png" />
-    <Content Include="Controllers\Content\fancybox\fancy_shadow_sw.png" />
-    <Content Include="Controllers\Content\fancybox\fancy_shadow_w.png" />
-    <Content Include="Controllers\Content\fancybox\fancy_title_left.png" />
-    <Content Include="Controllers\Content\fancybox\fancy_title_main.png" />
-    <Content Include="Controllers\Content\fancybox\fancy_title_over.png" />
-    <Content Include="Controllers\Content\fancybox\fancy_title_right.png" />
-    <Content Include="Controllers\Content\fancybox\jquery.easing-1.3.pack.js" />
-    <Content Include="Controllers\Content\fancybox\jquery.fancybox-1.3.4.css" />
-    <Content Include="Controllers\Content\fancybox\jquery.fancybox-1.3.4.js" />
-    <Content Include="Controllers\Content\fancybox\jquery.fancybox-1.3.4.pack.js" />
-    <Content Include="Controllers\Content\fancybox\jquery.mousewheel-3.0.4.pack.js" />
-    <Content Include="Controllers\Content\ie6.css" />
-    <Content Include="Controllers\Content\jquery.tooltip.css" />
-    <Content Include="Controllers\Content\themes\base\accordion.css" />
-    <Content Include="Controllers\Content\themes\base\all.css" />
-    <Content Include="Controllers\Content\themes\base\autocomplete.css" />
-    <Content Include="Controllers\Content\themes\base\base.css" />
-    <Content Include="Controllers\Content\themes\base\button.css" />
-    <Content Include="Controllers\Content\themes\base\core.css" />
-    <Content Include="Controllers\Content\themes\base\datepicker.css" />
-    <Content Include="Controllers\Content\themes\base\dialog.css" />
-    <Content Include="Controllers\Content\themes\base\draggable.css" />
-    <Content Include="Controllers\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Controllers\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Controllers\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Controllers\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Controllers\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Controllers\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Controllers\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Controllers\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Controllers\Content\themes\base\images\ui-icons_222222_256x240.png" />
-    <Content Include="Controllers\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Controllers\Content\themes\base\images\ui-icons_444444_256x240.png" />
-    <Content Include="Controllers\Content\themes\base\images\ui-icons_454545_256x240.png" />
-    <Content Include="Controllers\Content\themes\base\images\ui-icons_555555_256x240.png" />
-    <Content Include="Controllers\Content\themes\base\images\ui-icons_777620_256x240.png" />
-    <Content Include="Controllers\Content\themes\base\images\ui-icons_777777_256x240.png" />
-    <Content Include="Controllers\Content\themes\base\images\ui-icons_888888_256x240.png" />
-    <Content Include="Controllers\Content\themes\base\images\ui-icons_cc0000_256x240.png" />
-    <Content Include="Controllers\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Controllers\Content\themes\base\images\ui-icons_ffffff_256x240.png" />
-    <Content Include="Controllers\Content\themes\base\jquery-ui.css" />
-    <Content Include="Controllers\Content\themes\base\jquery-ui.min.css" />
-    <Content Include="Controllers\Content\themes\base\jquery.ui.button.css" />
-    <Content Include="Controllers\Content\themes\base\jquery.ui.theme.css" />
-    <Content Include="Controllers\Content\themes\base\menu.css" />
-    <Content Include="Controllers\Content\themes\base\progressbar.css" />
-    <Content Include="Controllers\Content\themes\base\resizable.css" />
-    <Content Include="Controllers\Content\themes\base\selectable.css" />
-    <Content Include="Controllers\Content\themes\base\selectmenu.css" />
-    <Content Include="Controllers\Content\themes\base\slider.css" />
-    <Content Include="Controllers\Content\themes\base\sortable.css" />
-    <Content Include="Controllers\Content\themes\base\spinner.css" />
-    <Content Include="Controllers\Content\themes\base\tabs.css" />
-    <Content Include="Controllers\Content\themes\base\theme.css" />
-    <Content Include="Controllers\Content\themes\base\tooltip.css" />
+    <Content Include="Content\ie7.css" />
+    <Content Include="Content\dynatree\jquery.dynatree.min.js" />
+    <Content Include="Content\dynatree\skin\icons.gif" />
+    <Content Include="Content\dynatree\skin\loading.gif" />
+    <Content Include="Content\dynatree\skin\ui.dynatree.css" />
+    <Content Include="Content\dynatree\skin\vline.gif" />
+    <Content Include="Content\fancybox\blank.gif" />
+    <Content Include="Content\fancybox\fancybox-x.png" />
+    <Content Include="Content\fancybox\fancybox-y.png" />
+    <Content Include="Content\fancybox\fancybox.png" />
+    <Content Include="Content\fancybox\fancy_close.png" />
+    <Content Include="Content\fancybox\fancy_loading.png" />
+    <Content Include="Content\fancybox\fancy_nav_left.png" />
+    <Content Include="Content\fancybox\fancy_nav_right.png" />
+    <Content Include="Content\fancybox\fancy_shadow_e.png" />
+    <Content Include="Content\fancybox\fancy_shadow_n.png" />
+    <Content Include="Content\fancybox\fancy_shadow_ne.png" />
+    <Content Include="Content\fancybox\fancy_shadow_nw.png" />
+    <Content Include="Content\fancybox\fancy_shadow_s.png" />
+    <Content Include="Content\fancybox\fancy_shadow_se.png" />
+    <Content Include="Content\fancybox\fancy_shadow_sw.png" />
+    <Content Include="Content\fancybox\fancy_shadow_w.png" />
+    <Content Include="Content\fancybox\fancy_title_left.png" />
+    <Content Include="Content\fancybox\fancy_title_main.png" />
+    <Content Include="Content\fancybox\fancy_title_over.png" />
+    <Content Include="Content\fancybox\fancy_title_right.png" />
+    <Content Include="Content\fancybox\jquery.easing-1.3.pack.js" />
+    <Content Include="Content\fancybox\jquery.fancybox-1.3.4.css" />
+    <Content Include="Content\fancybox\jquery.fancybox-1.3.4.js" />
+    <Content Include="Content\fancybox\jquery.fancybox-1.3.4.pack.js" />
+    <Content Include="Content\fancybox\jquery.mousewheel-3.0.4.pack.js" />
+    <Content Include="Content\ie6.css" />
+    <Content Include="Content\jquery.tooltip.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\add.png" />
     <Content Include="Images\ai-right-bg.gif" />
@@ -345,6 +354,7 @@
     <Content Include="Images\trash.png" />
     <Content Include="Images\unchecked.png" />
     <Content Include="Scripts\dataitems.js" />
+    <None Include="Properties\PublishProfiles\ExtantFilesystemPublish.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
@@ -392,6 +402,7 @@
     <Content Include="Views\Account\ValidateEmailSuccess.aspx" />
     <Content Include="Views\Admin\AddUser.aspx" />
     <Content Include="Views\Admin\AddUserSuccess.aspx" />
+    <Content Include="Views\Admin\ApproveDocuments.aspx" />
     <Content Include="Views\Admin\DiseaseArea.aspx" />
     <Content Include="Views\Admin\DiseaseAreas.aspx" />
     <Content Include="Views\Admin\EditUser.aspx" />
@@ -400,6 +411,8 @@
     <Content Include="Views\Admin\RebuildSearchIndex.aspx" />
     <Content Include="Views\Admin\Users.aspx" />
     <Content Include="Views\Pubmed\PubmedResult.ascx" />
+    <Content Include="Views\Setup\Complete.aspx" />
+    <Content Include="Views\Setup\Index.aspx" />
     <Content Include="Views\Shared\Unauthorized.aspx" />
     <Content Include="Views\Study\ByDataItem.ascx" />
     <Content Include="Views\Study\ByDiseaseAreaPartial.ascx" />
@@ -432,7 +445,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Controllers\Content\Site.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />

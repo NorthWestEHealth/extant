@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Security;
 using Extant.Data.Entities;
 using Extant.Web.Infrastructure;
 
@@ -65,6 +66,7 @@ namespace Extant.Web.Models
         [Display(Name = "Password")]
         public string Password { get; set; }
 
+        [MembershipPassword]
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
         [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]

@@ -26,9 +26,6 @@ namespace Extant.Web
                                                            {typeof (IPrincipal), typeof (PrincipalModelBinder)}
                                                        };
 
-            var smtpServer = ConfigurationManager.AppSettings["SmtpServer"];
-            var fromEmail = ConfigurationManager.AppSettings["FromEmail"];
-
             var container = new Container();
 
             Mapper.Initialize(cfg =>
@@ -41,7 +38,7 @@ namespace Extant.Web
                {
                    cfg.AddRegistry(new NHibernateRegistry());
                    cfg.AddRegistry(new RepositoryRegistry());
-                   cfg.For<IMailer>().Singleton().Use(Mailer.GetMailer(smtpServer, fromEmail));
+                   cfg.For<IMailer>().Singleton().Use<Mailer>();
                    cfg.For<IPubmedService>().Use<EBIPubmedService>();
                    cfg.For<IModelBinderProvider>().Use<StructureMapModelBinderProvider>();
                    cfg.For<ModelBinderTypeMappingDictionary>().Use(modelBinderTypeMappingDictionary);

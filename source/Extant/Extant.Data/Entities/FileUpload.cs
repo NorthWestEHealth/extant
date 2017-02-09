@@ -14,5 +14,7 @@ namespace Extant.Data.Entities
         public virtual int FileSize { get; set; }
 
         public virtual byte[] FileData { get; set; }
+
+        public virtual bool IsApproved { get; set; }
     }
 }

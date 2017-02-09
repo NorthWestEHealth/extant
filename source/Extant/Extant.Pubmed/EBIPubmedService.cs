@@ -164,7 +164,8 @@ namespace Extant.Pubmed
                 Authors = r.authorList.Select(a => a.fullName).ToList();
                 Journal = r.journalTitle;
                 PublicationDate = r.firstPublicationDate;
-                MeshTerms = r.meshHeadingList.Select(mh => mh.descriptorName).ToList();
+                if (r.meshHeadingList == null || r.meshHeadingList.Length == 0) MeshTerms = new List<string> { };
+                else MeshTerms = r.meshHeadingList.Select(mh => mh.descriptorName).ToList();
             }
 
             public PubmedResult PubmedResult

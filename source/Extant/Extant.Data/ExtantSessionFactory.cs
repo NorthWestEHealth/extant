@@ -148,6 +148,7 @@ namespace Extant.Data
             mapping.HasMany(s => s.TimePoints)
                    .AsList(x => x.Column("StudyIndex"))
                    .Cascade.AllDeleteOrphan();
+            mapping.IgnoreProperty(s => s.DocumentsRequireApproval);
         }
     }
 

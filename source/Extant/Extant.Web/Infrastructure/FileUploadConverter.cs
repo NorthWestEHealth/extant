@@ -7,6 +7,7 @@ using System;
 using System.Web;
 using AutoMapper;
 using Extant.Data.Entities;
+using Extant.Data;
 
 namespace Extant.Web.Infrastructure
 {
@@ -22,6 +23,7 @@ namespace Extant.Web.Infrastructure
                 fileUpload.FileName = source.FileName;
                 fileUpload.FileSize = source.ContentLength;
                 fileUpload.MimeType = source.ContentType;
+                fileUpload.IsApproved = HttpContext.Current.User.IsInRole(Constants.AdministratorRole); // automatically approve documents uploaded by an adminstrator.
                 return fileUpload;
             }
             return null;

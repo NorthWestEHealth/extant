@@ -5,6 +5,8 @@
 //-----------------------------------------------------------------------
 using System;
 using System.Net.Mail;
+using System.Web.Configuration;
+using System.Net.Configuration;
 using log4net;
 
 namespace Extant.Web.Infrastructure
@@ -21,10 +23,10 @@ namespace Extant.Web.Infrastructure
         private readonly SmtpClient MailClient;
         private readonly string EmailFrom;
 
-        public Mailer(string smtpServer, string emailFrom)
+        public Mailer()
         {
-            MailClient = new SmtpClient(smtpServer);
-            EmailFrom = emailFrom;
+            MailClient = new SmtpClient();
+            EmailFrom = (WebConfigurationManager.GetSection("system.net/mailSettings/smtp") as SmtpSection).From;
         }
 
         public bool Send(string to, string subject, string body)
@@ -40,11 +42,6 @@ namespace Extant.Web.Infrastructure
                 log.Error("Error when trying to send email", ex);
                 return false;
             }
-        }
-
-        public static IMailer GetMailer(string smtpServer, string emailFrom)
-        {
-            return new Mailer(smtpServer, emailFrom);
         }
     }
 }

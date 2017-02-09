@@ -3,12 +3,14 @@
 // Copyright (c) North West e-Health 2011. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Security.Principal;
 using System.Text.RegularExpressions;
 using System.Web.Mvc;
+using Microsoft.Web.Mvc;
 using System.Web.Security;
 using AutoMapper;
 using Extant.Data;
@@ -16,6 +18,7 @@ using Extant.Data.Entities;
 using Extant.Data.Repositories;
 using Extant.Web.Infrastructure;
 using Extant.Web.Models;
+using StatusCode = System.Net.HttpStatusCode;
 
 namespace Extant.Web.Controllers
 {
@@ -283,6 +286,126 @@ namespace Extant.Web.Controllers
             var da = new DiseaseArea {DiseaseAreaName = daname};
             da = DiseaseAreaRepo.Save(da);
             return RedirectToAction("DiseaseArea", new {_id = da.Id});
+        }
+
+        #endregion
+
+        #region DocumentApproval
+
+        public ActionResult ApproveDocuments(IPrincipal identity)
+        {
+            // set up list of studies/documents for approval
+            IEnumerable<DiseaseArea> das = identity.IsInRole(Constants.AdministratorRole)
+                ? DiseaseAreaRepo.GetAll()
+                : UserRepo.GetByEmail(identity.Identity.Name).DiseaseAreas;
+
+            int numstudies;
+            int studiestofetch = 1000;
+            IEnumerable<Study> studies = StudyRepo.GetDiseaseAreasStudies(das.Select(da => da.Id).ToArray(), 0, studiestofetch, out numstudies);
+            if (numstudies > studiestofetch) studies = StudyRepo.GetDiseaseAreasStudies(das.Select(da => da.Id).ToArray(), 0, numstudies, out numstudies);
+            List<DocumentApprovalModel> approvals = new List<DocumentApprovalModel>();
+
+            foreach (Study s in studies.Where(st => st.DocumentsRequireApproval))
+            {
+                if (s.PatientInformationLeaflet != null && !s.PatientInformationLeaflet.IsApproved) approvals.Add(new DocumentApprovalModel { StudyId = s.Id, StudyTitle = s.StudyName, Document = DocumentApprovalModel.DocumentType.PatientInformationLeaflet });
+                if (s.ConsentForm != null && !s.ConsentForm.IsApproved) approvals.Add(new DocumentApprovalModel { StudyId = s.Id, StudyTitle = s.StudyName, Document = DocumentApprovalModel.DocumentType.ConsentForm });
+                if (s.DataAccessPolicy != null && !s.DataAccessPolicy.IsApproved) approvals.Add(new DocumentApprovalModel { StudyId = s.Id, StudyTitle = s.StudyName, Document = DocumentApprovalModel.DocumentType.DataAccessPolicy });
+                approvals.AddRange(s.AdditionalDocuments.Where(ad => !ad.File.IsApproved).Select(ad => new DocumentApprovalModel { StudyId = s.Id, StudyTitle = s.StudyName, Document = DocumentApprovalModel.DocumentType.AdditionalDocument, DocumentDetails = new DocumentApprovalModel.AdditionalDocumentDetails { Type = ad.DocumentType, Description = ad.Description, FileName = ad.File.FileName } }));
+            }
+            return View(approvals);
+        }
+
+        [HttpPost]
+        [AjaxOnly]
+        public ActionResult ApproveSingle(int studyid, DocumentApprovalModel.DocumentType type, string filename) {
+            // process approval
+            Study s = StudyRepo.Get(studyid);
+            FileUpload file;
+            switch (type)
+            {
+                case DocumentApprovalModel.DocumentType.PatientInformationLeaflet:
+                    file = s.PatientInformationLeaflet;
+                    break;
+                case DocumentApprovalModel.DocumentType.ConsentForm:
+                    file = s.ConsentForm;
+                    break;
+                case DocumentApprovalModel.DocumentType.DataAccessPolicy:
+                    file = s.DataAccessPolicy;
+                    break;
+                case DocumentApprovalModel.DocumentType.AdditionalDocument:
+                    try
+                    {
+                        file = s.AdditionalDocuments.Where(ad => ad.File.FileName == filename).Select(ad => ad.File).SingleOrDefault();
+                    }
+                    catch (Exception e)
+                    {
+                        log4net.LogManager.GetLogger(typeof(AdminController)).Error("Failed to retrieve additional document:", e);
+                        file = null;
+                    }
+                    break;
+                default:
+                    file = null;
+                    break;
+            }
+
+            if (file == null) return new HttpStatusCodeResult(StatusCode.InternalServerError);
+
+            file.IsApproved = true;
+            return new HttpStatusCodeResult(StatusCode.NoContent);
+        }
+
+        [HttpPost]
+        [AjaxOnly]
+        public ActionResult ApproveAll(int StudyId) {
+
+            Study s = StudyRepo.Get(StudyId);
+            if (s == null) return new HttpStatusCodeResult(StatusCode.InternalServerError);
+
+            if (s.PatientInformationLeaflet != null) s.PatientInformationLeaflet.IsApproved = true;
+            if (s.ConsentForm != null) s.ConsentForm.IsApproved = true;
+            if (s.DataAccessPolicy != null) s.DataAccessPolicy.IsApproved = true;
+
+            foreach(AdditionalDocument ad in s.AdditionalDocuments)
+            {
+                ad.File.IsApproved = true;
+            }
+            
+            return new HttpStatusCodeResult(StatusCode.NoContent);
+        }
+
+        [HttpGet]
+        public ActionResult Preview(int studyid, DocumentApprovalModel.DocumentType type, string filename)
+        {
+            Study s = StudyRepo.Get(studyid);
+            FileUpload file;
+            switch (type)
+            {
+                case DocumentApprovalModel.DocumentType.PatientInformationLeaflet:
+                    file = s.PatientInformationLeaflet;
+                    break;
+                case DocumentApprovalModel.DocumentType.ConsentForm:
+                    file = s.ConsentForm;
+                    break;
+                case DocumentApprovalModel.DocumentType.DataAccessPolicy:
+                    file = s.DataAccessPolicy;
+                    break;
+                case DocumentApprovalModel.DocumentType.AdditionalDocument:
+                    try
+                    {
+                        file = s.AdditionalDocuments.Where(ad => ad.File.FileName == filename).Select(ad => ad.File).SingleOrDefault();
+                    }
+                    catch (Exception e)
+                    {
+                        log4net.LogManager.GetLogger(typeof(AdminController)).Error("Failed to retrieve additional document:", e);
+                        file = null;
+                    }
+                    break;
+                default:
+                    file = null;
+                    break;
+            }
+            if (file == null) return new HttpNotFoundResult();
+            else return File(file.FileData, file.MimeType, file.FileName);
         }
 
         #endregion
