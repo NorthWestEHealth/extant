@@ -109,35 +109,45 @@ h6{
 	height: 215px;
 }
 
+#uomlogo {
+    display: block;
+    float: left;
+    width: 169px;
+    height: 70px;
+    margin: 25.5px 51px;
+}
+
+#brand-cat-name {
+    display: block;
+    float: left;
+}
+
 #topnav{
 	float:left;
-	background-color:#333333;
+    clear: both;
+	background-color:#fff;
 	width:956px;
 	height:38px;
-	border-radius: 0px 0px 5px 5px; 
-	-moz-border-radius: 0px 0px 5px 5px; 
-	-webkit-border-radius: 0px 0px 5px 5px; 
-	border: 2px solid #333333;
 }
+
 #topnav ul{
 	float:left;
 	width:945px;
-	margin:0 5px;
+	margin: 0px 5px;
 }
 #topnav ul li{
 	float:left;
-	color:#fff;
+	color:#333;
 	list-style-type:none;
 	padding: 0;
 }
 #topnav ul li a{
-	float:left;
-	color:#fff;
 	font-size:16px;
 	font-weight:bold;
 	padding:10px 10px 8px 10px;
 	display:block;
 }
+
 #topnav ul li a:hover, #topnav ul li .active{
 	float:left;
 	color:#fff;
@@ -149,7 +159,21 @@ h6{
 	float: right;
 }
 
+#topnav ul li a.home {
+    width: 38px;
+    margin-left: -100em;
+    overflow: hidden;
+    background-image: url("/Images/home-light.png");
+}
 
+#topnav ul li a.home:hover {
+    background-image: url("/Images/homne-dark.png");
+}
+
+#page-footer {
+    width: 100%;
+    background-color: black;
+}
 
 .main-logo{
 	float:left;	

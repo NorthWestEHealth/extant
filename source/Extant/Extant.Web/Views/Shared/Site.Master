@@ -58,7 +58,7 @@
                 delay: 0
             });
             $('#tooltip').bgiframe();
-            <% if ( HttpContext.Current.User.Identity.IsAuthenticated ) { %>
+            <% if (HttpContext.Current.User.Identity.IsAuthenticated) { %>
             loginCountDown();
             <% } %>
         });
@@ -68,9 +68,14 @@
 <body>
     <div id="wrapper">
         <div id="header">
+            <div id="header-branding">
+                <img title="University of Manchester logo" alt="University of Manchester Logo" id="uomlogo" src="/Images/brand-logo.png" />
+                <div id="brand-cat-name"><%= ConfigurationManager.AppSettings["CatalogueName"] %></div>
+            </div>
             <div id="topnav">
                 <ul>
-                    <li><a href="/">Home</a></li>
+                    <li><a href="/" class="home">Home</a></li>
+                    <li><a href="/About">About</a></li>
                     <li><a href="/Study/Search">Find a Study</a></li>
                     <% if ( Request.IsAuthenticated )
                        {%>
@@ -84,6 +89,7 @@
                     <%
                         }
                     %>
+                    <li><a href="/Contact">Contact Us</a></li>
                     <%
                         if (Request.IsAuthenticated) {
                     %>
@@ -107,6 +113,9 @@
         </div>
         <div id="page-body">
             <asp:ContentPlaceHolder ID="MainContent" runat="server" /> 
+        </div>
+        <div id="page-footer">
+
         </div>
     </div>
 </body>

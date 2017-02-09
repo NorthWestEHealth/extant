@@ -32,5 +32,15 @@ namespace Extant.Web.Controllers
             return View(Mapper.Map<IEnumerable<Study>, IEnumerable<StudyBasicModel>>(studies));
         }
 
+        // "non-actions" with custom routing to display useful information
+        [Route("/About")]
+        public ActionResult About() {
+            return View();
+        }
+
+        [Route("/Contact")]
+        public ActionResult ContactUs() {
+            return View();
+        }
     }
 }
