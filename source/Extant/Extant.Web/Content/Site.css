@@ -33,6 +33,7 @@ ul li { padding-bottom: 15px; }
   margin: 0 auto;
   text-align: left;
 }
+/*
 #header {
 	float:left;
 	width:100%;
@@ -50,6 +51,7 @@ ul li { padding-bottom: 15px; }
 	background:#333;
 	margin-top:20px;
 }
+*/
 
 /************************************** Fonts ********************************************/
 
@@ -114,12 +116,13 @@ h6{
     float: left;
     width: 169px;
     height: 70px;
-    margin: 25.5px 51px;
+    /*margin: 25.5px 51px;*/
 }
 
 #brand-cat-name {
     display: block;
     float: left;
+    margin: 25px;
 }
 
 #topnav{
@@ -148,11 +151,13 @@ h6{
 	display:block;
 }
 
+/*
 #topnav ul li a:hover, #topnav ul li .active{
 	float:left;
 	color:#fff;
 	background:#C8400E;
 }
+*/
 
 #topnav ul li.right
 {
@@ -160,14 +165,17 @@ h6{
 }
 
 #topnav ul li a.home {
-    width: 38px;
+    width: 18px;
     margin-left: -100em;
+    background-attachment: scroll;
+    background-position: 5px;
+    background-repeat: no-repeat;
     overflow: hidden;
     background-image: url("/Images/home-light.png");
 }
 
 #topnav ul li a.home:hover {
-    background-image: url("/Images/homne-dark.png");
+    background-image: url("/Images/home-dark.png");
 }
 
 #page-footer {
@@ -190,6 +198,10 @@ h6{
 
 #page-footer-legal > ul {
     list-style: none;
+}
+
+#page-footer-legal > ul > li {
+    display: inline-block;
 }
 
 .main-logo{

@@ -332,6 +332,7 @@
     <Content Include="Images\add.png" />
     <Content Include="Images\ai-right-bg.gif" />
     <Content Include="Images\box-orange-border.gif" />
+    <Content Include="Images\brand-logo.png" />
     <Content Include="Images\but-go.gif" />
     <Content Include="Images\Buttons\bg_button_a.gif" />
     <Content Include="Images\Buttons\bg_button_full.gif" />
@@ -346,6 +347,8 @@
     <Content Include="Images\favicon.ico" />
     <Content Include="Images\find-textbox-bg.gif" />
     <Content Include="Images\help.png" />
+    <Content Include="Images\home-dark.png" />
+    <Content Include="Images\home-light.png" />
     <Content Include="Images\indicator.gif" />
     <Content Include="Images\mainlogo-no-caption.gif" />
     <Content Include="Images\mainlogo.gif" />
