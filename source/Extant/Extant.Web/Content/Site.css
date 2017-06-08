@@ -175,6 +175,23 @@ h6{
     background-color: black;
 }
 
+#page-footer-content {
+    width: 75%;
+    margin: auto;
+}
+
+#page-footer-content > div {
+    display: inline-block;
+}
+
+#page-footer-legal {
+    border-top: 2px solid grey;
+}
+
+#page-footer-legal > ul {
+    list-style: none;
+}
+
 .main-logo{
 	float:left;	
 }
