@@ -108,7 +108,8 @@
                 </ul>
             </div>
             <div class="main-logo">
-                <img width="316" height="100" alt="<%=ConfigurationManager.AppSettings["OrganisationName"]%>" src="/Images/mainlogo-no-caption.gif" />
+                <img alt="<%=ConfigurationManager.AppSettings["OrganisationName"]%>" src="/Images/main-logo-no-caption.jpg" />
+                <img alt="<%=ConfigurationManager.AppSettings["OrganisationName"]%>" src="/Images/sub-logo-no-caption.png" />
                 <h1><%=ConfigurationManager.AppSettings["CatalogueName"]%></h1>
             </div>
         </div>

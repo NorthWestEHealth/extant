@@ -349,6 +349,7 @@
     <Content Include="Images\help.png" />
     <Content Include="Images\home-dark.png" />
     <Content Include="Images\home-light.png" />
+    <Content Include="Images\icon-search.png" />
     <Content Include="Images\indicator.gif" />
     <Content Include="Images\main-logo-no-caption.jpg" />
     <Content Include="Images\mainlogo-no-caption.gif" />

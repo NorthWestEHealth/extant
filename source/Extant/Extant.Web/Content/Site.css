@@ -908,32 +908,34 @@ div.bottom-bar
 
 div#home-search
 {
-	width: 225px;
 	float: right;
 	margin-left: 20px;
+    border: 1px solid #6b2c91;
+    border-radius: 8px;
 }
 
 div#home-search-top
 {
-	height: 50px;
 	color:#666;
-	font-size:16px;	
+    text-align: center;
+    line-height: 3;
+    vertical-align: middle;
 }
 
 div#home-search-bottom
 {
-	background:url(/Images/find-textbox-bg.gif) top left no-repeat;
 	height: 35px;
-    padding: 6px 5px 40px 6px;
-    width: 192px;	
+    margin: 0 16px 16px;
+    border: 1px solid #999;
+    border-radius: 4px;
 }
 
 div#home-search-bottom .home-search-button{
 	vertical-align:middle;
 	border:0;
-	background:url(/Images/but-go.gif) top left no-repeat;
-	width:29px;
-	height:24px;
+	background:url(/Images/icon-search.png) no-repeat center;
+	width:32px;
+	height:32px;
 	margin: 0;
 	cursor: pointer;
 }
