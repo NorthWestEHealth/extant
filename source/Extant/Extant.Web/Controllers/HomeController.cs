@@ -33,14 +33,14 @@ namespace Extant.Web.Controllers
         }
 
         // "non-actions" with custom routing to display useful information
-        [Route("/About")]
+        [Route("About")]
         public ActionResult About() {
             return View();
         }
 
-        [Route("/Contact")]
+        [Route("Contact")]
         public ActionResult ContactUs() {
-            return View();
+            return View("Contact");
         }
     }
 }

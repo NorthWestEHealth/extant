@@ -25,6 +25,8 @@ namespace Extant.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapMvcAttributeRoutes();
+
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{_id}", // URL with parameters
