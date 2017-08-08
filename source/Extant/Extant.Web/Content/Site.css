@@ -57,8 +57,9 @@ ul li { padding-bottom: 15px; }
 
 body{
 	font-family:'Open Sans', sans-serif;
-	font-size:80%;
+	font-size:16px;
 	color:#333;
+    line-height: 1.5;
 }
 a{
 	color:#6b2c91;
@@ -117,14 +118,15 @@ h6{
 
 #uomlogo {
     display: inline-block;
+    vertical-align: text-top;
     width: 169px;
     height: 70px;
-    /*margin: 25.5px 51px;*/
 }
 
 #brand-cat-name {
     display: inline-block;
-    margin: 25px;
+    vertical-align: text-top;
+    margin: 0 25px 0 25px;
 }
 
 #topnav{
@@ -148,6 +150,7 @@ h6{
     color: #999;
 	font-size:16px;
 	font-weight:bold;
+    font-size: 106%;
 	padding:10px 10px 8px 10px;
 	display: inline-block;
 }
@@ -184,7 +187,6 @@ h6{
 }
 
 #page-footer-content {
-    width: 75%;
     margin: auto;
 }
 
@@ -198,10 +200,12 @@ h6{
 #page-footer-content strong {
     color: white;
     font-size: 106%;
+    font-weight: normal;
 }
 
 #page-footer-legal {
     border-top: 2px solid grey;
+    font-size: 93%;
 }
 
 #page-footer-legal > ul {
@@ -218,13 +222,14 @@ h6{
     color: #ccc;
 }
 
-.main-logo{
-	float:left;	
+.main-logo img, .main-logo h1 {
+    display: inline-block;
+    vertical-align: text-top;
 }
 
 .main-logo h1
 {
-	margin: 15px 0 0 0;	
+	margin: 10px 0 0 0;	
 }
 
 
@@ -637,7 +642,7 @@ div.split div.right
 
 /* Miscellaneous */
 
-.link { cursor: pointer; color: #C8400E; }
+.link { cursor: pointer; color: #6b2c91; }
 
 .link:hover { text-decoration: underline; }
 

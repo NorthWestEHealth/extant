@@ -350,10 +350,12 @@
     <Content Include="Images\home-dark.png" />
     <Content Include="Images\home-light.png" />
     <Content Include="Images\indicator.gif" />
+    <Content Include="Images\main-logo-no-caption.jpg" />
     <Content Include="Images\mainlogo-no-caption.gif" />
     <Content Include="Images\mainlogo.gif" />
     <Content Include="Images\minus.png" />
     <Content Include="Images\plus.png" />
+    <Content Include="Images\sub-logo-no-caption.png" />
     <Content Include="Images\trash.png" />
     <Content Include="Images\unchecked.png" />
     <Content Include="Scripts\dataitems.js" />
