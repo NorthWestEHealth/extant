@@ -108,7 +108,11 @@ h6{
 
 #header
 {
-	height: 215px;
+
+}
+
+#header-branding {
+    margin: 25px 0px;
 }
 
 #uomlogo {
@@ -190,6 +194,9 @@ h6{
 
 #page-footer-content > div {
     display: inline-block;
+    vertical-align: top;
+    margin: 2% 3%;
+    color: silver;
 }
 
 #page-footer-legal {
@@ -202,6 +209,8 @@ h6{
 
 #page-footer-legal > ul > li {
     display: inline-block;
+    margin: 2px 5px;
+    color: silver;
 }
 
 .main-logo{
