@@ -56,22 +56,22 @@ ul li { padding-bottom: 15px; }
 /************************************** Fonts ********************************************/
 
 body{
-	font-family:arial,verdana,sans-serif;
+	font-family:'Open Sans', sans-serif;
 	font-size:80%;
 	color:#333;
 }
 a{
-	color:#C8400E;
+	color:#6b2c91;
 	text-decoration:none;
 }
-a:hover, a:active, a:focus{
+a:hover, a:active, a:focus {
 	text-decoration:underline;
-	color:#C8400E;
 }
+
 h1{
 	font-size:200%;
 	margin-bottom:15px;
-	color: #C8400E;
+	color: #6b2c91;
 }
 h2{
 	font-size:140%;
@@ -116,21 +116,18 @@ h6{
 }
 
 #uomlogo {
-    display: block;
-    float: left;
+    display: inline-block;
     width: 169px;
     height: 70px;
     /*margin: 25.5px 51px;*/
 }
 
 #brand-cat-name {
-    display: block;
-    float: left;
+    display: inline-block;
     margin: 25px;
 }
 
 #topnav{
-	float:left;
     clear: both;
 	background-color:#fff;
 	width:956px;
@@ -138,30 +135,29 @@ h6{
 }
 
 #topnav ul{
-	float:left;
 	width:945px;
-	margin: 0px 5px;
+	margin: 0px 10px;
 }
 #topnav ul li{
-	float:left;
+	display: inline-block;
 	color:#333;
 	list-style-type:none;
 	padding: 0;
 }
 #topnav ul li a{
+    color: #999;
 	font-size:16px;
 	font-weight:bold;
 	padding:10px 10px 8px 10px;
-	display:block;
+	display: inline-block;
 }
 
-/*
+
 #topnav ul li a:hover, #topnav ul li .active{
-	float:left;
-	color:#fff;
+	color:#333;
 	background:#C8400E;
 }
-*/
+
 
 #topnav ul li.right
 {
@@ -170,9 +166,9 @@ h6{
 
 #topnav ul li a.home {
     width: 18px;
-    margin-left: -100em;
+    text-indent: -100em;
     background-attachment: scroll;
-    background-position: 5px;
+    background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
     background-image: url("/Images/home-light.png");
@@ -196,7 +192,12 @@ h6{
     display: inline-block;
     vertical-align: top;
     margin: 2% 3%;
-    color: silver;
+    color: #aaa;
+}
+
+#page-footer-content strong {
+    color: white;
+    font-size: 106%;
 }
 
 #page-footer-legal {

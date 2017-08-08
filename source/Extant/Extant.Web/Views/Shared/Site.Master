@@ -7,6 +7,7 @@
 <head id="Head1">
     <title><%=ConfigurationManager.AppSettings["OrganisationName"]%> | <%=ConfigurationManager.AppSettings["CatalogueName"]%> | <asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
     <link rel="icon" href="/Images/favicon.ico" type="image/x-icon" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css' />
     <link href="<%: Url.VersionedContent("/Content/site.css") %>" rel="stylesheet" type="text/css" />
     <!--[if IE 6]>
     <link href="<%: Url.VersionedContent("/Content/ie6.css") %>" rel="stylesheet" type="text/css" />
@@ -122,7 +123,7 @@
                     <p>+44 (0) 161 306 6000</p>
                 </div>
                 <div>
-                    <p><strong>Visit Us:</strong></p>
+                    <p><strong>Find Us:</strong></p>
                     <p> UK Research in Musculoskeletal Epidemiology (UK-RiME)<br />
                         Centre for Musculoskeletal Research<br />
                         2nd floor, Stopford Building<br />
@@ -132,7 +133,7 @@
                     </p>
                 </div>
                 <div>
-                    <p><strong>Follow Us:</strong></p>
+                    <p><strong>Connect With Us:</strong></p>
                     <p>Social Media Links</p>
                 </div>
             </div>
