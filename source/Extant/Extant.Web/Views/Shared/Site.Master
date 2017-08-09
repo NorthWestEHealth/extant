@@ -69,13 +69,13 @@
         <div id="header">
             <div id="header-branding">
                 <img title="University of Manchester logo" alt="University of Manchester Logo" id="uomlogo" src="/Images/brand-logo.png" />
-                <div id="brand-cat-name"><h1><%= ConfigurationManager.AppSettings["CatalogueName"] %></h1></div>
+                <div id="brand-cat-name"><h1><%= ConfigurationManager.AppSettings["OrganisationName"] %> <%= ConfigurationManager.AppSettings["CatalogueName"] %></h1></div>
             </div>
             <div id="topnav">
                 <ul>
                     <li><a href="/" class="home">Home</a></li>
-                    <li><a href="/About">About</a></li>
                     <li><a href="/Study/Search">Find a Study</a></li>
+                    <li><a href="/About">About</a></li>
                     <% if ( Request.IsAuthenticated )
                        {%>
                     <li><a href="/Study/New">Add Study</a></li>
@@ -108,7 +108,7 @@
             <div class="main-logo">
                 <img alt="<%=ConfigurationManager.AppSettings["OrganisationName"]%>" src="/Images/main-logo-no-caption.jpg" />
                 <img alt="<%=ConfigurationManager.AppSettings["OrganisationName"]%>" src="/Images/sub-logo-no-caption.png" />
-                <h1><%=ConfigurationManager.AppSettings["CatalogueName"]%></h1>
+                <!--h1><%=ConfigurationManager.AppSettings["CatalogueName"]%></h1 -->
             </div>
         </div>
         <div id="page-body">
@@ -116,12 +116,12 @@
         </div>
         <div id="page-footer">
             <div id="page-footer-content">
-                <div>
+                <div id="contact-main">
                     <p><strong>Contact Us:</strong></p>
                     <p><a href="mailto:CfMR.Enquiries@manchester.ac.uk?subject=UK%2DRIME%20Musculoskeletal%20Catalogue%20of%20Studies">Email Us</a></p>
                     <p>+44 (0) 161 306 6000</p>
                 </div>
-                <div>
+                <div id="mail-address">
                     <p><strong>Find Us:</strong></p>
                     <p> UK Research in Musculoskeletal Epidemiology (UK-RiME)<br />
                         Centre for Musculoskeletal Research<br />
@@ -131,9 +131,12 @@
                         Manchester M13 9PT
                     </p>
                 </div>
-                <div>
+                <div id="social-media">
                     <p><strong>Connect With Us:</strong></p>
-                    <p>Social Media Links</p>
+                    <p>
+                        <a href="https://github.com/ARUKCFE"><img src="../../Images/Logos/GitHub-Mark-Light-32px.png" alt="Github Mark" title="Github" /></a>
+                        <a href="https://twitter.com/UoMMskResearch"><img src="../../Images/Logos/Twitter_Logo_32px.png" alt="Twiter Logo" title="Twitter" /></a>
+                    </p>
                 </div>
             </div>
             <div id="page-footer-legal">

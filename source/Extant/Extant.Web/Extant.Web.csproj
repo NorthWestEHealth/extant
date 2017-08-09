@@ -348,11 +348,13 @@
     <Content Include="Images\delete.png" />
     <Content Include="Images\favicon.ico" />
     <Content Include="Images\find-textbox-bg.gif" />
+    <Content Include="Images\Logos\GitHub-Mark-32px.png" />
     <Content Include="Images\help.png" />
     <Content Include="Images\home-dark.png" />
     <Content Include="Images\home-light.png" />
     <Content Include="Images\icon-search.png" />
     <Content Include="Images\indicator.gif" />
+    <Content Include="Images\Logos\GitHub-Mark-Light-32px.png" />
     <Content Include="Images\main-logo-no-caption.jpg" />
     <Content Include="Images\mainlogo-no-caption.gif" />
     <Content Include="Images\mainlogo.gif" />
@@ -360,6 +362,7 @@
     <Content Include="Images\plus.png" />
     <Content Include="Images\sub-logo-no-caption.png" />
     <Content Include="Images\trash.png" />
+    <Content Include="Images\Logos\Twitter_Logo_32px.png" />
     <Content Include="Images\unchecked.png" />
     <Content Include="Scripts\dataitems.js" />
     <None Include="Properties\PublishProfiles\ExtantFilesystemPublish.pubxml" />
