@@ -5,18 +5,26 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div id="content">
+	<br></br>
+	<h3>Software</h3>
+	<p>The UK-RiME catalogue of musculoskeletal studies (MskSearch) software was originally developed as part of a collaboration between <a href="http://www.arthritisresearchuk.org/">Arthritis Research UK</a>, 
+	<a href="http://research.bmh.manchester.ac.uk/Musculoskeletal/research/CfE/">Arthritis Research UK Centre for Epidemiology</a> and <a href="https://nweh.co.uk/">North West eHealth</a>. Updates to the software have been carried out by Research IT Services at the University of Manchester.
+	The MskSearch catalogue software is available for download from the University of Manchester Research IT Services <a href="https://github.com/UoMResearchIT/extant"> github repository</a> <i class="fa fa-github" style="font-size:36px"></i> under an open source license.   
+	This project was supported by a research grant from <a href="http://www.arthritisresearchuk.org/">Arthritis Research UK</a>.    
+	 </p>
         <h3>Privacy Policy</h3>
-        <p>The UK-RiME Catalogue of Musculoskeletal Studies follows the University of Manchester privacy policy (http://www.manchester.ac.uk/privacy/).  Please note:</p>
-        <p></p>We will only use the information which you supply to us to:</p>
+        <p>The UK-RiME catalogue of musculoskeletal studies (MskSearch) follows the University of Manchester <a href="http://www.manchester.ac.uk/privacy/">privacy policy</a>.</p>
+        <p>We will only use the information which you supply to us to:</p>
         <ul>
             <li>Approve your account.</li>
-            <li>Provide you with and administer your “UK-RiME Catalogue of Musculoskeletal Studies” user account.</li>
+            <li>Provide you with and administer your MskSearch user account.</li>
             <li>(With you consent) provide you with email updates about the catalogue service e.g. scheduled down-time.</li>
         </ul>
-        <p>We will keep your information for a period of up to one year after your account is closed or the system is removed from service.</p>
-        <p>For further information on how your data is used, how we maintain the security of your information and your rights to access information we hold on you please contact xxxx@manchester.ac.uk</p>
-        <p>If you wish to delete your account at any time please contact xxxx@manchester.ac.uk. We will keep your details on record for up to one year, unless you request that your data be deleted.</p>
+        <p>For further information on how your data is used, how we maintain the security of your information and your rights to access information we hold on you, please contact <a href="mailto:kamilla.kopec-harding@manchester.ac.uk">the site administrator</a>. </p>
+        <p>If you wish to delete your account at any time, please contact <a href="mailto:kamilla.kopec-harding@manchester.ac.uk">the site administrator</a>. 
+        We will keep your information for a period of up to one year after your account is closed or the system is removed from service, unless you request that your data be deleted.</p>
         <h3>Upload Guide</h3>
         <p>When creating  a study profile on our site, your may upload additional files to provide supporting information such as a data access policy or study questionnaire(s).</p>
         <p>You must not misuse our site by:</p>

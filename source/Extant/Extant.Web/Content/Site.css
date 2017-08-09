@@ -488,7 +488,7 @@ label.disabled
 
 span.required
 {
-	color: #cc0000;
+	color: #6b2c91;
 	font-weight: bold;
 }
 
@@ -575,7 +575,7 @@ fieldset.withborder
 
 span.help-icon
 {
-	background-color: #C8400E;
+	background-color: #6b2c91;
 	font-weight: bold;
 	color: White;
 	padding: 1px 4px;
