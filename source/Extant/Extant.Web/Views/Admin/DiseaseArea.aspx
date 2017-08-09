@@ -157,9 +157,9 @@ Click for <span class="link" id="help-link">additional help</span>.
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="HeadContent" runat="server">
-    <link href="/Content/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/Content/fancybox/jquery.fancybox.min.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="/Content/dynatree/skin/ui.dynatree.css" rel="stylesheet" type="text/css" media="screen" />
-    <script src="<%: Url.Content("~/Content/fancybox/jquery.fancybox-1.3.4.pack.js") %>" type="text/javascript"></script>
+    <script src="<%: Url.Content("~/Content/fancybox/jquery.fancybox.min.js") %>" type="text/javascript"></script>
     <script src="<%: Url.Content("~/Content/dynatree/jquery.dynatree.min.js") %>" type="text/javascript"></script>
     <script src="<%: Url.Content("~/Scripts/mergesort.js") %>" type="text/javascript"></script>
     <script src="<%: Url.VersionedContent("/Scripts/diseaseareabuilder.js") %>" type="text/javascript"></script>

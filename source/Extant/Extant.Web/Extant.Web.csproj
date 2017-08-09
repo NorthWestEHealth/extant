@@ -252,6 +252,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\fancybox\jquery.fancybox.min.css" />
+    <Content Include="Content\fancybox\jquery.fancybox.min.js" />
     <Content Include="Content\ie7.css" />
     <Content Include="Content\dynatree\jquery.dynatree.min.js" />
     <Content Include="Content\dynatree\skin\icons.gif" />
