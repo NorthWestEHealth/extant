@@ -238,18 +238,18 @@ h6{
 }
 
 .box-orange-border a {
-	color:#C8400E;
+	color:#6b2c91;
 }
 
 .box-orange-border a:hover, a:active, a:focus{
 	text-decoration:underline;
-	color:#C8400E;
+	color:#6b2c91;
 }
 
 .box-orange-border .boxcontent {
 	margin: 0 0 0 0;
 	padding:0 0 10px 0;
-	color:#C8400E;
+	color:#6b2c91;
 }
 .box-orange-border .boxcontent ul {
 	list-style-type:none;
@@ -278,7 +278,7 @@ h6{
 	margin-left: 3.0em;
 }
 .box-orange-border .boxcontent h3{
-	color:#C8400E;
+	color:#6b2c91;
 }
 /*************** END Box 3 *****************/
 
@@ -796,7 +796,8 @@ ul.arrowed li ul li
 
 .pager .current 
 {
-	background-color:#C8400E;
+	background-color:#6b2c91;
+    color: white;
 	border:1px solid #ddd;
 	font-weight:bold;
 	margin-top:4px;

@@ -83,8 +83,8 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="HeadContent" runat="server">
-    <link href="/Content/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" media="screen" />
-    <script src="<%: Url.Content("~/Content/fancybox/jquery.fancybox-1.3.4.pack.js") %>" type="text/javascript"></script>
+    <link href="/Content/fancybox/jquery.fancybox.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <script src="<%: Url.Content("~/Content/fancybox/jquery.fancybox.min.js") %>" type="text/javascript"></script>
     <script src="<%: Url.VersionedContent("~/Scripts/pubmedsearch.js") %>" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {

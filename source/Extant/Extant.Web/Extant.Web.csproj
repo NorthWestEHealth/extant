@@ -280,10 +280,6 @@
     <Content Include="Content\fancybox\fancy_title_main.png" />
     <Content Include="Content\fancybox\fancy_title_over.png" />
     <Content Include="Content\fancybox\fancy_title_right.png" />
-    <Content Include="Content\fancybox\jquery.easing-1.3.pack.js" />
-    <Content Include="Content\fancybox\jquery.fancybox-1.3.4.css" />
-    <Content Include="Content\fancybox\jquery.fancybox-1.3.4.js" />
-    <Content Include="Content\fancybox\jquery.fancybox-1.3.4.pack.js" />
     <Content Include="Content\fancybox\jquery.mousewheel-3.0.4.pack.js" />
     <Content Include="Content\ie6.css" />
     <Content Include="Content\jquery.tooltip.css" />
