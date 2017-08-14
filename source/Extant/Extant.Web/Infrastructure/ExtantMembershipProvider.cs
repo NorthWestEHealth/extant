@@ -34,8 +34,8 @@ namespace Extant.Web.Infrastructure
             maxInvalidPasswordAttempts = Convert.ToInt32(MembershipHelper.GetConfigValue(config["maxInvalidPasswordAttempts"], "5"));
             passwordAttemptWindow = Convert.ToInt32(MembershipHelper.GetConfigValue(config["passwordAttemptWindow"], "10"));
             minRequiredNonAlphanumericCharacters = Convert.ToInt32(MembershipHelper.GetConfigValue(config["minRequiredNonAlphanumericCharacters"], "1"));
-            minRequiredPasswordLength = Convert.ToInt32(MembershipHelper.GetConfigValue(config["minRequiredPasswordLength"], "11"));
-            passwordStrengthRegularExpression = MembershipHelper.GetConfigValue(config["passwordStrengthRegularExpression"], @"(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^+=/?[\].,_~-])(?=.*[0-9].*[0-9])(?!.*\s).{11,16}");
+            minRequiredPasswordLength = Convert.ToInt32(MembershipHelper.GetConfigValue(config["minRequiredPasswordLength"], "10"));
+            passwordStrengthRegularExpression = MembershipHelper.GetConfigValue(config["passwordStrengthRegularExpression"], @"(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^+=/?[\].,_~-])(?=.*[0-9].*[0-9])(?!.*\s).{10,16}");
             
             base.Initialize(name, config);
         }
