@@ -20,6 +20,9 @@ namespace Extant.Web.Models
         [EmailAddress]
         public string Email { get; set; }
 
+        [Required]
+        public string Affiliation { get; set; }
+
         public IEnumerable<int> DiseaseAreas { get; set; }
 
         public bool IsApproved { get; set; }

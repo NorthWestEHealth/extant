@@ -19,6 +19,7 @@
 %>
     <tr id='<%:user.Id %>' class='<%: user.IsApproved ? "approved" : "" %>' >
         <td><%:user.UserName %></td>
+        <td><%:user.Affiliation %></td>
         <td class="email"><a href="mailto:<%:user.Email %>"><%:user.Email %></a>
         <% if (!user.EmailValidated) {%>
             <span class="unvalidated-email"> (unvalidated)</span>

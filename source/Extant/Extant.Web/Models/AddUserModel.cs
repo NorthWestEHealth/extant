@@ -18,6 +18,9 @@ namespace Extant.Web.Models
         [EmailAddress]
         public string Email { get; set; }
 
+        [Required]
+        public string Affiliation { get; set; }
+
         public int[] DiseaseAreas { get; set; }
 
         [Display(Name = "Administrator")]

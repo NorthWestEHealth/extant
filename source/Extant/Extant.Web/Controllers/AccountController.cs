@@ -137,6 +137,7 @@ namespace Extant.Web.Controllers
                     if (createStatus == MembershipCreateStatus.Success)
                     {
                         var newUser = UserRepo.Get((int)membershipUser.ProviderUserKey);
+                        newUser.Affiliation = model.Affiliation;
                         newUser.DiseaseAreas.Add(diseaseArea);
                         newUser.EmailValidated = false;
                         newUser.EmailValidationCode = SaltedHash.GetUrlEncodedBytes(16);

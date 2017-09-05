@@ -56,12 +56,17 @@ namespace Extant.Web.Models
         public string Email { get; set; }
 
         [Required]
+        [Display(Name = "Affiliated Institution")]
+        [HelpText("The institution you are affiliated with; this will help us approve your registration")]
+        public string Affiliation { get; set; }
+
+        [Required]
         [Display(Name = "Disease area")]
         [HelpText("Your primary Disease Area; if you are involved in more than one Disease Area select the one which you work in most of the time")]
         public int DiseaseAreaId { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 10)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
@@ -71,6 +76,12 @@ namespace Extant.Web.Models
         [Display(Name = "Confirm password")]
         [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        
+
+        [RegularExpression("True", ErrorMessage = "Please confirm that you have read and accept the privacy policy.")]
+        [Display(Name = "Accept Policies")]
+        public bool AcceptTerms { get; set; }
 
         public IEnumerable<DiseaseArea> DiseaseAreas { get; set; }
     }

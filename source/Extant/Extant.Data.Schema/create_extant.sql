@@ -404,6 +404,7 @@ alter table UserDiseaseAreas  drop constraint FK5DF97E1724403DF6
        Version INT not null,
        Email NVARCHAR(255) null unique,
        UserName NVARCHAR(255) null,
+       Affiliation NVARCHAR(255) null,
        Password NVARCHAR(255) null,
        Salt NVARCHAR(255) null,
        IsApproved BIT null,

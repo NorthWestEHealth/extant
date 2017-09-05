@@ -14,6 +14,8 @@ namespace Extant.Data.Entities
 
         public virtual string Email { get; set; }
 
+        public virtual string Affiliation { get; set; }
+
         public virtual string Password { get; set; }
 
         public virtual string Salt { get; set; }

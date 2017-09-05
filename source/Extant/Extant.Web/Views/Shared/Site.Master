@@ -70,6 +70,7 @@
             <div id="header-branding">
                 <img title="University of Manchester logo" alt="University of Manchester Logo" id="uomlogo" src="/Images/brand-logo.png" />
                 <div id="brand-cat-name"><h1><%= ConfigurationManager.AppSettings["OrganisationName"] %> <%= ConfigurationManager.AppSettings["CatalogueName"] %></h1></div>
+                <img alt="<%=ConfigurationManager.AppSettings["OrganisationName"]%>" id="orglogo" src="/Images/main-logo-no-caption.jpg" />
             </div>
             <div id="topnav">
                 <ul>
@@ -104,11 +105,6 @@
                         }
                     %>
                 </ul>
-            </div>
-            <div class="main-logo">
-                <img alt="<%=ConfigurationManager.AppSettings["OrganisationName"]%>" src="/Images/main-logo-no-caption.jpg" />
-                <img alt="<%=ConfigurationManager.AppSettings["OrganisationName"]%>" src="/Images/sub-logo-no-caption.png" />
-                <!--h1><%=ConfigurationManager.AppSettings["CatalogueName"]%></h1 -->
             </div>
         </div>
         <div id="page-body">

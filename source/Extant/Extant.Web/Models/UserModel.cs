@@ -19,6 +19,10 @@ namespace Extant.Web.Models
         [Display(Name = "Email address")]
         public string Email { get; set; }
 
+        [Required]
+        [Display(Name = "Affiliated Organisation")]
+        public string Affiliation { get; set; }
+
         public IEnumerable<int> DiseaseAreas { get; set; }
 
         public IEnumerable<DiseaseAreaBasicModel> AllDiseaseAreas { get; set; }

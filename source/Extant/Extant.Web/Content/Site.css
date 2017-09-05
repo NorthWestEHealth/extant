@@ -128,6 +128,14 @@ h6{
     margin: 0 25px 0 25px;
 }
 
+#orglogo {
+    display: inline-block;
+    vertical-align: text-top;
+    width: 132px;
+    height: 68px;
+    float: right;
+}
+
 #topnav{
     clear: both;
 	background-color:#fff;
@@ -150,7 +158,7 @@ h6{
 	font-size:16px;
 	font-weight:bold;
     font-size: 106%;
-	padding:10px 10px 8px 10px;
+	padding:10px 5px 8px 5px;
 	display: inline-block;
 }
 
@@ -928,6 +936,7 @@ div#home-search-bottom
     margin: 0 16px 16px;
     border: 1px solid #999;
     border-radius: 4px;
+    padding: 1px;
 }
 
 div#home-search-bottom .home-search-button{

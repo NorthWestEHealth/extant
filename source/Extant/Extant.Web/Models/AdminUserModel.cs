@@ -15,6 +15,8 @@ namespace Extant.Web.Models
 
         public virtual string Email { get; set; }
 
+        public virtual string Affiliation { get; set; }
+
         public virtual bool IsApproved { get; set; }
 
         public virtual bool IsLockedOut { get; set; }
