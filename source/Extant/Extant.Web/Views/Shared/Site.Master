@@ -57,6 +57,13 @@
                 delay: 0
             });
             $('#tooltip').bgiframe();
+            <% if (Request.Cookies["AcceptCookieNotice"] == null) { %>
+            $('#acceptcookies').on('click', function (e) {
+                 e.preventDefault();
+                 document.cookie = "AcceptCookieNotice=TRUE; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+                $("#cookienotice").css("display", "none");
+            });
+            <% } %>
             <% if (HttpContext.Current.User.Identity.IsAuthenticated) { %>
             loginCountDown();
             <% } %>
@@ -65,6 +72,9 @@
     <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
 </head>
 <body>
+<% if (Request.Cookies["AcceptCookieNotice"] == null) { %>
+    <div id="cookienotice"><span><strong>This site uses cookies to remember your preferences and keep you logged in. We do not track your activities on this site using cookies.</strong></span><span id="cookielinks"><a href="http://www.manchester.ac.uk/privacy/" target="_blank">More Info</a><a href="#" id="acceptcookies">OK</a></span></div>
+<% } %>
     <div id="wrapper">
         <div id="header">
             <div id="header-branding">
@@ -77,6 +87,7 @@
                     <li><a href="/" class="home">Home</a></li>
                     <li><a href="/Study/Search">Find a Study</a></li>
                     <li><a href="/About">About</a></li>
+                    <li><a href="/Terms">Terms &amp; Conditions and Privacy</a></li>
                     <% if ( Request.IsAuthenticated )
                        {%>
                     <li><a href="/Study/New">Add Study</a></li>
@@ -120,7 +131,6 @@
                 <div id="mail-address">
                     <p><strong>Find Us:</strong></p>
                     <p> UK Research in Musculoskeletal Epidemiology (UK-RiME)<br />
-                        Centre for Musculoskeletal Research<br />
                         2nd floor, Stopford Building<br />
                         The University of Manchester<br />
                         Oxford Road<br />

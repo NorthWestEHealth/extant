@@ -104,6 +104,38 @@ h6{
 	color: #333;
 }
 
+/*************************************** cookie notice ***********************************/
+
+#cookienotice {
+    width: 100%;
+    height: 2em;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(51,52,52,0.75);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#cookienotice span {
+    display: inline-block;
+}
+
+#cookielinks {
+    width: 200px;
+}
+
+#cookielinks a {
+    display: inline-block;
+    background-color: white;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 2px 5px;
+    text-align: center;
+    text-decoration: underline;
+}
+
 /************************************** Header Components ***************************************/
 
 #header

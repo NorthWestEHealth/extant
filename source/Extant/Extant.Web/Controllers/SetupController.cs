@@ -42,7 +42,9 @@ namespace Extant.Web.Controllers
 
             Roles.CreateRole(Constants.AdministratorRole);
             Roles.AddUserToRole(admin.Email, Constants.AdministratorRole);
-            
+
+            Roles.CreateRole(Constants.HubLeadRole);
+
             // merge settings into web.config
             appsettings.Merge("OrganisationName", model.OrganisationName);
             appsettings.Merge("CatalogueName", model.CatalogueName);

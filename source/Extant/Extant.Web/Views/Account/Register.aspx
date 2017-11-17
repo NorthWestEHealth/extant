@@ -11,20 +11,19 @@
     <p>
         Use the form below to create a new account. 
     </p>
-    <p>
-        <span>Passwords must adhere to the University of Manchester's complexity standards:</span>
+    <p>Passwords must adhere to the University of Manchester's complexity standards:</p>
         <ul style="font-style: italic;">
             <li>between 10 and 16 characters in length</li>
-            <li>contain at least:</li>
+            <li>contain at least:
                 <ul>
                     <li>one lower case letter</li>
                     <li>one UPPER CASE letter</li>
                     <li>one numeral (0-9)</li>
                     <li>one special character from the range: <strong>! @ # $ % ^ & + = / ? [ ] . , _ ~ -</strong></li>
                 </ul>
+            </li>
         </ul>
-        <strong>You must not use the same password as your UoM Central IT password (or equivalent if from another institution).</strong>
-    </p>
+        <p><strong>You must not use the same password as your UoM Central IT password (or equivalent if from another institution).</strong></p>
 
     <% using (Html.BeginForm(null, null, FormMethod.Post, new { @autocomplete = "off" })){ %>
         <%: Html.ValidationSummary(true, "Account creation was unsuccessful. Please correct the errors and try again.") %>
@@ -36,7 +35,7 @@
             <div class="form-row"><em>If you are involved in multiple disease areas please select the one which you work in most of the time</em></div>
             <%: Html.LabelValidationAndPasswordFor(m => m.Password, new { @class = "login" }, true)%>
             <%: Html.LabelValidationAndPasswordFor(m => m.ConfirmPassword, new { @class = "login" }, true)%>
-            <%: Html.LabelValidationAndYesNoRadioFor(m => m.AcceptTerms) %> <span style="font-style: italic;">I confirm that I have read and understand the <a href="http://www.manchester.ac.uk/privacy">privacy policy</a> and agree to terms therein.</span>
+            <%: Html.LabelValidationAndYesNoRadioFor(m => m.AcceptTerms) %> <span style="font-style: italic;">I confirm that I have read and understand the <a href="/Terms">terms &amp; conditions and privacy page</a> and agree to the terms therein.</span>
                 
             <div class="form-row">
                 <button type="submit">Register</button>

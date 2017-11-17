@@ -51,7 +51,7 @@ namespace Extant.Web.Controllers
         {
             var study = StudyRepo.Get(_id);
             var model = Mapper.Map<Study, StudyIndexModel>(study);
-            model.CanEdit = UserRepo.CanEditStudy(_id, user.Identity.Name, Constants.HubLeadRole);
+            model.CanEdit = UserRepo.CanEditStudy(_id, user.Identity.Name, Constants.HubLeadRole) || User.IsInRole(Constants.AdministratorRole);
             return View(model);
         }
 

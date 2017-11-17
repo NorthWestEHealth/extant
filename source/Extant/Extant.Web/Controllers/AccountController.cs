@@ -188,7 +188,7 @@ namespace Extant.Web.Controllers
             {
                 user.EmailValidated = true;
 
-                var autoApprove = Regex.IsMatch(user.Email, @"(\.ac\.uk|\.nhs\.net|\.nhs\.uk)$", RegexOptions.IgnoreCase);
+                var autoApprove = false; // autoapproval temporarily removed pending admin decision re: suitabiloty. // Regex.IsMatch(user.Email, @"(\.ac\.uk|\.nhs\.net|\.nhs\.uk)$", RegexOptions.IgnoreCase);
                 if (autoApprove)
                 {
                     user.IsApproved = true;
@@ -211,7 +211,9 @@ namespace Extant.Web.Controllers
                     foreach (var toEmail in UserRepo.GetEmailsForRegistrationNotification(diseaseArea.Id))
                     {
                         Mailer.Send(toEmail.Email, subject, body);
-                    }                    
+                    }
+
+                    UserRepo.GetUsersInRole(Constants.AdministratorRole).ToList().ForEach(u => Mailer.Send(u.Email, subject, body));
                 }
 
                 UserRepo.Save(user);

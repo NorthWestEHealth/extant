@@ -423,6 +423,7 @@
     <Content Include="Views\Admin\Users.aspx" />
     <Content Include="Views\Home\About.aspx" />
     <Content Include="Views\Home\Contact.aspx" />
+    <Content Include="Views\Home\Terms.aspx" />
     <Content Include="Views\Pubmed\PubmedResult.ascx" />
     <Content Include="Views\Setup\Complete.aspx" />
     <Content Include="Views\Setup\Index.aspx" />

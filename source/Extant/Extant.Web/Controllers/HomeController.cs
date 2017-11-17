@@ -42,5 +42,10 @@ namespace Extant.Web.Controllers
         public ActionResult ContactUs() {
             return View("Contact");
         }
+
+        [Route("Terms")]
+        public ActionResult Terms() {
+            return View();
+        }
     }
 }

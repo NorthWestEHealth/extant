@@ -31,13 +31,13 @@
                 <dd><%= m.Document.ToString() %> 
                     <form class="doc-preview" target="_blank" action="/Admin/Preview" method="get">
                         <input type="hidden" name="StudyId" value="<%= m.StudyId %>" />
-                        <input type="hidden" name="DocumentType" value="<%= m.Document %>" />
+                        <input type="hidden" name="Type" value="<%= m.Document %>" />
                         <% if (m.Document == DocumentApprovalModel.DocumentType.AdditionalDocument) { %><input type="hidden" name="FileName" value="<%= m.DocumentDetails.FileName %>" /><% } %>
                         <input type="submit" name="submit" value="Preview" />
                     </form>
                     <form class="doc-approve">
                         <input type="hidden" name="StudyId" value="<%= m.StudyId %>" />
-                        <input type="hidden" name="DocumentType" value="<%= m.Document %>" />
+                        <input type="hidden" name="Type" value="<%= m.Document %>" />
                         <% if (m.Document == DocumentApprovalModel.DocumentType.AdditionalDocument) { %><input type="hidden" name="FileName" value="<%= m.DocumentDetails.FileName %>" /><% } %>
                         <input type="submit" name="submit" value="Approve" />
                     </form>
