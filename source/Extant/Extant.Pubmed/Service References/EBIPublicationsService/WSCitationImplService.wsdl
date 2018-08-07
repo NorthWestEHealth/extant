@@ -2,7 +2,13 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://webservice.cdb.ebi.ac.uk/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WSCitationImplService" targetNamespace="http://webservice.cdb.ebi.ac.uk/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://www.ebi.ac.uk:80/europepmc/webservices/soap?xsd=1" namespace="http://webservice.cdb.ebi.ac.uk/" />
+      <xsd:import schemaLocation="https://www.ebi.ac.uk:443/europepmc/webservices/soap?xsd=1" namespace="https://www.europepmc.org/data" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://www.ebi.ac.uk:443/europepmc/webservices/soap?xsd=2" namespace="http://www.scholix.org" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://www.ebi.ac.uk:443/europepmc/webservices/soap?xsd=3" namespace="http://webservice.cdb.ebi.ac.uk/" />
     </xsd:schema>
   </types>
   <message name="searchPublications">
@@ -74,6 +80,12 @@
   <message name="getLabsLinksResponse">
     <part name="parameters" element="tns:getLabsLinksResponse" />
   </message>
+  <message name="getDataLinks">
+    <part name="parameters" element="tns:getDataLinks" />
+  </message>
+  <message name="getDataLinksResponse">
+    <part name="parameters" element="tns:getDataLinksResponse" />
+  </message>
   <portType name="WSCitationImpl">
     <operation name="searchPublications">
       <input wsam:Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/searchPublicationsRequest" message="tns:searchPublications" />
@@ -129,6 +141,11 @@
       <input wsam:Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getLabsLinksRequest" message="tns:getLabsLinks" />
       <output wsam:Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getLabsLinksResponse" message="tns:getLabsLinksResponse" />
       <fault wsam:Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getLabsLinks/Fault/QueryException" name="QueryException" message="tns:QueryException" />
+    </operation>
+    <operation name="getDataLinks">
+      <input wsam:Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getDataLinksRequest" message="tns:getDataLinks" />
+      <output wsam:Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getDataLinksResponse" message="tns:getDataLinksResponse" />
+      <fault wsam:Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getDataLinks/Fault/QueryException" name="QueryException" message="tns:QueryException" />
     </operation>
   </portType>
   <binding name="WSCitationImplPortBinding" type="tns:WSCitationImpl">
@@ -265,10 +282,22 @@
         <soap:fault use="literal" name="QueryException" namespace="" />
       </fault>
     </operation>
+    <operation name="getDataLinks">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="QueryException">
+        <soap:fault use="literal" name="QueryException" namespace="" />
+      </fault>
+    </operation>
   </binding>
   <service name="WSCitationImplService">
     <port name="WSCitationImplPort" binding="tns:WSCitationImplPortBinding">
-      <soap:address location="http://www.ebi.ac.uk:80/europepmc/webservices/soap" />
+      <soap:address location="https://www.ebi.ac.uk:443/europepmc/webservices/soap" />
     </port>
   </service>
 </definitions>

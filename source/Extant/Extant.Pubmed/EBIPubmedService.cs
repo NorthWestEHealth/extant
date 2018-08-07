@@ -28,7 +28,7 @@ namespace Extant.Pubmed
 
         // default client search values
         private string dResultType = "core", dSort = "", dEmail = "", dCusorMark = "*";
-        private bool dUseSynonyms = true;
+        private string dUseSynonyms = true.ToString();
 
 
         public EBIPubmedService()
@@ -54,7 +54,7 @@ namespace Extant.Pubmed
 
             RefreshCache(term); // treat request for single publication as new query to be cached for future reference.
 
-            responseWrapper results = client.searchPublications(term, dResultType, dCusorMark, "1", dSort, false, dEmail);
+            responseWrapper results = client.searchPublications(term, dResultType, dCusorMark, "1", dSort, "false", dEmail);
 
             if (results.hitCount == 0) return null;
             if (results.hitCount > 1) throw new ArgumentException("Pubmed ID is not unique; please recheck value and try again.");

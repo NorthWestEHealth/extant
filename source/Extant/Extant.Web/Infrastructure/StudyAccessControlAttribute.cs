@@ -62,7 +62,7 @@ namespace Extant.Web.Infrastructure
         protected bool IsOwnerOrHubLead(StudyRequest request)
         {
             var userRepo = (IUserRepository) DependencyResolver.Current.GetService(typeof(IUserRepository));
-            return userRepo.CanEditStudy(request.StudyId, request.Username, HubLeadRole);
+            return userRepo.CanEditStudy(request.StudyId, request.Username, HubLeadRole) || request.IsAdministrator;
         }
 
         protected override HttpValidationStatus OnCacheAuthorization(HttpContextBase httpContext)

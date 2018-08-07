@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="eab29e06-bda9-4b68-af05-f916d1d99bf0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a8aff67f-503f-4e1b-848f-c2dc1d8a1b86" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,12 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://www.ebi.ac.uk/europepmc/webservices/soap?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://www.ebi.ac.uk/europepmc/webservices/soap?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="soap.xsd" MetadataType="Schema" ID="a00c6a72-2a9f-4dd8-b13f-a653205c3c90" SourceId="1" SourceUrl="http://www.ebi.ac.uk/europepmc/webservices/soap?xsd=1" />
-    <MetadataFile FileName="WSCitationImplService.wsdl" MetadataType="Wsdl" ID="0013f2d3-fd59-4140-897b-eb581ff64c3d" SourceId="1" SourceUrl="http://www.ebi.ac.uk/europepmc/webservices/soap?wsdl" />
-    <MetadataFile FileName="swaref.xsd" MetadataType="Schema" ID="d5492033-eea3-4ad9-a715-de414077c989" SourceId="1" SourceUrl="http://ws-i.org/profiles/basic/1.1/swaref.xsd" />
+    <MetadataFile FileName="WSCitationImplService.wsdl" MetadataType="Wsdl" ID="b5fb6e3f-5092-4c3d-a03f-f6149893a7ca" SourceId="1" SourceUrl="https://www.ebi.ac.uk/europepmc/webservices/soap?wsdl" />
+    <MetadataFile FileName="swaref.xsd" MetadataType="Schema" ID="a9c3cab2-fbbc-4aec-874c-ddbd7ef71412" SourceId="1" SourceUrl="http://ws-i.org/profiles/basic/1.1/swaref.xsd" />
+    <MetadataFile FileName="soap.xsd" MetadataType="Schema" ID="19f5492f-9d5c-4f29-8da9-f1aee4773ab3" SourceId="1" SourceUrl="https://www.ebi.ac.uk/europepmc/webservices/soap?xsd=1" />
+    <MetadataFile FileName="soap1.xsd" MetadataType="Schema" ID="f4efb97a-cdad-4f19-a5b2-915778e98385" SourceId="1" SourceUrl="https://www.ebi.ac.uk/europepmc/webservices/soap?xsd=2" />
+    <MetadataFile FileName="soap2.xsd" MetadataType="Schema" ID="65ecf3aa-9f1f-4b88-8fc3-ccf4e31e33c3" SourceId="1" SourceUrl="https://www.ebi.ac.uk/europepmc/webservices/soap?xsd=3" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

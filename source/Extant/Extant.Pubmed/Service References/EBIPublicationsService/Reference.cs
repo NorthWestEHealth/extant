@@ -12,7 +12,7 @@ namespace Extant.Pubmed.EBIPublicationsService {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44,33 +44,1669 @@ namespace Extant.Pubmed.EBIPublicationsService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://www.europepmc.org/data")]
+    public partial class Section : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string obtainedByField;
+        
+        private string[] tagsField;
+        
+        private int sectionLinkCountField;
+        
+        private bool sectionLinkCountFieldSpecified;
+        
+        private Link[] linklistField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string ObtainedBy {
+            get {
+                return this.obtainedByField;
+            }
+            set {
+                this.obtainedByField = value;
+                this.RaisePropertyChanged("ObtainedBy");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("Tag", IsNullable=false)]
+        public string[] Tags {
+            get {
+                return this.tagsField;
+            }
+            set {
+                this.tagsField = value;
+                this.RaisePropertyChanged("Tags");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public int SectionLinkCount {
+            get {
+                return this.sectionLinkCountField;
+            }
+            set {
+                this.sectionLinkCountField = value;
+                this.RaisePropertyChanged("SectionLinkCount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SectionLinkCountSpecified {
+            get {
+                return this.sectionLinkCountFieldSpecified;
+            }
+            set {
+                this.sectionLinkCountFieldSpecified = value;
+                this.RaisePropertyChanged("SectionLinkCountSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://www.scholix.org", IsNullable=false)]
+        public Link[] Linklist {
+            get {
+                return this.linklistField;
+            }
+            set {
+                this.linklistField = value;
+                this.RaisePropertyChanged("Linklist");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.scholix.org")]
+    public partial class Link : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string obtainedByField;
+        
+        private string publicationDateField;
+        
+        private linkProvider linkProviderField;
+        
+        private RelationshipType relationshipTypeField;
+        
+        private dataLinkedElement sourceField;
+        
+        private dataLinkedElement targetField;
+        
+        private int frequencyField;
+        
+        private bool frequencyFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string ObtainedBy {
+            get {
+                return this.obtainedByField;
+            }
+            set {
+                this.obtainedByField = value;
+                this.RaisePropertyChanged("ObtainedBy");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string PublicationDate {
+            get {
+                return this.publicationDateField;
+            }
+            set {
+                this.publicationDateField = value;
+                this.RaisePropertyChanged("PublicationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public linkProvider LinkProvider {
+            get {
+                return this.linkProviderField;
+            }
+            set {
+                this.linkProviderField = value;
+                this.RaisePropertyChanged("LinkProvider");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public RelationshipType RelationshipType {
+            get {
+                return this.relationshipTypeField;
+            }
+            set {
+                this.relationshipTypeField = value;
+                this.RaisePropertyChanged("RelationshipType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public dataLinkedElement Source {
+            get {
+                return this.sourceField;
+            }
+            set {
+                this.sourceField = value;
+                this.RaisePropertyChanged("Source");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public dataLinkedElement Target {
+            get {
+                return this.targetField;
+            }
+            set {
+                this.targetField = value;
+                this.RaisePropertyChanged("Target");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="https://www.europepmc.org/data", Order=6)]
+        public int Frequency {
+            get {
+                return this.frequencyField;
+            }
+            set {
+                this.frequencyField = value;
+                this.RaisePropertyChanged("Frequency");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool FrequencySpecified {
+            get {
+                return this.frequencyFieldSpecified;
+            }
+            set {
+                this.frequencyFieldSpecified = value;
+                this.RaisePropertyChanged("FrequencySpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.scholix.org")]
+    public partial class linkProvider : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string nameField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.scholix.org")]
+    public partial class RelationshipType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string nameField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.scholix.org")]
+    public partial class dataLinkedElement : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private dataLinkObjectType typeField;
+        
+        private dataLinkIdentifier identifierField;
+        
+        private string titleField;
+        
+        private objectPublisher publisherField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public dataLinkObjectType Type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+                this.RaisePropertyChanged("Type");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public dataLinkIdentifier Identifier {
+            get {
+                return this.identifierField;
+            }
+            set {
+                this.identifierField = value;
+                this.RaisePropertyChanged("Identifier");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Title {
+            get {
+                return this.titleField;
+            }
+            set {
+                this.titleField = value;
+                this.RaisePropertyChanged("Title");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public objectPublisher Publisher {
+            get {
+                return this.publisherField;
+            }
+            set {
+                this.publisherField = value;
+                this.RaisePropertyChanged("Publisher");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.scholix.org")]
+    public partial class dataLinkObjectType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string nameField;
+        
+        private string subTypeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string SubType {
+            get {
+                return this.subTypeField;
+            }
+            set {
+                this.subTypeField = value;
+                this.RaisePropertyChanged("SubType");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.scholix.org")]
+    public partial class dataLinkIdentifier : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string idField;
+        
+        private string iDSchemeField;
+        
+        private string iDURLField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string ID {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("ID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string IDScheme {
+            get {
+                return this.iDSchemeField;
+            }
+            set {
+                this.iDSchemeField = value;
+                this.RaisePropertyChanged("IDScheme");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string IDURL {
+            get {
+                return this.iDURLField;
+            }
+            set {
+                this.iDURLField = value;
+                this.RaisePropertyChanged("IDURL");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://www.europepmc.org/data")]
+    public partial class objectPublisher : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string nameField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.scholix.org", Order=0)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://www.europepmc.org/data")]
+    public partial class Category : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string nameField;
+        
+        private string[] tagsField;
+        
+        private int categoryLinkCountField;
+        
+        private bool categoryLinkCountFieldSpecified;
+        
+        private Section[] sectionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("Tag", IsNullable=false)]
+        public string[] Tags {
+            get {
+                return this.tagsField;
+            }
+            set {
+                this.tagsField = value;
+                this.RaisePropertyChanged("Tags");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public int CategoryLinkCount {
+            get {
+                return this.categoryLinkCountField;
+            }
+            set {
+                this.categoryLinkCountField = value;
+                this.RaisePropertyChanged("CategoryLinkCount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool CategoryLinkCountSpecified {
+            get {
+                return this.categoryLinkCountFieldSpecified;
+            }
+            set {
+                this.categoryLinkCountFieldSpecified = value;
+                this.RaisePropertyChanged("CategoryLinkCountSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Section", Order=3)]
+        public Section[] Section {
+            get {
+                return this.sectionField;
+            }
+            set {
+                this.sectionField = value;
+                this.RaisePropertyChanged("Section");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class labsLinks : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class getDatabaseLinksResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string imgUrlField;
-        
-        private string titleField;
-        
-        private string urlField;
+        private responseWrapper returnField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string imgUrl {
+        public responseWrapper @return {
             get {
-                return this.imgUrlField;
+                return this.returnField;
             }
             set {
-                this.imgUrlField = value;
-                this.RaisePropertyChanged("imgUrl");
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class responseWrapper : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string versionField;
+        
+        private int hitCountField;
+        
+        private bool hitCountFieldSpecified;
+        
+        private string nextCursorMarkField;
+        
+        private request requestField;
+        
+        private profileListBean profileListField;
+        
+        private result[] resultListField;
+        
+        private dbCounts[] dbCountListField;
+        
+        private dbCrossReference[] dbCrossReferenceListField;
+        
+        private CitationData[] citationListField;
+        
+        private referenceInfo[] referenceListField;
+        
+        private semanticCounts[] semanticTypeCountListField;
+        
+        private minedTerms[] semanticTypeListField;
+        
+        private SearchTerm[] searchTermListField;
+        
+        private labsProviderCounts[] linksCountListField;
+        
+        private labsProvider[] providersField;
+        
+        private Category[] dataLinkListField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string version {
+            get {
+                return this.versionField;
+            }
+            set {
+                this.versionField = value;
+                this.RaisePropertyChanged("version");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int hitCount {
+            get {
+                return this.hitCountField;
+            }
+            set {
+                this.hitCountField = value;
+                this.RaisePropertyChanged("hitCount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool hitCountSpecified {
+            get {
+                return this.hitCountFieldSpecified;
+            }
+            set {
+                this.hitCountFieldSpecified = value;
+                this.RaisePropertyChanged("hitCountSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string nextCursorMark {
+            get {
+                return this.nextCursorMarkField;
+            }
+            set {
+                this.nextCursorMarkField = value;
+                this.RaisePropertyChanged("nextCursorMark");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public request request {
+            get {
+                return this.requestField;
+            }
+            set {
+                this.requestField = value;
+                this.RaisePropertyChanged("request");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public profileListBean profileList {
+            get {
+                return this.profileListField;
+            }
+            set {
+                this.profileListField = value;
+                this.RaisePropertyChanged("profileList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public result[] resultList {
+            get {
+                return this.resultListField;
+            }
+            set {
+                this.resultListField = value;
+                this.RaisePropertyChanged("resultList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("db", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public dbCounts[] dbCountList {
+            get {
+                return this.dbCountListField;
+            }
+            set {
+                this.dbCountListField = value;
+                this.RaisePropertyChanged("dbCountList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public dbCrossReference[] dbCrossReferenceList {
+            get {
+                return this.dbCrossReferenceListField;
+            }
+            set {
+                this.dbCrossReferenceListField = value;
+                this.RaisePropertyChanged("dbCrossReferenceList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("citation", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CitationData[] citationList {
+            get {
+                return this.citationListField;
+            }
+            set {
+                this.citationListField = value;
+                this.RaisePropertyChanged("citationList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("reference", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public referenceInfo[] referenceList {
+            get {
+                return this.referenceListField;
+            }
+            set {
+                this.referenceListField = value;
+                this.RaisePropertyChanged("referenceList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("semanticType", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public semanticCounts[] semanticTypeCountList {
+            get {
+                return this.semanticTypeCountListField;
+            }
+            set {
+                this.semanticTypeCountListField = value;
+                this.RaisePropertyChanged("semanticTypeCountList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("semanticType", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public minedTerms[] semanticTypeList {
+            get {
+                return this.semanticTypeListField;
+            }
+            set {
+                this.semanticTypeListField = value;
+                this.RaisePropertyChanged("semanticTypeList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("searchTerms", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SearchTerm[] searchTermList {
+            get {
+                return this.searchTermListField;
+            }
+            set {
+                this.searchTermListField = value;
+                this.RaisePropertyChanged("searchTermList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("provider", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public labsProviderCounts[] linksCountList {
+            get {
+                return this.linksCountListField;
+            }
+            set {
+                this.linksCountListField = value;
+                this.RaisePropertyChanged("linksCountList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("provider", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public labsProvider[] providers {
+            get {
+                return this.providersField;
+            }
+            set {
+                this.providersField = value;
+                this.RaisePropertyChanged("providers");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="https://www.europepmc.org/data", IsNullable=false)]
+        public Category[] dataLinkList {
+            get {
+                return this.dataLinkListField;
+            }
+            set {
+                this.dataLinkListField = value;
+                this.RaisePropertyChanged("dataLinkList");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class request : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string queryStringField;
+        
+        private string internalQueryField;
+        
+        private string resultTypeField;
+        
+        private string profileTypeField;
+        
+        private string idField;
+        
+        private string sourceField;
+        
+        private string categoryField;
+        
+        private string tagsField;
+        
+        private string obtainedByField;
+        
+        private string fromDateField;
+        
+        private int pageField;
+        
+        private bool pageFieldSpecified;
+        
+        private int sectionLimitField;
+        
+        private bool sectionLimitFieldSpecified;
+        
+        private int offSetField;
+        
+        private bool offSetFieldSpecified;
+        
+        private string cursorMarkField;
+        
+        private int pageSizeField;
+        
+        private bool pageSizeFieldSpecified;
+        
+        private string sortField;
+        
+        private string databaseField;
+        
+        private string semanticTypeField;
+        
+        private bool synonymField;
+        
+        private bool synonymFieldSpecified;
+        
+        private bool inlineImagesField;
+        
+        private bool inlineImagesFieldSpecified;
+        
+        private string emailField;
+        
+        private string providerIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string queryString {
+            get {
+                return this.queryStringField;
+            }
+            set {
+                this.queryStringField = value;
+                this.RaisePropertyChanged("queryString");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string internalQuery {
+            get {
+                return this.internalQueryField;
+            }
+            set {
+                this.internalQueryField = value;
+                this.RaisePropertyChanged("internalQuery");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string resultType {
+            get {
+                return this.resultTypeField;
+            }
+            set {
+                this.resultTypeField = value;
+                this.RaisePropertyChanged("resultType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string profileType {
+            get {
+                return this.profileTypeField;
+            }
+            set {
+                this.profileTypeField = value;
+                this.RaisePropertyChanged("profileType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string source {
+            get {
+                return this.sourceField;
+            }
+            set {
+                this.sourceField = value;
+                this.RaisePropertyChanged("source");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string category {
+            get {
+                return this.categoryField;
+            }
+            set {
+                this.categoryField = value;
+                this.RaisePropertyChanged("category");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string tags {
+            get {
+                return this.tagsField;
+            }
+            set {
+                this.tagsField = value;
+                this.RaisePropertyChanged("tags");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string obtainedBy {
+            get {
+                return this.obtainedByField;
+            }
+            set {
+                this.obtainedByField = value;
+                this.RaisePropertyChanged("obtainedBy");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public string fromDate {
+            get {
+                return this.fromDateField;
+            }
+            set {
+                this.fromDateField = value;
+                this.RaisePropertyChanged("fromDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public int page {
+            get {
+                return this.pageField;
+            }
+            set {
+                this.pageField = value;
+                this.RaisePropertyChanged("page");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool pageSpecified {
+            get {
+                return this.pageFieldSpecified;
+            }
+            set {
+                this.pageFieldSpecified = value;
+                this.RaisePropertyChanged("pageSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public int sectionLimit {
+            get {
+                return this.sectionLimitField;
+            }
+            set {
+                this.sectionLimitField = value;
+                this.RaisePropertyChanged("sectionLimit");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool sectionLimitSpecified {
+            get {
+                return this.sectionLimitFieldSpecified;
+            }
+            set {
+                this.sectionLimitFieldSpecified = value;
+                this.RaisePropertyChanged("sectionLimitSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public int offSet {
+            get {
+                return this.offSetField;
+            }
+            set {
+                this.offSetField = value;
+                this.RaisePropertyChanged("offSet");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool offSetSpecified {
+            get {
+                return this.offSetFieldSpecified;
+            }
+            set {
+                this.offSetFieldSpecified = value;
+                this.RaisePropertyChanged("offSetSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        public string cursorMark {
+            get {
+                return this.cursorMarkField;
+            }
+            set {
+                this.cursorMarkField = value;
+                this.RaisePropertyChanged("cursorMark");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
+        public int pageSize {
+            get {
+                return this.pageSizeField;
+            }
+            set {
+                this.pageSizeField = value;
+                this.RaisePropertyChanged("pageSize");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool pageSizeSpecified {
+            get {
+                return this.pageSizeFieldSpecified;
+            }
+            set {
+                this.pageSizeFieldSpecified = value;
+                this.RaisePropertyChanged("pageSizeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
+        public string sort {
+            get {
+                return this.sortField;
+            }
+            set {
+                this.sortField = value;
+                this.RaisePropertyChanged("sort");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=16)]
+        public string database {
+            get {
+                return this.databaseField;
+            }
+            set {
+                this.databaseField = value;
+                this.RaisePropertyChanged("database");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=17)]
+        public string semanticType {
+            get {
+                return this.semanticTypeField;
+            }
+            set {
+                this.semanticTypeField = value;
+                this.RaisePropertyChanged("semanticType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=18)]
+        public bool synonym {
+            get {
+                return this.synonymField;
+            }
+            set {
+                this.synonymField = value;
+                this.RaisePropertyChanged("synonym");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool synonymSpecified {
+            get {
+                return this.synonymFieldSpecified;
+            }
+            set {
+                this.synonymFieldSpecified = value;
+                this.RaisePropertyChanged("synonymSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=19)]
+        public bool inlineImages {
+            get {
+                return this.inlineImagesField;
+            }
+            set {
+                this.inlineImagesField = value;
+                this.RaisePropertyChanged("inlineImages");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool inlineImagesSpecified {
+            get {
+                return this.inlineImagesFieldSpecified;
+            }
+            set {
+                this.inlineImagesFieldSpecified = value;
+                this.RaisePropertyChanged("inlineImagesSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=20)]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+                this.RaisePropertyChanged("email");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=21)]
+        public string providerId {
+            get {
+                return this.providerIdField;
+            }
+            set {
+                this.providerIdField = value;
+                this.RaisePropertyChanged("providerId");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class profileListBean : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private profile[] sourceField;
+        
+        private profile[] pubTypeField;
+        
+        private profile[] subsetField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("source", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
+        public profile[] source {
+            get {
+                return this.sourceField;
+            }
+            set {
+                this.sourceField = value;
+                this.RaisePropertyChanged("source");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("pubType", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+        public profile[] pubType {
+            get {
+                return this.pubTypeField;
+            }
+            set {
+                this.pubTypeField = value;
+                this.RaisePropertyChanged("pubType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("subset", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+        public profile[] subset {
+            get {
+                return this.subsetField;
+            }
+            set {
+                this.subsetField = value;
+                this.RaisePropertyChanged("subset");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class profile : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string nameField;
+        
+        private int countField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public int count {
+            get {
+                return this.countField;
+            }
+            set {
+                this.countField = value;
+                this.RaisePropertyChanged("count");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class result : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private object mongoIdField;
+        
+        private request requestField;
+        
+        private int citationIdField;
+        
+        private bool citationIdFieldSpecified;
+        
+        private string idField;
+        
+        private string sourceField;
+        
+        private string pmidField;
+        
+        private string pmcidField;
+        
+        private string doiField;
+        
+        private string titleField;
+        
+        private string authorStringField;
+        
+        private authors[] authorListField;
+        
+        private authors[] investigatorListField;
+        
+        private authorId[] authorIdListField;
+        
+        private journalInfo journalInfoField;
+        
+        private string journalTitleField;
+        
+        private string issueField;
+        
+        private string journalVolumeField;
+        
+        private string pubYearField;
+        
+        private string journalIssnField;
+        
+        private string pageInfoField;
+        
+        private string abstractTextField;
+        
+        private string affiliationField;
+        
+        private string languageField;
+        
+        private string pubModelField;
+        
+        private string pubTypeField;
+        
+        private string[] pubTypeListField;
+        
+        private string brSummaryField;
+        
+        private bookOrReportDetails bookOrReportDetailsField;
+        
+        private patentDetailsInfo patentDetailsField;
+        
+        private grantInfo[] grantsListField;
+        
+        private meshHeadingInfo[] meshHeadingListField;
+        
+        private string[] keywordListField;
+        
+        private chemicalInfo[] chemicalListField;
+        
+        private subSet[] subsetListField;
+        
+        private fullTextURLInfo[] fullTextUrlListField;
+        
+        private commentCorrection[] commentCorrectionListField;
+        
+        private extComment[] extCommentListField;
+        
+        private string isOpenAccessField;
+        
+        private string inEPMCField;
+        
+        private string inPMCField;
+        
+        private int citedByCountField;
+        
+        private bool citedByCountFieldSpecified;
+        
+        private string hasReferencesField;
+        
+        private string hasTextMinedTermsField;
+        
+        private string hasDbCrossReferencesField;
+        
+        private string[] dbCrossReferenceListField;
+        
+        private string hasSupplementaryField;
+        
+        private string hasFullTextXMLField;
+        
+        private string hasPDFField;
+        
+        private string hasBookField;
+        
+        private string bookidField;
+        
+        private string hasSupplField;
+        
+        private string hasLabsLinksField;
+        
+        private string hasDataField;
+        
+        private string licenseField;
+        
+        private string authManField;
+        
+        private string epmcAuthManField;
+        
+        private string nihAuthManField;
+        
+        private string manuscriptIdField;
+        
+        private string hasTMAccessionNumbersField;
+        
+        private string[] tmAccessionTypeListField;
+        
+        private string dateOfCompletionField;
+        
+        private string dateOfCreationField;
+        
+        private string dateOfRevisionField;
+        
+        private string electronicPublicationDateField;
+        
+        private string firstPublicationDateField;
+        
+        private string embargoDateField;
+        
+        private string fullTextField;
+        
+        private string supplementaryFilesField;
+        
+        private string luceneScoreField;
+        
+        private System.DateTime dateUpdatedField;
+        
+        private bool dateUpdatedFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public object mongoId {
+            get {
+                return this.mongoIdField;
+            }
+            set {
+                this.mongoIdField = value;
+                this.RaisePropertyChanged("mongoId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public request request {
+            get {
+                return this.requestField;
+            }
+            set {
+                this.requestField = value;
+                this.RaisePropertyChanged("request");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int citationId {
+            get {
+                return this.citationIdField;
+            }
+            set {
+                this.citationIdField = value;
+                this.RaisePropertyChanged("citationId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool citationIdSpecified {
+            get {
+                return this.citationIdFieldSpecified;
+            }
+            set {
+                this.citationIdFieldSpecified = value;
+                this.RaisePropertyChanged("citationIdSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string source {
+            get {
+                return this.sourceField;
+            }
+            set {
+                this.sourceField = value;
+                this.RaisePropertyChanged("source");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string pmid {
+            get {
+                return this.pmidField;
+            }
+            set {
+                this.pmidField = value;
+                this.RaisePropertyChanged("pmid");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string pmcid {
+            get {
+                return this.pmcidField;
+            }
+            set {
+                this.pmcidField = value;
+                this.RaisePropertyChanged("pmcid");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string doi {
+            get {
+                return this.doiField;
+            }
+            set {
+                this.doiField = value;
+                this.RaisePropertyChanged("doi");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public string title {
             get {
                 return this.titleField;
@@ -82,7 +1718,2219 @@ namespace Extant.Pubmed.EBIPublicationsService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public string authorString {
+            get {
+                return this.authorStringField;
+            }
+            set {
+                this.authorStringField = value;
+                this.RaisePropertyChanged("authorString");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("author", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public authors[] authorList {
+            get {
+                return this.authorListField;
+            }
+            set {
+                this.authorListField = value;
+                this.RaisePropertyChanged("authorList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("investigator", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public authors[] investigatorList {
+            get {
+                return this.investigatorListField;
+            }
+            set {
+                this.investigatorListField = value;
+                this.RaisePropertyChanged("investigatorList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public authorId[] authorIdList {
+            get {
+                return this.authorIdListField;
+            }
+            set {
+                this.authorIdListField = value;
+                this.RaisePropertyChanged("authorIdList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        public journalInfo journalInfo {
+            get {
+                return this.journalInfoField;
+            }
+            set {
+                this.journalInfoField = value;
+                this.RaisePropertyChanged("journalInfo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
+        public string journalTitle {
+            get {
+                return this.journalTitleField;
+            }
+            set {
+                this.journalTitleField = value;
+                this.RaisePropertyChanged("journalTitle");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
+        public string issue {
+            get {
+                return this.issueField;
+            }
+            set {
+                this.issueField = value;
+                this.RaisePropertyChanged("issue");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=16)]
+        public string journalVolume {
+            get {
+                return this.journalVolumeField;
+            }
+            set {
+                this.journalVolumeField = value;
+                this.RaisePropertyChanged("journalVolume");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=17)]
+        public string pubYear {
+            get {
+                return this.pubYearField;
+            }
+            set {
+                this.pubYearField = value;
+                this.RaisePropertyChanged("pubYear");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=18)]
+        public string journalIssn {
+            get {
+                return this.journalIssnField;
+            }
+            set {
+                this.journalIssnField = value;
+                this.RaisePropertyChanged("journalIssn");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=19)]
+        public string pageInfo {
+            get {
+                return this.pageInfoField;
+            }
+            set {
+                this.pageInfoField = value;
+                this.RaisePropertyChanged("pageInfo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=20)]
+        public string abstractText {
+            get {
+                return this.abstractTextField;
+            }
+            set {
+                this.abstractTextField = value;
+                this.RaisePropertyChanged("abstractText");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=21)]
+        public string affiliation {
+            get {
+                return this.affiliationField;
+            }
+            set {
+                this.affiliationField = value;
+                this.RaisePropertyChanged("affiliation");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=22)]
+        public string language {
+            get {
+                return this.languageField;
+            }
+            set {
+                this.languageField = value;
+                this.RaisePropertyChanged("language");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=23)]
+        public string pubModel {
+            get {
+                return this.pubModelField;
+            }
+            set {
+                this.pubModelField = value;
+                this.RaisePropertyChanged("pubModel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=24)]
+        public string pubType {
+            get {
+                return this.pubTypeField;
+            }
+            set {
+                this.pubTypeField = value;
+                this.RaisePropertyChanged("pubType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=25)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("pubType", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] pubTypeList {
+            get {
+                return this.pubTypeListField;
+            }
+            set {
+                this.pubTypeListField = value;
+                this.RaisePropertyChanged("pubTypeList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=26)]
+        public string brSummary {
+            get {
+                return this.brSummaryField;
+            }
+            set {
+                this.brSummaryField = value;
+                this.RaisePropertyChanged("brSummary");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=27)]
+        public bookOrReportDetails bookOrReportDetails {
+            get {
+                return this.bookOrReportDetailsField;
+            }
+            set {
+                this.bookOrReportDetailsField = value;
+                this.RaisePropertyChanged("bookOrReportDetails");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=28)]
+        public patentDetailsInfo patentDetails {
+            get {
+                return this.patentDetailsField;
+            }
+            set {
+                this.patentDetailsField = value;
+                this.RaisePropertyChanged("patentDetails");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=29)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("grant", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public grantInfo[] grantsList {
+            get {
+                return this.grantsListField;
+            }
+            set {
+                this.grantsListField = value;
+                this.RaisePropertyChanged("grantsList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=30)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("meshHeading", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public meshHeadingInfo[] meshHeadingList {
+            get {
+                return this.meshHeadingListField;
+            }
+            set {
+                this.meshHeadingListField = value;
+                this.RaisePropertyChanged("meshHeadingList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=31)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("keyword", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] keywordList {
+            get {
+                return this.keywordListField;
+            }
+            set {
+                this.keywordListField = value;
+                this.RaisePropertyChanged("keywordList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=32)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("chemical", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public chemicalInfo[] chemicalList {
+            get {
+                return this.chemicalListField;
+            }
+            set {
+                this.chemicalListField = value;
+                this.RaisePropertyChanged("chemicalList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=33)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("subset", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public subSet[] subsetList {
+            get {
+                return this.subsetListField;
+            }
+            set {
+                this.subsetListField = value;
+                this.RaisePropertyChanged("subsetList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=34)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("fullTextUrl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public fullTextURLInfo[] fullTextUrlList {
+            get {
+                return this.fullTextUrlListField;
+            }
+            set {
+                this.fullTextUrlListField = value;
+                this.RaisePropertyChanged("fullTextUrlList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=35)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public commentCorrection[] commentCorrectionList {
+            get {
+                return this.commentCorrectionListField;
+            }
+            set {
+                this.commentCorrectionListField = value;
+                this.RaisePropertyChanged("commentCorrectionList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=36)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public extComment[] extCommentList {
+            get {
+                return this.extCommentListField;
+            }
+            set {
+                this.extCommentListField = value;
+                this.RaisePropertyChanged("extCommentList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=37)]
+        public string isOpenAccess {
+            get {
+                return this.isOpenAccessField;
+            }
+            set {
+                this.isOpenAccessField = value;
+                this.RaisePropertyChanged("isOpenAccess");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=38)]
+        public string inEPMC {
+            get {
+                return this.inEPMCField;
+            }
+            set {
+                this.inEPMCField = value;
+                this.RaisePropertyChanged("inEPMC");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=39)]
+        public string inPMC {
+            get {
+                return this.inPMCField;
+            }
+            set {
+                this.inPMCField = value;
+                this.RaisePropertyChanged("inPMC");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=40)]
+        public int citedByCount {
+            get {
+                return this.citedByCountField;
+            }
+            set {
+                this.citedByCountField = value;
+                this.RaisePropertyChanged("citedByCount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool citedByCountSpecified {
+            get {
+                return this.citedByCountFieldSpecified;
+            }
+            set {
+                this.citedByCountFieldSpecified = value;
+                this.RaisePropertyChanged("citedByCountSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=41)]
+        public string hasReferences {
+            get {
+                return this.hasReferencesField;
+            }
+            set {
+                this.hasReferencesField = value;
+                this.RaisePropertyChanged("hasReferences");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=42)]
+        public string hasTextMinedTerms {
+            get {
+                return this.hasTextMinedTermsField;
+            }
+            set {
+                this.hasTextMinedTermsField = value;
+                this.RaisePropertyChanged("hasTextMinedTerms");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=43)]
+        public string hasDbCrossReferences {
+            get {
+                return this.hasDbCrossReferencesField;
+            }
+            set {
+                this.hasDbCrossReferencesField = value;
+                this.RaisePropertyChanged("hasDbCrossReferences");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=44)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("dbName", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] dbCrossReferenceList {
+            get {
+                return this.dbCrossReferenceListField;
+            }
+            set {
+                this.dbCrossReferenceListField = value;
+                this.RaisePropertyChanged("dbCrossReferenceList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=45)]
+        public string hasSupplementary {
+            get {
+                return this.hasSupplementaryField;
+            }
+            set {
+                this.hasSupplementaryField = value;
+                this.RaisePropertyChanged("hasSupplementary");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=46)]
+        public string hasFullTextXML {
+            get {
+                return this.hasFullTextXMLField;
+            }
+            set {
+                this.hasFullTextXMLField = value;
+                this.RaisePropertyChanged("hasFullTextXML");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=47)]
+        public string hasPDF {
+            get {
+                return this.hasPDFField;
+            }
+            set {
+                this.hasPDFField = value;
+                this.RaisePropertyChanged("hasPDF");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=48)]
+        public string hasBook {
+            get {
+                return this.hasBookField;
+            }
+            set {
+                this.hasBookField = value;
+                this.RaisePropertyChanged("hasBook");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=49)]
+        public string bookid {
+            get {
+                return this.bookidField;
+            }
+            set {
+                this.bookidField = value;
+                this.RaisePropertyChanged("bookid");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=50)]
+        public string hasSuppl {
+            get {
+                return this.hasSupplField;
+            }
+            set {
+                this.hasSupplField = value;
+                this.RaisePropertyChanged("hasSuppl");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=51)]
+        public string hasLabsLinks {
+            get {
+                return this.hasLabsLinksField;
+            }
+            set {
+                this.hasLabsLinksField = value;
+                this.RaisePropertyChanged("hasLabsLinks");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=52)]
+        public string hasData {
+            get {
+                return this.hasDataField;
+            }
+            set {
+                this.hasDataField = value;
+                this.RaisePropertyChanged("hasData");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=53)]
+        public string license {
+            get {
+                return this.licenseField;
+            }
+            set {
+                this.licenseField = value;
+                this.RaisePropertyChanged("license");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=54)]
+        public string authMan {
+            get {
+                return this.authManField;
+            }
+            set {
+                this.authManField = value;
+                this.RaisePropertyChanged("authMan");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=55)]
+        public string epmcAuthMan {
+            get {
+                return this.epmcAuthManField;
+            }
+            set {
+                this.epmcAuthManField = value;
+                this.RaisePropertyChanged("epmcAuthMan");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=56)]
+        public string nihAuthMan {
+            get {
+                return this.nihAuthManField;
+            }
+            set {
+                this.nihAuthManField = value;
+                this.RaisePropertyChanged("nihAuthMan");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=57)]
+        public string manuscriptId {
+            get {
+                return this.manuscriptIdField;
+            }
+            set {
+                this.manuscriptIdField = value;
+                this.RaisePropertyChanged("manuscriptId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=58)]
+        public string hasTMAccessionNumbers {
+            get {
+                return this.hasTMAccessionNumbersField;
+            }
+            set {
+                this.hasTMAccessionNumbersField = value;
+                this.RaisePropertyChanged("hasTMAccessionNumbers");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=59)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("accessionType", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] tmAccessionTypeList {
+            get {
+                return this.tmAccessionTypeListField;
+            }
+            set {
+                this.tmAccessionTypeListField = value;
+                this.RaisePropertyChanged("tmAccessionTypeList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=60)]
+        public string dateOfCompletion {
+            get {
+                return this.dateOfCompletionField;
+            }
+            set {
+                this.dateOfCompletionField = value;
+                this.RaisePropertyChanged("dateOfCompletion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=61)]
+        public string dateOfCreation {
+            get {
+                return this.dateOfCreationField;
+            }
+            set {
+                this.dateOfCreationField = value;
+                this.RaisePropertyChanged("dateOfCreation");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=62)]
+        public string dateOfRevision {
+            get {
+                return this.dateOfRevisionField;
+            }
+            set {
+                this.dateOfRevisionField = value;
+                this.RaisePropertyChanged("dateOfRevision");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=63)]
+        public string electronicPublicationDate {
+            get {
+                return this.electronicPublicationDateField;
+            }
+            set {
+                this.electronicPublicationDateField = value;
+                this.RaisePropertyChanged("electronicPublicationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=64)]
+        public string firstPublicationDate {
+            get {
+                return this.firstPublicationDateField;
+            }
+            set {
+                this.firstPublicationDateField = value;
+                this.RaisePropertyChanged("firstPublicationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=65)]
+        public string embargoDate {
+            get {
+                return this.embargoDateField;
+            }
+            set {
+                this.embargoDateField = value;
+                this.RaisePropertyChanged("embargoDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI", Order=66)]
+        public string fullText {
+            get {
+                return this.fullTextField;
+            }
+            set {
+                this.fullTextField = value;
+                this.RaisePropertyChanged("fullText");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI", Order=67)]
+        public string supplementaryFiles {
+            get {
+                return this.supplementaryFilesField;
+            }
+            set {
+                this.supplementaryFilesField = value;
+                this.RaisePropertyChanged("supplementaryFiles");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=68)]
+        public string luceneScore {
+            get {
+                return this.luceneScoreField;
+            }
+            set {
+                this.luceneScoreField = value;
+                this.RaisePropertyChanged("luceneScore");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=69)]
+        public System.DateTime dateUpdated {
+            get {
+                return this.dateUpdatedField;
+            }
+            set {
+                this.dateUpdatedField = value;
+                this.RaisePropertyChanged("dateUpdated");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool dateUpdatedSpecified {
+            get {
+                return this.dateUpdatedFieldSpecified;
+            }
+            set {
+                this.dateUpdatedFieldSpecified = value;
+                this.RaisePropertyChanged("dateUpdatedSpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class authors : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string collectiveNameField;
+        
+        private string fullNameField;
+        
+        private string firstNameField;
+        
+        private string lastNameField;
+        
+        private string initialsField;
+        
+        private authorId authorIdField;
+        
+        private string affiliationField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string collectiveName {
+            get {
+                return this.collectiveNameField;
+            }
+            set {
+                this.collectiveNameField = value;
+                this.RaisePropertyChanged("collectiveName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string fullName {
+            get {
+                return this.fullNameField;
+            }
+            set {
+                this.fullNameField = value;
+                this.RaisePropertyChanged("fullName");
+            }
+        }
+        
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string firstName {
+            get {
+                return this.firstNameField;
+            }
+            set {
+                this.firstNameField = value;
+                this.RaisePropertyChanged("firstName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string lastName {
+            get {
+                return this.lastNameField;
+            }
+            set {
+                this.lastNameField = value;
+                this.RaisePropertyChanged("lastName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string initials {
+            get {
+                return this.initialsField;
+            }
+            set {
+                this.initialsField = value;
+                this.RaisePropertyChanged("initials");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public authorId authorId {
+            get {
+                return this.authorIdField;
+            }
+            set {
+                this.authorIdField = value;
+                this.RaisePropertyChanged("authorId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string affiliation {
+            get {
+                return this.affiliationField;
+            }
+            set {
+                this.affiliationField = value;
+                this.RaisePropertyChanged("affiliation");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class authorId : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string typeField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+                this.RaisePropertyChanged("type");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+                this.RaisePropertyChanged("Value");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class journalInfo : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string issueField;
+        
+        private string volumeField;
+        
+        private int journalIssueIdField;
+        
+        private bool journalIssueIdFieldSpecified;
+        
+        private string dateOfPublicationField;
+        
+        private sbyte monthOfPublicationField;
+        
+        private bool monthOfPublicationFieldSpecified;
+        
+        private short yearOfPublicationField;
+        
+        private bool yearOfPublicationFieldSpecified;
+        
+        private string printPublicationDateField;
+        
+        private journal journalField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string issue {
+            get {
+                return this.issueField;
+            }
+            set {
+                this.issueField = value;
+                this.RaisePropertyChanged("issue");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string volume {
+            get {
+                return this.volumeField;
+            }
+            set {
+                this.volumeField = value;
+                this.RaisePropertyChanged("volume");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int journalIssueId {
+            get {
+                return this.journalIssueIdField;
+            }
+            set {
+                this.journalIssueIdField = value;
+                this.RaisePropertyChanged("journalIssueId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool journalIssueIdSpecified {
+            get {
+                return this.journalIssueIdFieldSpecified;
+            }
+            set {
+                this.journalIssueIdFieldSpecified = value;
+                this.RaisePropertyChanged("journalIssueIdSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string dateOfPublication {
+            get {
+                return this.dateOfPublicationField;
+            }
+            set {
+                this.dateOfPublicationField = value;
+                this.RaisePropertyChanged("dateOfPublication");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public sbyte monthOfPublication {
+            get {
+                return this.monthOfPublicationField;
+            }
+            set {
+                this.monthOfPublicationField = value;
+                this.RaisePropertyChanged("monthOfPublication");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool monthOfPublicationSpecified {
+            get {
+                return this.monthOfPublicationFieldSpecified;
+            }
+            set {
+                this.monthOfPublicationFieldSpecified = value;
+                this.RaisePropertyChanged("monthOfPublicationSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public short yearOfPublication {
+            get {
+                return this.yearOfPublicationField;
+            }
+            set {
+                this.yearOfPublicationField = value;
+                this.RaisePropertyChanged("yearOfPublication");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool yearOfPublicationSpecified {
+            get {
+                return this.yearOfPublicationFieldSpecified;
+            }
+            set {
+                this.yearOfPublicationFieldSpecified = value;
+                this.RaisePropertyChanged("yearOfPublicationSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string printPublicationDate {
+            get {
+                return this.printPublicationDateField;
+            }
+            set {
+                this.printPublicationDateField = value;
+                this.RaisePropertyChanged("printPublicationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public journal journal {
+            get {
+                return this.journalField;
+            }
+            set {
+                this.journalField = value;
+                this.RaisePropertyChanged("journal");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class journal : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string titleField;
+        
+        private string iSOAbbreviationField;
+        
+        private string medlineAbbreviationField;
+        
+        private string nLMidField;
+        
+        private string iSSNField;
+        
+        private string eSSNField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string title {
+            get {
+                return this.titleField;
+            }
+            set {
+                this.titleField = value;
+                this.RaisePropertyChanged("title");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string ISOAbbreviation {
+            get {
+                return this.iSOAbbreviationField;
+            }
+            set {
+                this.iSOAbbreviationField = value;
+                this.RaisePropertyChanged("ISOAbbreviation");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string medlineAbbreviation {
+            get {
+                return this.medlineAbbreviationField;
+            }
+            set {
+                this.medlineAbbreviationField = value;
+                this.RaisePropertyChanged("medlineAbbreviation");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string NLMid {
+            get {
+                return this.nLMidField;
+            }
+            set {
+                this.nLMidField = value;
+                this.RaisePropertyChanged("NLMid");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string ISSN {
+            get {
+                return this.iSSNField;
+            }
+            set {
+                this.iSSNField = value;
+                this.RaisePropertyChanged("ISSN");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string ESSN {
+            get {
+                return this.eSSNField;
+            }
+            set {
+                this.eSSNField = value;
+                this.RaisePropertyChanged("ESSN");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class bookOrReportDetails : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string publisherField;
+        
+        private sbyte dayOfPublicationField;
+        
+        private bool dayOfPublicationFieldSpecified;
+        
+        private sbyte monthOfPublicationField;
+        
+        private bool monthOfPublicationFieldSpecified;
+        
+        private short yearOfPublicationField;
+        
+        private bool yearOfPublicationFieldSpecified;
+        
+        private string numberOfPagesField;
+        
+        private string editionField;
+        
+        private string isbn10Field;
+        
+        private string isbn13Field;
+        
+        private string seriesNameField;
+        
+        private string seriesIssnField;
+        
+        private string comprisingTitleField;
+        
+        private string comprisingTitleNonAsciiField;
+        
+        private string extraInformationField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string publisher {
+            get {
+                return this.publisherField;
+            }
+            set {
+                this.publisherField = value;
+                this.RaisePropertyChanged("publisher");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public sbyte dayOfPublication {
+            get {
+                return this.dayOfPublicationField;
+            }
+            set {
+                this.dayOfPublicationField = value;
+                this.RaisePropertyChanged("dayOfPublication");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool dayOfPublicationSpecified {
+            get {
+                return this.dayOfPublicationFieldSpecified;
+            }
+            set {
+                this.dayOfPublicationFieldSpecified = value;
+                this.RaisePropertyChanged("dayOfPublicationSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public sbyte monthOfPublication {
+            get {
+                return this.monthOfPublicationField;
+            }
+            set {
+                this.monthOfPublicationField = value;
+                this.RaisePropertyChanged("monthOfPublication");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool monthOfPublicationSpecified {
+            get {
+                return this.monthOfPublicationFieldSpecified;
+            }
+            set {
+                this.monthOfPublicationFieldSpecified = value;
+                this.RaisePropertyChanged("monthOfPublicationSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public short yearOfPublication {
+            get {
+                return this.yearOfPublicationField;
+            }
+            set {
+                this.yearOfPublicationField = value;
+                this.RaisePropertyChanged("yearOfPublication");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool yearOfPublicationSpecified {
+            get {
+                return this.yearOfPublicationFieldSpecified;
+            }
+            set {
+                this.yearOfPublicationFieldSpecified = value;
+                this.RaisePropertyChanged("yearOfPublicationSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string numberOfPages {
+            get {
+                return this.numberOfPagesField;
+            }
+            set {
+                this.numberOfPagesField = value;
+                this.RaisePropertyChanged("numberOfPages");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string edition {
+            get {
+                return this.editionField;
+            }
+            set {
+                this.editionField = value;
+                this.RaisePropertyChanged("edition");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string isbn10 {
+            get {
+                return this.isbn10Field;
+            }
+            set {
+                this.isbn10Field = value;
+                this.RaisePropertyChanged("isbn10");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string isbn13 {
+            get {
+                return this.isbn13Field;
+            }
+            set {
+                this.isbn13Field = value;
+                this.RaisePropertyChanged("isbn13");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string seriesName {
+            get {
+                return this.seriesNameField;
+            }
+            set {
+                this.seriesNameField = value;
+                this.RaisePropertyChanged("seriesName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public string seriesIssn {
+            get {
+                return this.seriesIssnField;
+            }
+            set {
+                this.seriesIssnField = value;
+                this.RaisePropertyChanged("seriesIssn");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public string comprisingTitle {
+            get {
+                return this.comprisingTitleField;
+            }
+            set {
+                this.comprisingTitleField = value;
+                this.RaisePropertyChanged("comprisingTitle");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public string comprisingTitleNonAscii {
+            get {
+                return this.comprisingTitleNonAsciiField;
+            }
+            set {
+                this.comprisingTitleNonAsciiField = value;
+                this.RaisePropertyChanged("comprisingTitleNonAscii");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public string extraInformation {
+            get {
+                return this.extraInformationField;
+            }
+            set {
+                this.extraInformationField = value;
+                this.RaisePropertyChanged("extraInformation");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class patentDetailsInfo : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string countryCodeField;
+        
+        private string countryField;
+        
+        private string typeCodeField;
+        
+        private string typeDescriptionField;
+        
+        private patentClassifierInfo[] classifierListField;
+        
+        private patentApplication applicationField;
+        
+        private patentPriorityData[] priorityListField;
+        
+        private patentFamilyData[] familyListField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string countryCode {
+            get {
+                return this.countryCodeField;
+            }
+            set {
+                this.countryCodeField = value;
+                this.RaisePropertyChanged("countryCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string country {
+            get {
+                return this.countryField;
+            }
+            set {
+                this.countryField = value;
+                this.RaisePropertyChanged("country");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string typeCode {
+            get {
+                return this.typeCodeField;
+            }
+            set {
+                this.typeCodeField = value;
+                this.RaisePropertyChanged("typeCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string typeDescription {
+            get {
+                return this.typeDescriptionField;
+            }
+            set {
+                this.typeDescriptionField = value;
+                this.RaisePropertyChanged("typeDescription");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("classifier", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public patentClassifierInfo[] classifierList {
+            get {
+                return this.classifierListField;
+            }
+            set {
+                this.classifierListField = value;
+                this.RaisePropertyChanged("classifierList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public patentApplication application {
+            get {
+                return this.applicationField;
+            }
+            set {
+                this.applicationField = value;
+                this.RaisePropertyChanged("application");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("priority", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public patentPriorityData[] priorityList {
+            get {
+                return this.priorityListField;
+            }
+            set {
+                this.priorityListField = value;
+                this.RaisePropertyChanged("priorityList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("family", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public patentFamilyData[] familyList {
+            get {
+                return this.familyListField;
+            }
+            set {
+                this.familyListField = value;
+                this.RaisePropertyChanged("familyList");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class patentClassifierInfo : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string classificationField;
+        
+        private string classificationTypeField;
+        
+        private string hyperlinkField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string classification {
+            get {
+                return this.classificationField;
+            }
+            set {
+                this.classificationField = value;
+                this.RaisePropertyChanged("classification");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string classificationType {
+            get {
+                return this.classificationTypeField;
+            }
+            set {
+                this.classificationTypeField = value;
+                this.RaisePropertyChanged("classificationType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string hyperlink {
+            get {
+                return this.hyperlinkField;
+            }
+            set {
+                this.hyperlinkField = value;
+                this.RaisePropertyChanged("hyperlink");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class patentApplication : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string applicationNumberField;
+        
+        private string applicationDateField;
+        
+        private short orderInField;
+        
+        private bool orderInFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string applicationNumber {
+            get {
+                return this.applicationNumberField;
+            }
+            set {
+                this.applicationNumberField = value;
+                this.RaisePropertyChanged("applicationNumber");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string applicationDate {
+            get {
+                return this.applicationDateField;
+            }
+            set {
+                this.applicationDateField = value;
+                this.RaisePropertyChanged("applicationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public short orderIn {
+            get {
+                return this.orderInField;
+            }
+            set {
+                this.orderInField = value;
+                this.RaisePropertyChanged("orderIn");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool orderInSpecified {
+            get {
+                return this.orderInFieldSpecified;
+            }
+            set {
+                this.orderInFieldSpecified = value;
+                this.RaisePropertyChanged("orderInSpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class patentPriorityData : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string priorityNumberField;
+        
+        private string priorityDateField;
+        
+        private short orderInField;
+        
+        private bool orderInFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string priorityNumber {
+            get {
+                return this.priorityNumberField;
+            }
+            set {
+                this.priorityNumberField = value;
+                this.RaisePropertyChanged("priorityNumber");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string priorityDate {
+            get {
+                return this.priorityDateField;
+            }
+            set {
+                this.priorityDateField = value;
+                this.RaisePropertyChanged("priorityDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public short orderIn {
+            get {
+                return this.orderInField;
+            }
+            set {
+                this.orderInField = value;
+                this.RaisePropertyChanged("orderIn");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool orderInSpecified {
+            get {
+                return this.orderInFieldSpecified;
+            }
+            set {
+                this.orderInFieldSpecified = value;
+                this.RaisePropertyChanged("orderInSpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class patentFamilyData : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string familyNumberField;
+        
+        private short orderInField;
+        
+        private bool orderInFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string familyNumber {
+            get {
+                return this.familyNumberField;
+            }
+            set {
+                this.familyNumberField = value;
+                this.RaisePropertyChanged("familyNumber");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public short orderIn {
+            get {
+                return this.orderInField;
+            }
+            set {
+                this.orderInField = value;
+                this.RaisePropertyChanged("orderIn");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool orderInSpecified {
+            get {
+                return this.orderInFieldSpecified;
+            }
+            set {
+                this.orderInFieldSpecified = value;
+                this.RaisePropertyChanged("orderInSpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class grantInfo : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string grantIdField;
+        
+        private string agencyField;
+        
+        private string acronymField;
+        
+        private short orderInField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string grantId {
+            get {
+                return this.grantIdField;
+            }
+            set {
+                this.grantIdField = value;
+                this.RaisePropertyChanged("grantId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string agency {
+            get {
+                return this.agencyField;
+            }
+            set {
+                this.agencyField = value;
+                this.RaisePropertyChanged("agency");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string acronym {
+            get {
+                return this.acronymField;
+            }
+            set {
+                this.acronymField = value;
+                this.RaisePropertyChanged("acronym");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public short orderIn {
+            get {
+                return this.orderInField;
+            }
+            set {
+                this.orderInField = value;
+                this.RaisePropertyChanged("orderIn");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class meshHeadingInfo : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string majorTopic_YNField;
+        
+        private string descriptorNameField;
+        
+        private meshQualifierInfo[] meshQualifierListField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string majorTopic_YN {
+            get {
+                return this.majorTopic_YNField;
+            }
+            set {
+                this.majorTopic_YNField = value;
+                this.RaisePropertyChanged("majorTopic_YN");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string descriptorName {
+            get {
+                return this.descriptorNameField;
+            }
+            set {
+                this.descriptorNameField = value;
+                this.RaisePropertyChanged("descriptorName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("meshQualifier", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public meshQualifierInfo[] meshQualifierList {
+            get {
+                return this.meshQualifierListField;
+            }
+            set {
+                this.meshQualifierListField = value;
+                this.RaisePropertyChanged("meshQualifierList");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class meshQualifierInfo : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string abbreviationField;
+        
+        private string qualifierNameField;
+        
+        private string majorTopic_YNField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string abbreviation {
+            get {
+                return this.abbreviationField;
+            }
+            set {
+                this.abbreviationField = value;
+                this.RaisePropertyChanged("abbreviation");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string qualifierName {
+            get {
+                return this.qualifierNameField;
+            }
+            set {
+                this.qualifierNameField = value;
+                this.RaisePropertyChanged("qualifierName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string majorTopic_YN {
+            get {
+                return this.majorTopic_YNField;
+            }
+            set {
+                this.majorTopic_YNField = value;
+                this.RaisePropertyChanged("majorTopic_YN");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class chemicalInfo : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string nameField;
+        
+        private string registryNumberField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string registryNumber {
+            get {
+                return this.registryNumberField;
+            }
+            set {
+                this.registryNumberField = value;
+                this.RaisePropertyChanged("registryNumber");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class subSet : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string codeField;
+        
+        private string nameField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string code {
+            get {
+                return this.codeField;
+            }
+            set {
+                this.codeField = value;
+                this.RaisePropertyChanged("code");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("name");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class fullTextURLInfo : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string availabilityField;
+        
+        private string availabilityCodeField;
+        
+        private string documentStyleField;
+        
+        private string siteField;
+        
+        private string urlField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string availability {
+            get {
+                return this.availabilityField;
+            }
+            set {
+                this.availabilityField = value;
+                this.RaisePropertyChanged("availability");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string availabilityCode {
+            get {
+                return this.availabilityCodeField;
+            }
+            set {
+                this.availabilityCodeField = value;
+                this.RaisePropertyChanged("availabilityCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string documentStyle {
+            get {
+                return this.documentStyleField;
+            }
+            set {
+                this.documentStyleField = value;
+                this.RaisePropertyChanged("documentStyle");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string site {
+            get {
+                return this.siteField;
+            }
+            set {
+                this.siteField = value;
+                this.RaisePropertyChanged("site");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public string url {
             get {
                 return this.urlField;
@@ -104,28 +3952,28 @@ namespace Extant.Pubmed.EBIPublicationsService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class labsProvider : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class commentCorrection : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private int idField;
+        private string idField;
         
-        private bool idFieldSpecified;
+        private string sourceField;
         
-        private string nameField;
+        private string referenceField;
         
-        private string descriptionField;
+        private string typeField;
         
-        private string frontTabField;
+        private string noteField;
         
-        private labsLinks[] linkField;
+        private short orderInField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int id {
+        public string id {
             get {
                 return this.idField;
             }
@@ -136,62 +3984,62 @@ namespace Extant.Pubmed.EBIPublicationsService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idSpecified {
-            get {
-                return this.idFieldSpecified;
-            }
-            set {
-                this.idFieldSpecified = value;
-                this.RaisePropertyChanged("idSpecified");
-            }
-        }
-        
-        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string name {
+        public string source {
             get {
-                return this.nameField;
+                return this.sourceField;
             }
             set {
-                this.nameField = value;
-                this.RaisePropertyChanged("name");
+                this.sourceField = value;
+                this.RaisePropertyChanged("source");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string description {
+        public string reference {
             get {
-                return this.descriptionField;
+                return this.referenceField;
             }
             set {
-                this.descriptionField = value;
-                this.RaisePropertyChanged("description");
+                this.referenceField = value;
+                this.RaisePropertyChanged("reference");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string frontTab {
+        public string type {
             get {
-                return this.frontTabField;
+                return this.typeField;
             }
             set {
-                this.frontTabField = value;
-                this.RaisePropertyChanged("frontTab");
+                this.typeField = value;
+                this.RaisePropertyChanged("type");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("link", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
-        public labsLinks[] link {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string note {
             get {
-                return this.linkField;
+                return this.noteField;
             }
             set {
-                this.linkField = value;
-                this.RaisePropertyChanged("link");
+                this.noteField = value;
+                this.RaisePropertyChanged("note");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public short orderIn {
+            get {
+                return this.orderInField;
+            }
+            set {
+                this.orderInField = value;
+                this.RaisePropertyChanged("orderIn");
             }
         }
         
@@ -206,52 +4054,52 @@ namespace Extant.Pubmed.EBIPublicationsService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class labsProviderCounts : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class extComment : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string providerNameField;
+        private string extCommentSourceField;
         
-        private int linksCountField;
+        private string info1Field;
         
-        private bool linksCountFieldSpecified;
+        private string info2Field;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string providerName {
+        public string extCommentSource {
             get {
-                return this.providerNameField;
+                return this.extCommentSourceField;
             }
             set {
-                this.providerNameField = value;
-                this.RaisePropertyChanged("providerName");
+                this.extCommentSourceField = value;
+                this.RaisePropertyChanged("extCommentSource");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int linksCount {
+        public string info1 {
             get {
-                return this.linksCountField;
+                return this.info1Field;
             }
             set {
-                this.linksCountField = value;
-                this.RaisePropertyChanged("linksCount");
+                this.info1Field = value;
+                this.RaisePropertyChanged("info1");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool linksCountSpecified {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string info2 {
             get {
-                return this.linksCountFieldSpecified;
+                return this.info2Field;
             }
             set {
-                this.linksCountFieldSpecified = value;
-                this.RaisePropertyChanged("linksCountSpecified");
+                this.info2Field = value;
+                this.RaisePropertyChanged("info2");
             }
         }
         
@@ -266,196 +4114,14 @@ namespace Extant.Pubmed.EBIPublicationsService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class SearchTerm : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string termField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string term {
-            get {
-                return this.termField;
-            }
-            set {
-                this.termField = value;
-                this.RaisePropertyChanged("term");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class minedSummary : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string termField;
-        
-        private int countField;
-        
-        private string[] altNameListField;
+    public partial class dbCounts : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string dbNameField;
-        
-        private string[] dbIdListField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string term {
-            get {
-                return this.termField;
-            }
-            set {
-                this.termField = value;
-                this.RaisePropertyChanged("term");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int count {
-            get {
-                return this.countField;
-            }
-            set {
-                this.countField = value;
-                this.RaisePropertyChanged("count");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("altName", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] altNameList {
-            get {
-                return this.altNameListField;
-            }
-            set {
-                this.altNameListField = value;
-                this.RaisePropertyChanged("altNameList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string dbName {
-            get {
-                return this.dbNameField;
-            }
-            set {
-                this.dbNameField = value;
-                this.RaisePropertyChanged("dbName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("dbId", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] dbIdList {
-            get {
-                return this.dbIdListField;
-            }
-            set {
-                this.dbIdListField = value;
-                this.RaisePropertyChanged("dbIdList");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class minedTerms : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string nameField;
-        
-        private int totalField;
-        
-        private minedSummary[] tmSummaryField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-                this.RaisePropertyChanged("name");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int total {
-            get {
-                return this.totalField;
-            }
-            set {
-                this.totalField = value;
-                this.RaisePropertyChanged("total");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("tmSummary", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
-        public minedSummary[] tmSummary {
-            get {
-                return this.tmSummaryField;
-            }
-            set {
-                this.tmSummaryField = value;
-                this.RaisePropertyChanged("tmSummary");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class semanticCounts : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string nameField;
         
         private int countField;
         
@@ -463,13 +4129,13 @@ namespace Extant.Pubmed.EBIPublicationsService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string name {
+        public string dbName {
             get {
-                return this.nameField;
+                return this.dbNameField;
             }
             set {
-                this.nameField = value;
-                this.RaisePropertyChanged("name");
+                this.dbNameField = value;
+                this.RaisePropertyChanged("dbName");
             }
         }
         
@@ -508,7 +4174,341 @@ namespace Extant.Pubmed.EBIPublicationsService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class dbCrossReference : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string dbNameField;
+        
+        private int dbCountField;
+        
+        private dbCrossReferenceInfo[] dbCrossReferenceInfoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string dbName {
+            get {
+                return this.dbNameField;
+            }
+            set {
+                this.dbNameField = value;
+                this.RaisePropertyChanged("dbName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int dbCount {
+            get {
+                return this.dbCountField;
+            }
+            set {
+                this.dbCountField = value;
+                this.RaisePropertyChanged("dbCount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("dbCrossReferenceInfo", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+        public dbCrossReferenceInfo[] dbCrossReferenceInfo {
+            get {
+                return this.dbCrossReferenceInfoField;
+            }
+            set {
+                this.dbCrossReferenceInfoField = value;
+                this.RaisePropertyChanged("dbCrossReferenceInfo");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class dbCrossReferenceInfo : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string info1Field;
+        
+        private string info2Field;
+        
+        private string info3Field;
+        
+        private string info4Field;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string info1 {
+            get {
+                return this.info1Field;
+            }
+            set {
+                this.info1Field = value;
+                this.RaisePropertyChanged("info1");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string info2 {
+            get {
+                return this.info2Field;
+            }
+            set {
+                this.info2Field = value;
+                this.RaisePropertyChanged("info2");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string info3 {
+            get {
+                return this.info3Field;
+            }
+            set {
+                this.info3Field = value;
+                this.RaisePropertyChanged("info3");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string info4 {
+            get {
+                return this.info4Field;
+            }
+            set {
+                this.info4Field = value;
+                this.RaisePropertyChanged("info4");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class CitationData : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string idField;
+        
+        private string sourceField;
+        
+        private string citationTypeField;
+        
+        private string titleField;
+        
+        private string authorStringField;
+        
+        private string journalAbbreviationField;
+        
+        private int pubYearField;
+        
+        private string volumeField;
+        
+        private string iSSNField;
+        
+        private string issueField;
+        
+        private string pageInfoField;
+        
+        private int citedByCountField;
+        
+        private string textField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string source {
+            get {
+                return this.sourceField;
+            }
+            set {
+                this.sourceField = value;
+                this.RaisePropertyChanged("source");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string citationType {
+            get {
+                return this.citationTypeField;
+            }
+            set {
+                this.citationTypeField = value;
+                this.RaisePropertyChanged("citationType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string title {
+            get {
+                return this.titleField;
+            }
+            set {
+                this.titleField = value;
+                this.RaisePropertyChanged("title");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string authorString {
+            get {
+                return this.authorStringField;
+            }
+            set {
+                this.authorStringField = value;
+                this.RaisePropertyChanged("authorString");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string journalAbbreviation {
+            get {
+                return this.journalAbbreviationField;
+            }
+            set {
+                this.journalAbbreviationField = value;
+                this.RaisePropertyChanged("journalAbbreviation");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public int pubYear {
+            get {
+                return this.pubYearField;
+            }
+            set {
+                this.pubYearField = value;
+                this.RaisePropertyChanged("pubYear");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string volume {
+            get {
+                return this.volumeField;
+            }
+            set {
+                this.volumeField = value;
+                this.RaisePropertyChanged("volume");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string ISSN {
+            get {
+                return this.iSSNField;
+            }
+            set {
+                this.iSSNField = value;
+                this.RaisePropertyChanged("ISSN");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public string issue {
+            get {
+                return this.issueField;
+            }
+            set {
+                this.issueField = value;
+                this.RaisePropertyChanged("issue");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public string pageInfo {
+            get {
+                return this.pageInfoField;
+            }
+            set {
+                this.pageInfoField = value;
+                this.RaisePropertyChanged("pageInfo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public int citedByCount {
+            get {
+                return this.citedByCountField;
+            }
+            set {
+                this.citedByCountField = value;
+                this.RaisePropertyChanged("citedByCount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public string text {
+            get {
+                return this.textField;
+            }
+            set {
+                this.textField = value;
+                this.RaisePropertyChanged("text");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -876,348 +4876,14 @@ namespace Extant.Pubmed.EBIPublicationsService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class CitationData : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class semanticCounts : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string idField;
-        
-        private string sourceField;
-        
-        private string citationTypeField;
-        
-        private string titleField;
-        
-        private string authorStringField;
-        
-        private string journalAbbreviationField;
-        
-        private int pubYearField;
-        
-        private string volumeField;
-        
-        private string iSSNField;
-        
-        private string issueField;
-        
-        private string pageInfoField;
-        
-        private int citedByCountField;
-        
-        private string textField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string source {
-            get {
-                return this.sourceField;
-            }
-            set {
-                this.sourceField = value;
-                this.RaisePropertyChanged("source");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string citationType {
-            get {
-                return this.citationTypeField;
-            }
-            set {
-                this.citationTypeField = value;
-                this.RaisePropertyChanged("citationType");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string title {
-            get {
-                return this.titleField;
-            }
-            set {
-                this.titleField = value;
-                this.RaisePropertyChanged("title");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string authorString {
-            get {
-                return this.authorStringField;
-            }
-            set {
-                this.authorStringField = value;
-                this.RaisePropertyChanged("authorString");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string journalAbbreviation {
-            get {
-                return this.journalAbbreviationField;
-            }
-            set {
-                this.journalAbbreviationField = value;
-                this.RaisePropertyChanged("journalAbbreviation");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public int pubYear {
-            get {
-                return this.pubYearField;
-            }
-            set {
-                this.pubYearField = value;
-                this.RaisePropertyChanged("pubYear");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string volume {
-            get {
-                return this.volumeField;
-            }
-            set {
-                this.volumeField = value;
-                this.RaisePropertyChanged("volume");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string ISSN {
-            get {
-                return this.iSSNField;
-            }
-            set {
-                this.iSSNField = value;
-                this.RaisePropertyChanged("ISSN");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string issue {
-            get {
-                return this.issueField;
-            }
-            set {
-                this.issueField = value;
-                this.RaisePropertyChanged("issue");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public string pageInfo {
-            get {
-                return this.pageInfoField;
-            }
-            set {
-                this.pageInfoField = value;
-                this.RaisePropertyChanged("pageInfo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public int citedByCount {
-            get {
-                return this.citedByCountField;
-            }
-            set {
-                this.citedByCountField = value;
-                this.RaisePropertyChanged("citedByCount");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
-        public string text {
-            get {
-                return this.textField;
-            }
-            set {
-                this.textField = value;
-                this.RaisePropertyChanged("text");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class dbCrossReferenceInfo : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string info1Field;
-        
-        private string info2Field;
-        
-        private string info3Field;
-        
-        private string info4Field;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string info1 {
-            get {
-                return this.info1Field;
-            }
-            set {
-                this.info1Field = value;
-                this.RaisePropertyChanged("info1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string info2 {
-            get {
-                return this.info2Field;
-            }
-            set {
-                this.info2Field = value;
-                this.RaisePropertyChanged("info2");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string info3 {
-            get {
-                return this.info3Field;
-            }
-            set {
-                this.info3Field = value;
-                this.RaisePropertyChanged("info3");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string info4 {
-            get {
-                return this.info4Field;
-            }
-            set {
-                this.info4Field = value;
-                this.RaisePropertyChanged("info4");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class dbCrossReference : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string dbNameField;
-        
-        private int dbCountField;
-        
-        private dbCrossReferenceInfo[] dbCrossReferenceInfoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string dbName {
-            get {
-                return this.dbNameField;
-            }
-            set {
-                this.dbNameField = value;
-                this.RaisePropertyChanged("dbName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int dbCount {
-            get {
-                return this.dbCountField;
-            }
-            set {
-                this.dbCountField = value;
-                this.RaisePropertyChanged("dbCount");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("dbCrossReferenceInfo", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
-        public dbCrossReferenceInfo[] dbCrossReferenceInfo {
-            get {
-                return this.dbCrossReferenceInfoField;
-            }
-            set {
-                this.dbCrossReferenceInfoField = value;
-                this.RaisePropertyChanged("dbCrossReferenceInfo");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class dbCounts : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string dbNameField;
+        private string nameField;
         
         private int countField;
         
@@ -1225,13 +4891,13 @@ namespace Extant.Pubmed.EBIPublicationsService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string dbName {
+        public string name {
             get {
-                return this.dbNameField;
+                return this.nameField;
             }
             set {
-                this.dbNameField = value;
-                this.RaisePropertyChanged("dbName");
+                this.nameField = value;
+                this.RaisePropertyChanged("name");
             }
         }
         
@@ -1270,52 +4936,52 @@ namespace Extant.Pubmed.EBIPublicationsService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class extComment : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class minedTerms : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string extCommentSourceField;
+        private string nameField;
         
-        private string info1Field;
+        private int totalField;
         
-        private string info2Field;
+        private minedSummary[] tmSummaryField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string extCommentSource {
+        public string name {
             get {
-                return this.extCommentSourceField;
+                return this.nameField;
             }
             set {
-                this.extCommentSourceField = value;
-                this.RaisePropertyChanged("extCommentSource");
+                this.nameField = value;
+                this.RaisePropertyChanged("name");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string info1 {
+        public int total {
             get {
-                return this.info1Field;
+                return this.totalField;
             }
             set {
-                this.info1Field = value;
-                this.RaisePropertyChanged("info1");
+                this.totalField = value;
+                this.RaisePropertyChanged("total");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string info2 {
+        [System.Xml.Serialization.XmlElementAttribute("tmSummary", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+        public minedSummary[] tmSummary {
             get {
-                return this.info2Field;
+                return this.tmSummaryField;
             }
             set {
-                this.info2Field = value;
-                this.RaisePropertyChanged("info2");
+                this.tmSummaryField = value;
+                this.RaisePropertyChanged("tmSummary");
             }
         }
         
@@ -1330,28 +4996,210 @@ namespace Extant.Pubmed.EBIPublicationsService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class commentCorrection : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class minedSummary : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string idField;
+        private string termField;
         
-        private string sourceField;
+        private int countField;
         
-        private string referenceField;
+        private string[] altNameListField;
         
-        private string typeField;
+        private string dbNameField;
         
-        private string noteField;
-        
-        private short orderInField;
+        private string[] dbIdListField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string id {
+        public string term {
+            get {
+                return this.termField;
+            }
+            set {
+                this.termField = value;
+                this.RaisePropertyChanged("term");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int count {
+            get {
+                return this.countField;
+            }
+            set {
+                this.countField = value;
+                this.RaisePropertyChanged("count");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("altName", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] altNameList {
+            get {
+                return this.altNameListField;
+            }
+            set {
+                this.altNameListField = value;
+                this.RaisePropertyChanged("altNameList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string dbName {
+            get {
+                return this.dbNameField;
+            }
+            set {
+                this.dbNameField = value;
+                this.RaisePropertyChanged("dbName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("dbId", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] dbIdList {
+            get {
+                return this.dbIdListField;
+            }
+            set {
+                this.dbIdListField = value;
+                this.RaisePropertyChanged("dbIdList");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class SearchTerm : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string termField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string term {
+            get {
+                return this.termField;
+            }
+            set {
+                this.termField = value;
+                this.RaisePropertyChanged("term");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class labsProviderCounts : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string providerNameField;
+        
+        private int linksCountField;
+        
+        private bool linksCountFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string providerName {
+            get {
+                return this.providerNameField;
+            }
+            set {
+                this.providerNameField = value;
+                this.RaisePropertyChanged("providerName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int linksCount {
+            get {
+                return this.linksCountField;
+            }
+            set {
+                this.linksCountField = value;
+                this.RaisePropertyChanged("linksCount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool linksCountSpecified {
+            get {
+                return this.linksCountFieldSpecified;
+            }
+            set {
+                this.linksCountFieldSpecified = value;
+                this.RaisePropertyChanged("linksCountSpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class labsProvider : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idField;
+        
+        private bool idFieldSpecified;
+        
+        private string nameField;
+        
+        private string descriptionField;
+        
+        private string frontTabField;
+        
+        private labsLinks[] linkField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int id {
             get {
                 return this.idField;
             }
@@ -1362,62 +5210,62 @@ namespace Extant.Pubmed.EBIPublicationsService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string source {
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool idSpecified {
             get {
-                return this.sourceField;
+                return this.idFieldSpecified;
             }
             set {
-                this.sourceField = value;
-                this.RaisePropertyChanged("source");
+                this.idFieldSpecified = value;
+                this.RaisePropertyChanged("idSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("name");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string reference {
+        public string description {
             get {
-                return this.referenceField;
+                return this.descriptionField;
             }
             set {
-                this.referenceField = value;
-                this.RaisePropertyChanged("reference");
+                this.descriptionField = value;
+                this.RaisePropertyChanged("description");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string type {
+        public string frontTab {
             get {
-                return this.typeField;
+                return this.frontTabField;
             }
             set {
-                this.typeField = value;
-                this.RaisePropertyChanged("type");
+                this.frontTabField = value;
+                this.RaisePropertyChanged("frontTab");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string note {
+        [System.Xml.Serialization.XmlElementAttribute("link", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
+        public labsLinks[] link {
             get {
-                return this.noteField;
+                return this.linkField;
             }
             set {
-                this.noteField = value;
-                this.RaisePropertyChanged("note");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public short orderIn {
-            get {
-                return this.orderInField;
-            }
-            set {
-                this.orderInField = value;
-                this.RaisePropertyChanged("orderIn");
+                this.linkField = value;
+                this.RaisePropertyChanged("link");
             }
         }
         
@@ -1432,73 +5280,45 @@ namespace Extant.Pubmed.EBIPublicationsService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class fullTextURLInfo : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class labsLinks : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string availabilityField;
+        private string imgUrlField;
         
-        private string availabilityCodeField;
-        
-        private string documentStyleField;
-        
-        private string siteField;
+        private string titleField;
         
         private string urlField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string availability {
+        public string imgUrl {
             get {
-                return this.availabilityField;
+                return this.imgUrlField;
             }
             set {
-                this.availabilityField = value;
-                this.RaisePropertyChanged("availability");
+                this.imgUrlField = value;
+                this.RaisePropertyChanged("imgUrl");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string availabilityCode {
+        public string title {
             get {
-                return this.availabilityCodeField;
+                return this.titleField;
             }
             set {
-                this.availabilityCodeField = value;
-                this.RaisePropertyChanged("availabilityCode");
+                this.titleField = value;
+                this.RaisePropertyChanged("title");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string documentStyle {
-            get {
-                return this.documentStyleField;
-            }
-            set {
-                this.documentStyleField = value;
-                this.RaisePropertyChanged("documentStyle");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string site {
-            get {
-                return this.siteField;
-            }
-            set {
-                this.siteField = value;
-                this.RaisePropertyChanged("site");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public string url {
             get {
                 return this.urlField;
@@ -1520,2421 +5340,29 @@ namespace Extant.Pubmed.EBIPublicationsService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class subSet : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string codeField;
-        
-        private string nameField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string code {
-            get {
-                return this.codeField;
-            }
-            set {
-                this.codeField = value;
-                this.RaisePropertyChanged("code");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-                this.RaisePropertyChanged("name");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class chemicalInfo : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string nameField;
-        
-        private string registryNumberField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-                this.RaisePropertyChanged("name");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string registryNumber {
-            get {
-                return this.registryNumberField;
-            }
-            set {
-                this.registryNumberField = value;
-                this.RaisePropertyChanged("registryNumber");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class meshQualifierInfo : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string abbreviationField;
-        
-        private string qualifierNameField;
-        
-        private string majorTopic_YNField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string abbreviation {
-            get {
-                return this.abbreviationField;
-            }
-            set {
-                this.abbreviationField = value;
-                this.RaisePropertyChanged("abbreviation");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string qualifierName {
-            get {
-                return this.qualifierNameField;
-            }
-            set {
-                this.qualifierNameField = value;
-                this.RaisePropertyChanged("qualifierName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string majorTopic_YN {
-            get {
-                return this.majorTopic_YNField;
-            }
-            set {
-                this.majorTopic_YNField = value;
-                this.RaisePropertyChanged("majorTopic_YN");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class meshHeadingInfo : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string majorTopic_YNField;
-        
-        private string descriptorNameField;
-        
-        private meshQualifierInfo[] meshQualifierListField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string majorTopic_YN {
-            get {
-                return this.majorTopic_YNField;
-            }
-            set {
-                this.majorTopic_YNField = value;
-                this.RaisePropertyChanged("majorTopic_YN");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string descriptorName {
-            get {
-                return this.descriptorNameField;
-            }
-            set {
-                this.descriptorNameField = value;
-                this.RaisePropertyChanged("descriptorName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("meshQualifier", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public meshQualifierInfo[] meshQualifierList {
-            get {
-                return this.meshQualifierListField;
-            }
-            set {
-                this.meshQualifierListField = value;
-                this.RaisePropertyChanged("meshQualifierList");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class grantInfo : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string grantIdField;
-        
-        private string agencyField;
-        
-        private string acronymField;
-        
-        private short orderInField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string grantId {
-            get {
-                return this.grantIdField;
-            }
-            set {
-                this.grantIdField = value;
-                this.RaisePropertyChanged("grantId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string agency {
-            get {
-                return this.agencyField;
-            }
-            set {
-                this.agencyField = value;
-                this.RaisePropertyChanged("agency");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string acronym {
-            get {
-                return this.acronymField;
-            }
-            set {
-                this.acronymField = value;
-                this.RaisePropertyChanged("acronym");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public short orderIn {
-            get {
-                return this.orderInField;
-            }
-            set {
-                this.orderInField = value;
-                this.RaisePropertyChanged("orderIn");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class patentFamilyData : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string familyNumberField;
-        
-        private short orderInField;
-        
-        private bool orderInFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string familyNumber {
-            get {
-                return this.familyNumberField;
-            }
-            set {
-                this.familyNumberField = value;
-                this.RaisePropertyChanged("familyNumber");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public short orderIn {
-            get {
-                return this.orderInField;
-            }
-            set {
-                this.orderInField = value;
-                this.RaisePropertyChanged("orderIn");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool orderInSpecified {
-            get {
-                return this.orderInFieldSpecified;
-            }
-            set {
-                this.orderInFieldSpecified = value;
-                this.RaisePropertyChanged("orderInSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class patentPriorityData : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string priorityNumberField;
-        
-        private string priorityDateField;
-        
-        private short orderInField;
-        
-        private bool orderInFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string priorityNumber {
-            get {
-                return this.priorityNumberField;
-            }
-            set {
-                this.priorityNumberField = value;
-                this.RaisePropertyChanged("priorityNumber");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string priorityDate {
-            get {
-                return this.priorityDateField;
-            }
-            set {
-                this.priorityDateField = value;
-                this.RaisePropertyChanged("priorityDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public short orderIn {
-            get {
-                return this.orderInField;
-            }
-            set {
-                this.orderInField = value;
-                this.RaisePropertyChanged("orderIn");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool orderInSpecified {
-            get {
-                return this.orderInFieldSpecified;
-            }
-            set {
-                this.orderInFieldSpecified = value;
-                this.RaisePropertyChanged("orderInSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class patentApplication : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string applicationNumberField;
-        
-        private string applicationDateField;
-        
-        private short orderInField;
-        
-        private bool orderInFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string applicationNumber {
-            get {
-                return this.applicationNumberField;
-            }
-            set {
-                this.applicationNumberField = value;
-                this.RaisePropertyChanged("applicationNumber");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string applicationDate {
-            get {
-                return this.applicationDateField;
-            }
-            set {
-                this.applicationDateField = value;
-                this.RaisePropertyChanged("applicationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public short orderIn {
-            get {
-                return this.orderInField;
-            }
-            set {
-                this.orderInField = value;
-                this.RaisePropertyChanged("orderIn");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool orderInSpecified {
-            get {
-                return this.orderInFieldSpecified;
-            }
-            set {
-                this.orderInFieldSpecified = value;
-                this.RaisePropertyChanged("orderInSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class patentClassifierInfo : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string classificationField;
-        
-        private string classificationTypeField;
-        
-        private string hyperlinkField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string classification {
-            get {
-                return this.classificationField;
-            }
-            set {
-                this.classificationField = value;
-                this.RaisePropertyChanged("classification");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string classificationType {
-            get {
-                return this.classificationTypeField;
-            }
-            set {
-                this.classificationTypeField = value;
-                this.RaisePropertyChanged("classificationType");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string hyperlink {
-            get {
-                return this.hyperlinkField;
-            }
-            set {
-                this.hyperlinkField = value;
-                this.RaisePropertyChanged("hyperlink");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class patentDetailsInfo : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string countryCodeField;
-        
-        private string countryField;
-        
-        private string typeCodeField;
-        
-        private string typeDescriptionField;
-        
-        private patentClassifierInfo[] classifierListField;
-        
-        private patentApplication applicationField;
-        
-        private patentPriorityData[] priorityListField;
-        
-        private patentFamilyData[] familyListField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string countryCode {
-            get {
-                return this.countryCodeField;
-            }
-            set {
-                this.countryCodeField = value;
-                this.RaisePropertyChanged("countryCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string country {
-            get {
-                return this.countryField;
-            }
-            set {
-                this.countryField = value;
-                this.RaisePropertyChanged("country");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string typeCode {
-            get {
-                return this.typeCodeField;
-            }
-            set {
-                this.typeCodeField = value;
-                this.RaisePropertyChanged("typeCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string typeDescription {
-            get {
-                return this.typeDescriptionField;
-            }
-            set {
-                this.typeDescriptionField = value;
-                this.RaisePropertyChanged("typeDescription");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("classifier", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public patentClassifierInfo[] classifierList {
-            get {
-                return this.classifierListField;
-            }
-            set {
-                this.classifierListField = value;
-                this.RaisePropertyChanged("classifierList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public patentApplication application {
-            get {
-                return this.applicationField;
-            }
-            set {
-                this.applicationField = value;
-                this.RaisePropertyChanged("application");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("priority", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public patentPriorityData[] priorityList {
-            get {
-                return this.priorityListField;
-            }
-            set {
-                this.priorityListField = value;
-                this.RaisePropertyChanged("priorityList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("family", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public patentFamilyData[] familyList {
-            get {
-                return this.familyListField;
-            }
-            set {
-                this.familyListField = value;
-                this.RaisePropertyChanged("familyList");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class bookOrReportDetails : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string publisherField;
-        
-        private sbyte dayOfPublicationField;
-        
-        private bool dayOfPublicationFieldSpecified;
-        
-        private sbyte monthOfPublicationField;
-        
-        private bool monthOfPublicationFieldSpecified;
-        
-        private short yearOfPublicationField;
-        
-        private bool yearOfPublicationFieldSpecified;
-        
-        private string numberOfPagesField;
-        
-        private string editionField;
-        
-        private string isbn10Field;
-        
-        private string isbn13Field;
-        
-        private string seriesNameField;
-        
-        private string seriesIssnField;
-        
-        private string comprisingTitleField;
-        
-        private string comprisingTitleNonAsciiField;
-        
-        private string extraInformationField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string publisher {
-            get {
-                return this.publisherField;
-            }
-            set {
-                this.publisherField = value;
-                this.RaisePropertyChanged("publisher");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public sbyte dayOfPublication {
-            get {
-                return this.dayOfPublicationField;
-            }
-            set {
-                this.dayOfPublicationField = value;
-                this.RaisePropertyChanged("dayOfPublication");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dayOfPublicationSpecified {
-            get {
-                return this.dayOfPublicationFieldSpecified;
-            }
-            set {
-                this.dayOfPublicationFieldSpecified = value;
-                this.RaisePropertyChanged("dayOfPublicationSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public sbyte monthOfPublication {
-            get {
-                return this.monthOfPublicationField;
-            }
-            set {
-                this.monthOfPublicationField = value;
-                this.RaisePropertyChanged("monthOfPublication");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool monthOfPublicationSpecified {
-            get {
-                return this.monthOfPublicationFieldSpecified;
-            }
-            set {
-                this.monthOfPublicationFieldSpecified = value;
-                this.RaisePropertyChanged("monthOfPublicationSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public short yearOfPublication {
-            get {
-                return this.yearOfPublicationField;
-            }
-            set {
-                this.yearOfPublicationField = value;
-                this.RaisePropertyChanged("yearOfPublication");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool yearOfPublicationSpecified {
-            get {
-                return this.yearOfPublicationFieldSpecified;
-            }
-            set {
-                this.yearOfPublicationFieldSpecified = value;
-                this.RaisePropertyChanged("yearOfPublicationSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string numberOfPages {
-            get {
-                return this.numberOfPagesField;
-            }
-            set {
-                this.numberOfPagesField = value;
-                this.RaisePropertyChanged("numberOfPages");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string edition {
-            get {
-                return this.editionField;
-            }
-            set {
-                this.editionField = value;
-                this.RaisePropertyChanged("edition");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string isbn10 {
-            get {
-                return this.isbn10Field;
-            }
-            set {
-                this.isbn10Field = value;
-                this.RaisePropertyChanged("isbn10");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string isbn13 {
-            get {
-                return this.isbn13Field;
-            }
-            set {
-                this.isbn13Field = value;
-                this.RaisePropertyChanged("isbn13");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string seriesName {
-            get {
-                return this.seriesNameField;
-            }
-            set {
-                this.seriesNameField = value;
-                this.RaisePropertyChanged("seriesName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string seriesIssn {
-            get {
-                return this.seriesIssnField;
-            }
-            set {
-                this.seriesIssnField = value;
-                this.RaisePropertyChanged("seriesIssn");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public string comprisingTitle {
-            get {
-                return this.comprisingTitleField;
-            }
-            set {
-                this.comprisingTitleField = value;
-                this.RaisePropertyChanged("comprisingTitle");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public string comprisingTitleNonAscii {
-            get {
-                return this.comprisingTitleNonAsciiField;
-            }
-            set {
-                this.comprisingTitleNonAsciiField = value;
-                this.RaisePropertyChanged("comprisingTitleNonAscii");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
-        public string extraInformation {
-            get {
-                return this.extraInformationField;
-            }
-            set {
-                this.extraInformationField = value;
-                this.RaisePropertyChanged("extraInformation");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class journal : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string titleField;
-        
-        private string iSOAbbreviationField;
-        
-        private string medlineAbbreviationField;
-        
-        private string nLMidField;
-        
-        private string iSSNField;
-        
-        private string eSSNField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string title {
-            get {
-                return this.titleField;
-            }
-            set {
-                this.titleField = value;
-                this.RaisePropertyChanged("title");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string ISOAbbreviation {
-            get {
-                return this.iSOAbbreviationField;
-            }
-            set {
-                this.iSOAbbreviationField = value;
-                this.RaisePropertyChanged("ISOAbbreviation");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string medlineAbbreviation {
-            get {
-                return this.medlineAbbreviationField;
-            }
-            set {
-                this.medlineAbbreviationField = value;
-                this.RaisePropertyChanged("medlineAbbreviation");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string NLMid {
-            get {
-                return this.nLMidField;
-            }
-            set {
-                this.nLMidField = value;
-                this.RaisePropertyChanged("NLMid");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string ISSN {
-            get {
-                return this.iSSNField;
-            }
-            set {
-                this.iSSNField = value;
-                this.RaisePropertyChanged("ISSN");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string ESSN {
-            get {
-                return this.eSSNField;
-            }
-            set {
-                this.eSSNField = value;
-                this.RaisePropertyChanged("ESSN");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class journalInfo : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string issueField;
-        
-        private string volumeField;
-        
-        private int journalIssueIdField;
-        
-        private bool journalIssueIdFieldSpecified;
-        
-        private string dateOfPublicationField;
-        
-        private sbyte monthOfPublicationField;
-        
-        private bool monthOfPublicationFieldSpecified;
-        
-        private short yearOfPublicationField;
-        
-        private bool yearOfPublicationFieldSpecified;
-        
-        private string printPublicationDateField;
-        
-        private journal journalField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string issue {
-            get {
-                return this.issueField;
-            }
-            set {
-                this.issueField = value;
-                this.RaisePropertyChanged("issue");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string volume {
-            get {
-                return this.volumeField;
-            }
-            set {
-                this.volumeField = value;
-                this.RaisePropertyChanged("volume");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int journalIssueId {
-            get {
-                return this.journalIssueIdField;
-            }
-            set {
-                this.journalIssueIdField = value;
-                this.RaisePropertyChanged("journalIssueId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool journalIssueIdSpecified {
-            get {
-                return this.journalIssueIdFieldSpecified;
-            }
-            set {
-                this.journalIssueIdFieldSpecified = value;
-                this.RaisePropertyChanged("journalIssueIdSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string dateOfPublication {
-            get {
-                return this.dateOfPublicationField;
-            }
-            set {
-                this.dateOfPublicationField = value;
-                this.RaisePropertyChanged("dateOfPublication");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public sbyte monthOfPublication {
-            get {
-                return this.monthOfPublicationField;
-            }
-            set {
-                this.monthOfPublicationField = value;
-                this.RaisePropertyChanged("monthOfPublication");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool monthOfPublicationSpecified {
-            get {
-                return this.monthOfPublicationFieldSpecified;
-            }
-            set {
-                this.monthOfPublicationFieldSpecified = value;
-                this.RaisePropertyChanged("monthOfPublicationSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public short yearOfPublication {
-            get {
-                return this.yearOfPublicationField;
-            }
-            set {
-                this.yearOfPublicationField = value;
-                this.RaisePropertyChanged("yearOfPublication");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool yearOfPublicationSpecified {
-            get {
-                return this.yearOfPublicationFieldSpecified;
-            }
-            set {
-                this.yearOfPublicationFieldSpecified = value;
-                this.RaisePropertyChanged("yearOfPublicationSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string printPublicationDate {
-            get {
-                return this.printPublicationDateField;
-            }
-            set {
-                this.printPublicationDateField = value;
-                this.RaisePropertyChanged("printPublicationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public journal journal {
-            get {
-                return this.journalField;
-            }
-            set {
-                this.journalField = value;
-                this.RaisePropertyChanged("journal");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class authorId : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string typeField;
-        
-        private string valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string type {
-            get {
-                return this.typeField;
-            }
-            set {
-                this.typeField = value;
-                this.RaisePropertyChanged("type");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public string Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("Value");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class authors : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string collectiveNameField;
-        
-        private string fullNameField;
-        
-        private string firstNameField;
-        
-        private string lastNameField;
-        
-        private string initialsField;
-        
-        private authorId authorIdField;
-        
-        private string affiliationField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string collectiveName {
-            get {
-                return this.collectiveNameField;
-            }
-            set {
-                this.collectiveNameField = value;
-                this.RaisePropertyChanged("collectiveName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string fullName {
-            get {
-                return this.fullNameField;
-            }
-            set {
-                this.fullNameField = value;
-                this.RaisePropertyChanged("fullName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string firstName {
-            get {
-                return this.firstNameField;
-            }
-            set {
-                this.firstNameField = value;
-                this.RaisePropertyChanged("firstName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string lastName {
-            get {
-                return this.lastNameField;
-            }
-            set {
-                this.lastNameField = value;
-                this.RaisePropertyChanged("lastName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string initials {
-            get {
-                return this.initialsField;
-            }
-            set {
-                this.initialsField = value;
-                this.RaisePropertyChanged("initials");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public authorId authorId {
-            get {
-                return this.authorIdField;
-            }
-            set {
-                this.authorIdField = value;
-                this.RaisePropertyChanged("authorId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string affiliation {
-            get {
-                return this.affiliationField;
-            }
-            set {
-                this.affiliationField = value;
-                this.RaisePropertyChanged("affiliation");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class result : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private request requestField;
-        
-        private int citationIdField;
-        
-        private bool citationIdFieldSpecified;
+    public partial class getDatabaseLinks : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string idField;
         
         private string sourceField;
         
-        private string pmidField;
-        
-        private string pmcidField;
-        
-        private string doiField;
-        
-        private string titleField;
-        
-        private string authorStringField;
-        
-        private authors[] authorListField;
-        
-        private authors[] investigatorListField;
-        
-        private authorId[] authorIdListField;
-        
-        private journalInfo journalInfoField;
-        
-        private string journalTitleField;
-        
-        private string issueField;
-        
-        private string journalVolumeField;
-        
-        private string pubYearField;
-        
-        private string journalIssnField;
-        
-        private string pageInfoField;
-        
-        private string abstractTextField;
-        
-        private string affiliationField;
-        
-        private string languageField;
-        
-        private string pubModelField;
-        
-        private string pubTypeField;
-        
-        private string[] pubTypeListField;
-        
-        private string brSummaryField;
-        
-        private bookOrReportDetails bookOrReportDetailsField;
-        
-        private patentDetailsInfo patentDetailsField;
-        
-        private grantInfo[] grantsListField;
-        
-        private meshHeadingInfo[] meshHeadingListField;
-        
-        private string[] keywordListField;
-        
-        private chemicalInfo[] chemicalListField;
-        
-        private subSet[] subsetListField;
-        
-        private fullTextURLInfo[] fullTextUrlListField;
-        
-        private commentCorrection[] commentCorrectionListField;
-        
-        private extComment[] extCommentListField;
-        
-        private string isOpenAccessField;
-        
-        private string inEPMCField;
-        
-        private string inPMCField;
-        
-        private int citedByCountField;
-        
-        private bool citedByCountFieldSpecified;
-        
-        private string hasReferencesField;
-        
-        private string hasTextMinedTermsField;
-        
-        private string hasDbCrossReferencesField;
-        
-        private string[] dbCrossReferenceListField;
-        
-        private string hasSupplementaryField;
-        
-        private string hasFullTextXMLField;
-        
-        private string hasPDFField;
-        
-        private string hasBookField;
-        
-        private string bookidField;
-        
-        private string hasSupplField;
-        
-        private string hasLabsLinksField;
-        
-        private string licenseField;
-        
-        private string epmcAuthManField;
-        
-        private string hasTMAccessionNumbersField;
-        
-        private string[] tmAccessionTypeListField;
-        
-        private string dateOfCompletionField;
-        
-        private string dateOfCreationField;
-        
-        private string dateOfRevisionField;
-        
-        private string electronicPublicationDateField;
-        
-        private string firstPublicationDateField;
-        
-        private string embargoDateField;
-        
-        private string fullTextField;
-        
-        private string supplementaryFilesField;
-        
-        private string luceneScoreField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public request request {
-            get {
-                return this.requestField;
-            }
-            set {
-                this.requestField = value;
-                this.RaisePropertyChanged("request");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int citationId {
-            get {
-                return this.citationIdField;
-            }
-            set {
-                this.citationIdField = value;
-                this.RaisePropertyChanged("citationId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool citationIdSpecified {
-            get {
-                return this.citationIdFieldSpecified;
-            }
-            set {
-                this.citationIdFieldSpecified = value;
-                this.RaisePropertyChanged("citationIdSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string source {
-            get {
-                return this.sourceField;
-            }
-            set {
-                this.sourceField = value;
-                this.RaisePropertyChanged("source");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string pmid {
-            get {
-                return this.pmidField;
-            }
-            set {
-                this.pmidField = value;
-                this.RaisePropertyChanged("pmid");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string pmcid {
-            get {
-                return this.pmcidField;
-            }
-            set {
-                this.pmcidField = value;
-                this.RaisePropertyChanged("pmcid");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string doi {
-            get {
-                return this.doiField;
-            }
-            set {
-                this.doiField = value;
-                this.RaisePropertyChanged("doi");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string title {
-            get {
-                return this.titleField;
-            }
-            set {
-                this.titleField = value;
-                this.RaisePropertyChanged("title");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string authorString {
-            get {
-                return this.authorStringField;
-            }
-            set {
-                this.authorStringField = value;
-                this.RaisePropertyChanged("authorString");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("author", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public authors[] authorList {
-            get {
-                return this.authorListField;
-            }
-            set {
-                this.authorListField = value;
-                this.RaisePropertyChanged("authorList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("investigator", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public authors[] investigatorList {
-            get {
-                return this.investigatorListField;
-            }
-            set {
-                this.investigatorListField = value;
-                this.RaisePropertyChanged("investigatorList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public authorId[] authorIdList {
-            get {
-                return this.authorIdListField;
-            }
-            set {
-                this.authorIdListField = value;
-                this.RaisePropertyChanged("authorIdList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
-        public journalInfo journalInfo {
-            get {
-                return this.journalInfoField;
-            }
-            set {
-                this.journalInfoField = value;
-                this.RaisePropertyChanged("journalInfo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
-        public string journalTitle {
-            get {
-                return this.journalTitleField;
-            }
-            set {
-                this.journalTitleField = value;
-                this.RaisePropertyChanged("journalTitle");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
-        public string issue {
-            get {
-                return this.issueField;
-            }
-            set {
-                this.issueField = value;
-                this.RaisePropertyChanged("issue");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
-        public string journalVolume {
-            get {
-                return this.journalVolumeField;
-            }
-            set {
-                this.journalVolumeField = value;
-                this.RaisePropertyChanged("journalVolume");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=16)]
-        public string pubYear {
-            get {
-                return this.pubYearField;
-            }
-            set {
-                this.pubYearField = value;
-                this.RaisePropertyChanged("pubYear");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=17)]
-        public string journalIssn {
-            get {
-                return this.journalIssnField;
-            }
-            set {
-                this.journalIssnField = value;
-                this.RaisePropertyChanged("journalIssn");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=18)]
-        public string pageInfo {
-            get {
-                return this.pageInfoField;
-            }
-            set {
-                this.pageInfoField = value;
-                this.RaisePropertyChanged("pageInfo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=19)]
-        public string abstractText {
-            get {
-                return this.abstractTextField;
-            }
-            set {
-                this.abstractTextField = value;
-                this.RaisePropertyChanged("abstractText");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=20)]
-        public string affiliation {
-            get {
-                return this.affiliationField;
-            }
-            set {
-                this.affiliationField = value;
-                this.RaisePropertyChanged("affiliation");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=21)]
-        public string language {
-            get {
-                return this.languageField;
-            }
-            set {
-                this.languageField = value;
-                this.RaisePropertyChanged("language");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=22)]
-        public string pubModel {
-            get {
-                return this.pubModelField;
-            }
-            set {
-                this.pubModelField = value;
-                this.RaisePropertyChanged("pubModel");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=23)]
-        public string pubType {
-            get {
-                return this.pubTypeField;
-            }
-            set {
-                this.pubTypeField = value;
-                this.RaisePropertyChanged("pubType");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=24)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("pubType", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] pubTypeList {
-            get {
-                return this.pubTypeListField;
-            }
-            set {
-                this.pubTypeListField = value;
-                this.RaisePropertyChanged("pubTypeList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=25)]
-        public string brSummary {
-            get {
-                return this.brSummaryField;
-            }
-            set {
-                this.brSummaryField = value;
-                this.RaisePropertyChanged("brSummary");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=26)]
-        public bookOrReportDetails bookOrReportDetails {
-            get {
-                return this.bookOrReportDetailsField;
-            }
-            set {
-                this.bookOrReportDetailsField = value;
-                this.RaisePropertyChanged("bookOrReportDetails");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=27)]
-        public patentDetailsInfo patentDetails {
-            get {
-                return this.patentDetailsField;
-            }
-            set {
-                this.patentDetailsField = value;
-                this.RaisePropertyChanged("patentDetails");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=28)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("grant", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public grantInfo[] grantsList {
-            get {
-                return this.grantsListField;
-            }
-            set {
-                this.grantsListField = value;
-                this.RaisePropertyChanged("grantsList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=29)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("meshHeading", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public meshHeadingInfo[] meshHeadingList {
-            get {
-                return this.meshHeadingListField;
-            }
-            set {
-                this.meshHeadingListField = value;
-                this.RaisePropertyChanged("meshHeadingList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=30)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("keyword", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] keywordList {
-            get {
-                return this.keywordListField;
-            }
-            set {
-                this.keywordListField = value;
-                this.RaisePropertyChanged("keywordList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=31)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("chemical", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public chemicalInfo[] chemicalList {
-            get {
-                return this.chemicalListField;
-            }
-            set {
-                this.chemicalListField = value;
-                this.RaisePropertyChanged("chemicalList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=32)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("subset", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public subSet[] subsetList {
-            get {
-                return this.subsetListField;
-            }
-            set {
-                this.subsetListField = value;
-                this.RaisePropertyChanged("subsetList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=33)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("fullTextUrl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public fullTextURLInfo[] fullTextUrlList {
-            get {
-                return this.fullTextUrlListField;
-            }
-            set {
-                this.fullTextUrlListField = value;
-                this.RaisePropertyChanged("fullTextUrlList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=34)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public commentCorrection[] commentCorrectionList {
-            get {
-                return this.commentCorrectionListField;
-            }
-            set {
-                this.commentCorrectionListField = value;
-                this.RaisePropertyChanged("commentCorrectionList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=35)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public extComment[] extCommentList {
-            get {
-                return this.extCommentListField;
-            }
-            set {
-                this.extCommentListField = value;
-                this.RaisePropertyChanged("extCommentList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=36)]
-        public string isOpenAccess {
-            get {
-                return this.isOpenAccessField;
-            }
-            set {
-                this.isOpenAccessField = value;
-                this.RaisePropertyChanged("isOpenAccess");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=37)]
-        public string inEPMC {
-            get {
-                return this.inEPMCField;
-            }
-            set {
-                this.inEPMCField = value;
-                this.RaisePropertyChanged("inEPMC");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=38)]
-        public string inPMC {
-            get {
-                return this.inPMCField;
-            }
-            set {
-                this.inPMCField = value;
-                this.RaisePropertyChanged("inPMC");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=39)]
-        public int citedByCount {
-            get {
-                return this.citedByCountField;
-            }
-            set {
-                this.citedByCountField = value;
-                this.RaisePropertyChanged("citedByCount");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool citedByCountSpecified {
-            get {
-                return this.citedByCountFieldSpecified;
-            }
-            set {
-                this.citedByCountFieldSpecified = value;
-                this.RaisePropertyChanged("citedByCountSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=40)]
-        public string hasReferences {
-            get {
-                return this.hasReferencesField;
-            }
-            set {
-                this.hasReferencesField = value;
-                this.RaisePropertyChanged("hasReferences");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=41)]
-        public string hasTextMinedTerms {
-            get {
-                return this.hasTextMinedTermsField;
-            }
-            set {
-                this.hasTextMinedTermsField = value;
-                this.RaisePropertyChanged("hasTextMinedTerms");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=42)]
-        public string hasDbCrossReferences {
-            get {
-                return this.hasDbCrossReferencesField;
-            }
-            set {
-                this.hasDbCrossReferencesField = value;
-                this.RaisePropertyChanged("hasDbCrossReferences");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=43)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("dbName", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] dbCrossReferenceList {
-            get {
-                return this.dbCrossReferenceListField;
-            }
-            set {
-                this.dbCrossReferenceListField = value;
-                this.RaisePropertyChanged("dbCrossReferenceList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=44)]
-        public string hasSupplementary {
-            get {
-                return this.hasSupplementaryField;
-            }
-            set {
-                this.hasSupplementaryField = value;
-                this.RaisePropertyChanged("hasSupplementary");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=45)]
-        public string hasFullTextXML {
-            get {
-                return this.hasFullTextXMLField;
-            }
-            set {
-                this.hasFullTextXMLField = value;
-                this.RaisePropertyChanged("hasFullTextXML");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=46)]
-        public string hasPDF {
-            get {
-                return this.hasPDFField;
-            }
-            set {
-                this.hasPDFField = value;
-                this.RaisePropertyChanged("hasPDF");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=47)]
-        public string hasBook {
-            get {
-                return this.hasBookField;
-            }
-            set {
-                this.hasBookField = value;
-                this.RaisePropertyChanged("hasBook");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=48)]
-        public string bookid {
-            get {
-                return this.bookidField;
-            }
-            set {
-                this.bookidField = value;
-                this.RaisePropertyChanged("bookid");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=49)]
-        public string hasSuppl {
-            get {
-                return this.hasSupplField;
-            }
-            set {
-                this.hasSupplField = value;
-                this.RaisePropertyChanged("hasSuppl");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=50)]
-        public string hasLabsLinks {
-            get {
-                return this.hasLabsLinksField;
-            }
-            set {
-                this.hasLabsLinksField = value;
-                this.RaisePropertyChanged("hasLabsLinks");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=51)]
-        public string license {
-            get {
-                return this.licenseField;
-            }
-            set {
-                this.licenseField = value;
-                this.RaisePropertyChanged("license");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=52)]
-        public string epmcAuthMan {
-            get {
-                return this.epmcAuthManField;
-            }
-            set {
-                this.epmcAuthManField = value;
-                this.RaisePropertyChanged("epmcAuthMan");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=53)]
-        public string hasTMAccessionNumbers {
-            get {
-                return this.hasTMAccessionNumbersField;
-            }
-            set {
-                this.hasTMAccessionNumbersField = value;
-                this.RaisePropertyChanged("hasTMAccessionNumbers");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=54)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("accessionType", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] tmAccessionTypeList {
-            get {
-                return this.tmAccessionTypeListField;
-            }
-            set {
-                this.tmAccessionTypeListField = value;
-                this.RaisePropertyChanged("tmAccessionTypeList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=55)]
-        public string dateOfCompletion {
-            get {
-                return this.dateOfCompletionField;
-            }
-            set {
-                this.dateOfCompletionField = value;
-                this.RaisePropertyChanged("dateOfCompletion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=56)]
-        public string dateOfCreation {
-            get {
-                return this.dateOfCreationField;
-            }
-            set {
-                this.dateOfCreationField = value;
-                this.RaisePropertyChanged("dateOfCreation");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=57)]
-        public string dateOfRevision {
-            get {
-                return this.dateOfRevisionField;
-            }
-            set {
-                this.dateOfRevisionField = value;
-                this.RaisePropertyChanged("dateOfRevision");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=58)]
-        public string electronicPublicationDate {
-            get {
-                return this.electronicPublicationDateField;
-            }
-            set {
-                this.electronicPublicationDateField = value;
-                this.RaisePropertyChanged("electronicPublicationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=59)]
-        public string firstPublicationDate {
-            get {
-                return this.firstPublicationDateField;
-            }
-            set {
-                this.firstPublicationDateField = value;
-                this.RaisePropertyChanged("firstPublicationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=60)]
-        public string embargoDate {
-            get {
-                return this.embargoDateField;
-            }
-            set {
-                this.embargoDateField = value;
-                this.RaisePropertyChanged("embargoDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI", Order=61)]
-        public string fullText {
-            get {
-                return this.fullTextField;
-            }
-            set {
-                this.fullTextField = value;
-                this.RaisePropertyChanged("fullText");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI", Order=62)]
-        public string supplementaryFiles {
-            get {
-                return this.supplementaryFilesField;
-            }
-            set {
-                this.supplementaryFilesField = value;
-                this.RaisePropertyChanged("supplementaryFiles");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=63)]
-        public string luceneScore {
-            get {
-                return this.luceneScoreField;
-            }
-            set {
-                this.luceneScoreField = value;
-                this.RaisePropertyChanged("luceneScore");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class request : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string queryStringField;
-        
-        private string internalQueryField;
-        
-        private string resultTypeField;
-        
-        private string profileTypeField;
-        
-        private string idField;
-        
-        private string sourceField;
+        private string databaseField;
         
         private int offSetField;
         
         private bool offSetFieldSpecified;
         
-        private string cursorMarkField;
-        
-        private int pageSizeField;
-        
-        private bool pageSizeFieldSpecified;
-        
-        private string sortField;
-        
-        private string databaseField;
-        
-        private string semanticTypeField;
-        
-        private bool synonymField;
-        
-        private bool synonymFieldSpecified;
+        private string pageSizeField;
         
         private string emailField;
         
-        private string providerIdField;
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string queryString {
-            get {
-                return this.queryStringField;
-            }
-            set {
-                this.queryStringField = value;
-                this.RaisePropertyChanged("queryString");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string internalQuery {
-            get {
-                return this.internalQueryField;
-            }
-            set {
-                this.internalQueryField = value;
-                this.RaisePropertyChanged("internalQuery");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string resultType {
-            get {
-                return this.resultTypeField;
-            }
-            set {
-                this.resultTypeField = value;
-                this.RaisePropertyChanged("resultType");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string profileType {
-            get {
-                return this.profileTypeField;
-            }
-            set {
-                this.profileTypeField = value;
-                this.RaisePropertyChanged("profileType");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public string id {
             get {
                 return this.idField;
@@ -3946,7 +5374,7 @@ namespace Extant.Pubmed.EBIPublicationsService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public string source {
             get {
                 return this.sourceField;
@@ -3958,7 +5386,19 @@ namespace Extant.Pubmed.EBIPublicationsService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string database {
+            get {
+                return this.databaseField;
+            }
+            set {
+                this.databaseField = value;
+                this.RaisePropertyChanged("database");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public int offSet {
             get {
                 return this.offSetField;
@@ -3982,7 +5422,211 @@ namespace Extant.Pubmed.EBIPublicationsService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string pageSize {
+            get {
+                return this.pageSizeField;
+            }
+            set {
+                this.pageSizeField = value;
+                this.RaisePropertyChanged("pageSize");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+                this.RaisePropertyChanged("email");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class getFulltextXMLResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private result returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public result @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class getFulltextXML : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string idField;
+        
+        private string sourceField;
+        
+        private string emailField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string source {
+            get {
+                return this.sourceField;
+            }
+            set {
+                this.sourceField = value;
+                this.RaisePropertyChanged("source");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+                this.RaisePropertyChanged("email");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class searchPublicationsResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private responseWrapper returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public responseWrapper @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class searchPublications : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string queryStringField;
+        
+        private string resultTypeField;
+        
+        private string cursorMarkField;
+        
+        private string pageSizeField;
+        
+        private string sortField;
+        
+        private string synonymField;
+        
+        private string emailField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string queryString {
+            get {
+                return this.queryStringField;
+            }
+            set {
+                this.queryStringField = value;
+                this.RaisePropertyChanged("queryString");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string resultType {
+            get {
+                return this.resultTypeField;
+            }
+            set {
+                this.resultTypeField = value;
+                this.RaisePropertyChanged("resultType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public string cursorMark {
             get {
                 return this.cursorMarkField;
@@ -3994,8 +5638,8 @@ namespace Extant.Pubmed.EBIPublicationsService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public int pageSize {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string pageSize {
             get {
                 return this.pageSizeField;
             }
@@ -4006,19 +5650,7 @@ namespace Extant.Pubmed.EBIPublicationsService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool pageSizeSpecified {
-            get {
-                return this.pageSizeFieldSpecified;
-            }
-            set {
-                this.pageSizeFieldSpecified = value;
-                this.RaisePropertyChanged("pageSizeSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public string sort {
             get {
                 return this.sortField;
@@ -4030,19 +5662,825 @@ namespace Extant.Pubmed.EBIPublicationsService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public string database {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string synonym {
             get {
-                return this.databaseField;
+                return this.synonymField;
             }
             set {
-                this.databaseField = value;
-                this.RaisePropertyChanged("database");
+                this.synonymField = value;
+                this.RaisePropertyChanged("synonym");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+                this.RaisePropertyChanged("email");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class getLabsLinksResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private responseWrapper returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public responseWrapper @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class getLabsLinks : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string idField;
+        
+        private string sourceField;
+        
+        private string providerIdField;
+        
+        private int offSetField;
+        
+        private bool offSetFieldSpecified;
+        
+        private string pageSizeField;
+        
+        private string emailField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string source {
+            get {
+                return this.sourceField;
+            }
+            set {
+                this.sourceField = value;
+                this.RaisePropertyChanged("source");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string providerId {
+            get {
+                return this.providerIdField;
+            }
+            set {
+                this.providerIdField = value;
+                this.RaisePropertyChanged("providerId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int offSet {
+            get {
+                return this.offSetField;
+            }
+            set {
+                this.offSetField = value;
+                this.RaisePropertyChanged("offSet");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool offSetSpecified {
+            get {
+                return this.offSetFieldSpecified;
+            }
+            set {
+                this.offSetFieldSpecified = value;
+                this.RaisePropertyChanged("offSetSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string pageSize {
+            get {
+                return this.pageSizeField;
+            }
+            set {
+                this.pageSizeField = value;
+                this.RaisePropertyChanged("pageSize");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+                this.RaisePropertyChanged("email");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class getReferencesResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private responseWrapper returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public responseWrapper @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class getReferences : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string idField;
+        
+        private string sourceField;
+        
+        private int offSetField;
+        
+        private bool offSetFieldSpecified;
+        
+        private string pageSizeField;
+        
+        private string emailField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string source {
+            get {
+                return this.sourceField;
+            }
+            set {
+                this.sourceField = value;
+                this.RaisePropertyChanged("source");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int offSet {
+            get {
+                return this.offSetField;
+            }
+            set {
+                this.offSetField = value;
+                this.RaisePropertyChanged("offSet");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool offSetSpecified {
+            get {
+                return this.offSetFieldSpecified;
+            }
+            set {
+                this.offSetFieldSpecified = value;
+                this.RaisePropertyChanged("offSetSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string pageSize {
+            get {
+                return this.pageSizeField;
+            }
+            set {
+                this.pageSizeField = value;
+                this.RaisePropertyChanged("pageSize");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+                this.RaisePropertyChanged("email");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class listSearchFieldsResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private responseWrapper returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public responseWrapper @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class listSearchFields : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string emailField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+                this.RaisePropertyChanged("email");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class getBookXMLResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private result returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public result @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class getBookXML : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string idField;
+        
+        private string sourceField;
+        
+        private string emailField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string source {
+            get {
+                return this.sourceField;
+            }
+            set {
+                this.sourceField = value;
+                this.RaisePropertyChanged("source");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+                this.RaisePropertyChanged("email");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class getDataLinksResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private responseWrapper returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public responseWrapper @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class getDataLinks : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string idField;
+        
+        private string sourceField;
+        
+        private string categoryField;
+        
+        private string obtainedByField;
+        
+        private string fromDateField;
+        
+        private string tagsField;
+        
+        private string sectionLimitField;
+        
+        private string emailField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string source {
+            get {
+                return this.sourceField;
+            }
+            set {
+                this.sourceField = value;
+                this.RaisePropertyChanged("source");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string category {
+            get {
+                return this.categoryField;
+            }
+            set {
+                this.categoryField = value;
+                this.RaisePropertyChanged("category");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string obtainedBy {
+            get {
+                return this.obtainedByField;
+            }
+            set {
+                this.obtainedByField = value;
+                this.RaisePropertyChanged("obtainedBy");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string fromDate {
+            get {
+                return this.fromDateField;
+            }
+            set {
+                this.fromDateField = value;
+                this.RaisePropertyChanged("fromDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string tags {
+            get {
+                return this.tagsField;
+            }
+            set {
+                this.tagsField = value;
+                this.RaisePropertyChanged("tags");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string sectionLimit {
+            get {
+                return this.sectionLimitField;
+            }
+            set {
+                this.sectionLimitField = value;
+                this.RaisePropertyChanged("sectionLimit");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+                this.RaisePropertyChanged("email");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class profilePublicationsResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private responseWrapper returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public responseWrapper @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class profilePublications : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string queryStringField;
+        
+        private string profileTypeField;
+        
+        private string synonymField;
+        
+        private string emailField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string queryString {
+            get {
+                return this.queryStringField;
+            }
+            set {
+                this.queryStringField = value;
+                this.RaisePropertyChanged("queryString");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string profileType {
+            get {
+                return this.profileTypeField;
+            }
+            set {
+                this.profileTypeField = value;
+                this.RaisePropertyChanged("profileType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string synonym {
+            get {
+                return this.synonymField;
+            }
+            set {
+                this.synonymField = value;
+                this.RaisePropertyChanged("synonym");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+                this.RaisePropertyChanged("email");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class getTextMinedTermsResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private responseWrapper returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public responseWrapper @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class getTextMinedTerms : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string idField;
+        
+        private string sourceField;
+        
+        private string semanticTypeField;
+        
+        private int offSetField;
+        
+        private bool offSetFieldSpecified;
+        
+        private string pageSizeField;
+        
+        private string emailField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string source {
+            get {
+                return this.sourceField;
+            }
+            set {
+                this.sourceField = value;
+                this.RaisePropertyChanged("source");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public string semanticType {
             get {
                 return this.semanticTypeField;
@@ -4054,31 +6492,43 @@ namespace Extant.Pubmed.EBIPublicationsService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
-        public bool synonym {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int offSet {
             get {
-                return this.synonymField;
+                return this.offSetField;
             }
             set {
-                this.synonymField = value;
-                this.RaisePropertyChanged("synonym");
+                this.offSetField = value;
+                this.RaisePropertyChanged("offSet");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool synonymSpecified {
+        public bool offSetSpecified {
             get {
-                return this.synonymFieldSpecified;
+                return this.offSetFieldSpecified;
             }
             set {
-                this.synonymFieldSpecified = value;
-                this.RaisePropertyChanged("synonymSpecified");
+                this.offSetFieldSpecified = value;
+                this.RaisePropertyChanged("offSetSpecified");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string pageSize {
+            get {
+                return this.pageSizeField;
+            }
+            set {
+                this.pageSizeField = value;
+                this.RaisePropertyChanged("pageSize");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public string email {
             get {
                 return this.emailField;
@@ -4089,15 +6539,35 @@ namespace Extant.Pubmed.EBIPublicationsService {
             }
         }
         
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class getCitationsResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private responseWrapper returnField;
+        
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
-        public string providerId {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public responseWrapper @return {
             get {
-                return this.providerIdField;
+                return this.returnField;
             }
             set {
-                this.providerIdField = value;
-                this.RaisePropertyChanged("providerId");
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
             }
         }
         
@@ -4112,68 +6582,40 @@ namespace Extant.Pubmed.EBIPublicationsService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class profile : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class getCitations : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string nameField;
+        private string idField;
         
-        private int countField;
+        private string sourceField;
+        
+        private int offSetField;
+        
+        private bool offSetFieldSpecified;
+        
+        private string pageSizeField;
+        
+        private string emailField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string name {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string id {
             get {
-                return this.nameField;
+                return this.idField;
             }
             set {
-                this.nameField = value;
-                this.RaisePropertyChanged("name");
+                this.idField = value;
+                this.RaisePropertyChanged("id");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public int count {
-            get {
-                return this.countField;
-            }
-            set {
-                this.countField = value;
-                this.RaisePropertyChanged("count");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class profileListBean : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private profile[] sourceField;
-        
-        private profile[] pubTypeField;
-        
-        private profile[] subsetField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("source", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
-        public profile[] source {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string source {
             get {
                 return this.sourceField;
             }
@@ -4184,26 +6626,50 @@ namespace Extant.Pubmed.EBIPublicationsService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("pubType", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
-        public profile[] pubType {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int offSet {
             get {
-                return this.pubTypeField;
+                return this.offSetField;
             }
             set {
-                this.pubTypeField = value;
-                this.RaisePropertyChanged("pubType");
+                this.offSetField = value;
+                this.RaisePropertyChanged("offSet");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("subset", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
-        public profile[] subset {
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool offSetSpecified {
             get {
-                return this.subsetField;
+                return this.offSetFieldSpecified;
             }
             set {
-                this.subsetField = value;
-                this.RaisePropertyChanged("subset");
+                this.offSetFieldSpecified = value;
+                this.RaisePropertyChanged("offSetSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string pageSize {
+            get {
+                return this.pageSizeField;
+            }
+            set {
+                this.pageSizeField = value;
+                this.RaisePropertyChanged("pageSize");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+                this.RaisePropertyChanged("email");
             }
         }
         
@@ -4218,244 +6684,98 @@ namespace Extant.Pubmed.EBIPublicationsService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1087.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
-    public partial class responseWrapper : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class getSupplementaryFilesResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string versionField;
-        
-        private int hitCountField;
-        
-        private bool hitCountFieldSpecified;
-        
-        private string nextCursorMarkField;
-        
-        private request requestField;
-        
-        private profileListBean profileListField;
-        
-        private result[] resultListField;
-        
-        private dbCounts[] dbCountListField;
-        
-        private dbCrossReference[] dbCrossReferenceListField;
-        
-        private CitationData[] citationListField;
-        
-        private referenceInfo[] referenceListField;
-        
-        private semanticCounts[] semanticTypeCountListField;
-        
-        private minedTerms[] semanticTypeListField;
-        
-        private SearchTerm[] searchTermListField;
-        
-        private labsProviderCounts[] linksCountListField;
-        
-        private labsProvider[] providersField;
+        private result returnField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string version {
+        public result @return {
             get {
-                return this.versionField;
+                return this.returnField;
             }
             set {
-                this.versionField = value;
-                this.RaisePropertyChanged("version");
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/")]
+    public partial class getSupplementaryFiles : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string idField;
+        
+        private string sourceField;
+        
+        private string inlineImagesField;
+        
+        private string emailField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int hitCount {
+        public string source {
             get {
-                return this.hitCountField;
+                return this.sourceField;
             }
             set {
-                this.hitCountField = value;
-                this.RaisePropertyChanged("hitCount");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool hitCountSpecified {
-            get {
-                return this.hitCountFieldSpecified;
-            }
-            set {
-                this.hitCountFieldSpecified = value;
-                this.RaisePropertyChanged("hitCountSpecified");
+                this.sourceField = value;
+                this.RaisePropertyChanged("source");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string nextCursorMark {
+        public string inlineImages {
             get {
-                return this.nextCursorMarkField;
+                return this.inlineImagesField;
             }
             set {
-                this.nextCursorMarkField = value;
-                this.RaisePropertyChanged("nextCursorMark");
+                this.inlineImagesField = value;
+                this.RaisePropertyChanged("inlineImages");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public request request {
+        public string email {
             get {
-                return this.requestField;
+                return this.emailField;
             }
             set {
-                this.requestField = value;
-                this.RaisePropertyChanged("request");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public profileListBean profileList {
-            get {
-                return this.profileListField;
-            }
-            set {
-                this.profileListField = value;
-                this.RaisePropertyChanged("profileList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public result[] resultList {
-            get {
-                return this.resultListField;
-            }
-            set {
-                this.resultListField = value;
-                this.RaisePropertyChanged("resultList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("db", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public dbCounts[] dbCountList {
-            get {
-                return this.dbCountListField;
-            }
-            set {
-                this.dbCountListField = value;
-                this.RaisePropertyChanged("dbCountList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public dbCrossReference[] dbCrossReferenceList {
-            get {
-                return this.dbCrossReferenceListField;
-            }
-            set {
-                this.dbCrossReferenceListField = value;
-                this.RaisePropertyChanged("dbCrossReferenceList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("citation", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CitationData[] citationList {
-            get {
-                return this.citationListField;
-            }
-            set {
-                this.citationListField = value;
-                this.RaisePropertyChanged("citationList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("reference", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public referenceInfo[] referenceList {
-            get {
-                return this.referenceListField;
-            }
-            set {
-                this.referenceListField = value;
-                this.RaisePropertyChanged("referenceList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("semanticType", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public semanticCounts[] semanticTypeCountList {
-            get {
-                return this.semanticTypeCountListField;
-            }
-            set {
-                this.semanticTypeCountListField = value;
-                this.RaisePropertyChanged("semanticTypeCountList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("semanticType", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public minedTerms[] semanticTypeList {
-            get {
-                return this.semanticTypeListField;
-            }
-            set {
-                this.semanticTypeListField = value;
-                this.RaisePropertyChanged("semanticTypeList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("searchTerms", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SearchTerm[] searchTermList {
-            get {
-                return this.searchTermListField;
-            }
-            set {
-                this.searchTermListField = value;
-                this.RaisePropertyChanged("searchTermList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("provider", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public labsProviderCounts[] linksCountList {
-            get {
-                return this.linksCountListField;
-            }
-            set {
-                this.linksCountListField = value;
-                this.RaisePropertyChanged("linksCountList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("provider", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public labsProvider[] providers {
-            get {
-                return this.providersField;
-            }
-            set {
-                this.providersField = value;
-                this.RaisePropertyChanged("providers");
+                this.emailField = value;
+                this.RaisePropertyChanged("email");
             }
         }
         
@@ -4478,118 +6798,428 @@ namespace Extant.Pubmed.EBIPublicationsService {
         [System.ServiceModel.FaultContractAttribute(typeof(Extant.Pubmed.EBIPublicationsService.QueryException), Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/searchPublications/Fault/QueryExce" +
             "ption", Name="QueryException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferencesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferences))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFieldsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTermsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTerms))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitations))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFilesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFiles))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(result[]))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Extant.Pubmed.EBIPublicationsService.searchPublicationsResponse searchPublications(Extant.Pubmed.EBIPublicationsService.searchPublicationsRequest request);
+        Extant.Pubmed.EBIPublicationsService.searchPublicationsResponse1 searchPublications(Extant.Pubmed.EBIPublicationsService.searchPublicationsRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/searchPublicationsRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/searchPublicationsResponse")]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.searchPublicationsResponse> searchPublicationsAsync(Extant.Pubmed.EBIPublicationsService.searchPublicationsRequest request);
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.searchPublicationsResponse1> searchPublicationsAsync(Extant.Pubmed.EBIPublicationsService.searchPublicationsRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/profilePublicationsRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/profilePublicationsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Extant.Pubmed.EBIPublicationsService.QueryException), Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/profilePublications/Fault/QueryExc" +
             "eption", Name="QueryException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferencesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferences))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFieldsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTermsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTerms))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitations))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFilesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFiles))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(result[]))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Extant.Pubmed.EBIPublicationsService.profilePublicationsResponse profilePublications(Extant.Pubmed.EBIPublicationsService.profilePublicationsRequest request);
+        Extant.Pubmed.EBIPublicationsService.profilePublicationsResponse1 profilePublications(Extant.Pubmed.EBIPublicationsService.profilePublicationsRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/profilePublicationsRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/profilePublicationsResponse")]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.profilePublicationsResponse> profilePublicationsAsync(Extant.Pubmed.EBIPublicationsService.profilePublicationsRequest request);
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.profilePublicationsResponse1> profilePublicationsAsync(Extant.Pubmed.EBIPublicationsService.profilePublicationsRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getCitationsRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getCitationsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Extant.Pubmed.EBIPublicationsService.QueryException), Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getCitations/Fault/QueryException", Name="QueryException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferencesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferences))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFieldsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTermsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTerms))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitations))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFilesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFiles))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(result[]))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Extant.Pubmed.EBIPublicationsService.getCitationsResponse getCitations(Extant.Pubmed.EBIPublicationsService.getCitationsRequest request);
+        Extant.Pubmed.EBIPublicationsService.getCitationsResponse1 getCitations(Extant.Pubmed.EBIPublicationsService.getCitationsRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getCitationsRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getCitationsResponse")]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getCitationsResponse> getCitationsAsync(Extant.Pubmed.EBIPublicationsService.getCitationsRequest request);
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getCitationsResponse1> getCitationsAsync(Extant.Pubmed.EBIPublicationsService.getCitationsRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getReferencesRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getReferencesResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Extant.Pubmed.EBIPublicationsService.QueryException), Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getReferences/Fault/QueryException" +
             "", Name="QueryException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferencesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferences))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFieldsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTermsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTerms))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitations))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFilesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFiles))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(result[]))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Extant.Pubmed.EBIPublicationsService.getReferencesResponse getReferences(Extant.Pubmed.EBIPublicationsService.getReferencesRequest request);
+        Extant.Pubmed.EBIPublicationsService.getReferencesResponse1 getReferences(Extant.Pubmed.EBIPublicationsService.getReferencesRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getReferencesRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getReferencesResponse")]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getReferencesResponse> getReferencesAsync(Extant.Pubmed.EBIPublicationsService.getReferencesRequest request);
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getReferencesResponse1> getReferencesAsync(Extant.Pubmed.EBIPublicationsService.getReferencesRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getTextMinedTermsRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getTextMinedTermsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Extant.Pubmed.EBIPublicationsService.QueryException), Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getTextMinedTerms/Fault/QueryExcep" +
             "tion", Name="QueryException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferencesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferences))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFieldsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTermsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTerms))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitations))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFilesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFiles))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(result[]))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Extant.Pubmed.EBIPublicationsService.getTextMinedTermsResponse getTextMinedTerms(Extant.Pubmed.EBIPublicationsService.getTextMinedTermsRequest request);
+        Extant.Pubmed.EBIPublicationsService.getTextMinedTermsResponse1 getTextMinedTerms(Extant.Pubmed.EBIPublicationsService.getTextMinedTermsRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getTextMinedTermsRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getTextMinedTermsResponse")]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getTextMinedTermsResponse> getTextMinedTermsAsync(Extant.Pubmed.EBIPublicationsService.getTextMinedTermsRequest request);
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getTextMinedTermsResponse1> getTextMinedTermsAsync(Extant.Pubmed.EBIPublicationsService.getTextMinedTermsRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getDatabaseLinksRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getDatabaseLinksResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Extant.Pubmed.EBIPublicationsService.QueryException), Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getDatabaseLinks/Fault/QueryExcept" +
             "ion", Name="QueryException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferencesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferences))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFieldsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTermsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTerms))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitations))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFilesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFiles))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(result[]))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Extant.Pubmed.EBIPublicationsService.getDatabaseLinksResponse getDatabaseLinks(Extant.Pubmed.EBIPublicationsService.getDatabaseLinksRequest request);
+        Extant.Pubmed.EBIPublicationsService.getDatabaseLinksResponse1 getDatabaseLinks(Extant.Pubmed.EBIPublicationsService.getDatabaseLinksRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getDatabaseLinksRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getDatabaseLinksResponse")]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getDatabaseLinksResponse> getDatabaseLinksAsync(Extant.Pubmed.EBIPublicationsService.getDatabaseLinksRequest request);
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getDatabaseLinksResponse1> getDatabaseLinksAsync(Extant.Pubmed.EBIPublicationsService.getDatabaseLinksRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getSupplementaryFilesRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getSupplementaryFilesResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Extant.Pubmed.EBIPublicationsService.QueryException), Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getSupplementaryFiles/Fault/QueryE" +
             "xception", Name="QueryException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferencesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferences))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFieldsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTermsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTerms))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitations))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFilesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFiles))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(result[]))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesResponse getSupplementaryFiles(Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesRequest request);
+        Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesResponse1 getSupplementaryFiles(Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getSupplementaryFilesRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getSupplementaryFilesResponse")]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesResponse> getSupplementaryFilesAsync(Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesRequest request);
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesResponse1> getSupplementaryFilesAsync(Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getFulltextXMLRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getFulltextXMLResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Extant.Pubmed.EBIPublicationsService.QueryException), Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getFulltextXML/Fault/QueryExceptio" +
             "n", Name="QueryException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferencesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferences))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFieldsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTermsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTerms))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitations))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFilesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFiles))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(result[]))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Extant.Pubmed.EBIPublicationsService.getFulltextXMLResponse getFulltextXML(Extant.Pubmed.EBIPublicationsService.getFulltextXMLRequest request);
+        Extant.Pubmed.EBIPublicationsService.getFulltextXMLResponse1 getFulltextXML(Extant.Pubmed.EBIPublicationsService.getFulltextXMLRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getFulltextXMLRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getFulltextXMLResponse")]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getFulltextXMLResponse> getFulltextXMLAsync(Extant.Pubmed.EBIPublicationsService.getFulltextXMLRequest request);
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getFulltextXMLResponse1> getFulltextXMLAsync(Extant.Pubmed.EBIPublicationsService.getFulltextXMLRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getBookXMLRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getBookXMLResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Extant.Pubmed.EBIPublicationsService.QueryException), Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getBookXML/Fault/QueryException", Name="QueryException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferencesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferences))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFieldsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTermsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTerms))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitations))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFilesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFiles))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(result[]))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Extant.Pubmed.EBIPublicationsService.getBookXMLResponse getBookXML(Extant.Pubmed.EBIPublicationsService.getBookXMLRequest request);
+        Extant.Pubmed.EBIPublicationsService.getBookXMLResponse1 getBookXML(Extant.Pubmed.EBIPublicationsService.getBookXMLRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getBookXMLRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getBookXMLResponse")]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getBookXMLResponse> getBookXMLAsync(Extant.Pubmed.EBIPublicationsService.getBookXMLRequest request);
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getBookXMLResponse1> getBookXMLAsync(Extant.Pubmed.EBIPublicationsService.getBookXMLRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/listSearchFieldsRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/listSearchFieldsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Extant.Pubmed.EBIPublicationsService.QueryException), Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/listSearchFields/Fault/QueryExcept" +
             "ion", Name="QueryException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferencesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferences))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFieldsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTermsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTerms))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitations))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFilesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFiles))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(result[]))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Extant.Pubmed.EBIPublicationsService.listSearchFieldsResponse listSearchFields(Extant.Pubmed.EBIPublicationsService.listSearchFieldsRequest request);
+        Extant.Pubmed.EBIPublicationsService.listSearchFieldsResponse1 listSearchFields(Extant.Pubmed.EBIPublicationsService.listSearchFieldsRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/listSearchFieldsRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/listSearchFieldsResponse")]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.listSearchFieldsResponse> listSearchFieldsAsync(Extant.Pubmed.EBIPublicationsService.listSearchFieldsRequest request);
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.listSearchFieldsResponse1> listSearchFieldsAsync(Extant.Pubmed.EBIPublicationsService.listSearchFieldsRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getLabsLinksRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getLabsLinksResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Extant.Pubmed.EBIPublicationsService.QueryException), Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getLabsLinks/Fault/QueryException", Name="QueryException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferencesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferences))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFieldsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTermsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTerms))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitations))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFilesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFiles))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(result[]))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Extant.Pubmed.EBIPublicationsService.getLabsLinksResponse getLabsLinks(Extant.Pubmed.EBIPublicationsService.getLabsLinksRequest request);
+        Extant.Pubmed.EBIPublicationsService.getLabsLinksResponse1 getLabsLinks(Extant.Pubmed.EBIPublicationsService.getLabsLinksRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getLabsLinksRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getLabsLinksResponse")]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getLabsLinksResponse> getLabsLinksAsync(Extant.Pubmed.EBIPublicationsService.getLabsLinksRequest request);
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getLabsLinksResponse1> getLabsLinksAsync(Extant.Pubmed.EBIPublicationsService.getLabsLinksRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getDataLinksRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getDataLinksResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Extant.Pubmed.EBIPublicationsService.QueryException), Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getDataLinks/Fault/QueryException", Name="QueryException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDatabaseLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getFulltextXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(searchPublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getLabsLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferencesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getReferences))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFieldsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listSearchFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXMLResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getBookXML))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinksResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getDataLinks))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublicationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(profilePublications))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTermsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTextMinedTerms))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitationsResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCitations))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFilesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSupplementaryFiles))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(result[]))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Extant.Pubmed.EBIPublicationsService.getDataLinksResponse1 getDataLinks(Extant.Pubmed.EBIPublicationsService.getDataLinksRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getDataLinksRequest", ReplyAction="http://webservice.cdb.ebi.ac.uk/WSCitationImpl/getDataLinksResponse")]
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getDataLinksResponse1> getDataLinksAsync(Extant.Pubmed.EBIPublicationsService.getDataLinksRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4620,7 +7250,7 @@ namespace Extant.Pubmed.EBIPublicationsService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=5)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool synonym;
+        public string synonym;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=6)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -4629,7 +7259,7 @@ namespace Extant.Pubmed.EBIPublicationsService {
         public searchPublicationsRequest() {
         }
         
-        public searchPublicationsRequest(string queryString, string resultType, string cursorMark, string pageSize, string sort, bool synonym, string email) {
+        public searchPublicationsRequest(string queryString, string resultType, string cursorMark, string pageSize, string sort, string synonym, string email) {
             this.queryString = queryString;
             this.resultType = resultType;
             this.cursorMark = cursorMark;
@@ -4644,16 +7274,16 @@ namespace Extant.Pubmed.EBIPublicationsService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="searchPublicationsResponse", WrapperNamespace="http://webservice.cdb.ebi.ac.uk/", IsWrapped=true)]
-    public partial class searchPublicationsResponse {
+    public partial class searchPublicationsResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Extant.Pubmed.EBIPublicationsService.responseWrapper @return;
         
-        public searchPublicationsResponse() {
+        public searchPublicationsResponse1() {
         }
         
-        public searchPublicationsResponse(Extant.Pubmed.EBIPublicationsService.responseWrapper @return) {
+        public searchPublicationsResponse1(Extant.Pubmed.EBIPublicationsService.responseWrapper @return) {
             this.@return = @return;
         }
     }
@@ -4674,7 +7304,7 @@ namespace Extant.Pubmed.EBIPublicationsService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=2)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool synonym;
+        public string synonym;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=3)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -4683,7 +7313,7 @@ namespace Extant.Pubmed.EBIPublicationsService {
         public profilePublicationsRequest() {
         }
         
-        public profilePublicationsRequest(string queryString, string profileType, bool synonym, string email) {
+        public profilePublicationsRequest(string queryString, string profileType, string synonym, string email) {
             this.queryString = queryString;
             this.profileType = profileType;
             this.synonym = synonym;
@@ -4695,16 +7325,16 @@ namespace Extant.Pubmed.EBIPublicationsService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="profilePublicationsResponse", WrapperNamespace="http://webservice.cdb.ebi.ac.uk/", IsWrapped=true)]
-    public partial class profilePublicationsResponse {
+    public partial class profilePublicationsResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Extant.Pubmed.EBIPublicationsService.responseWrapper @return;
         
-        public profilePublicationsResponse() {
+        public profilePublicationsResponse1() {
         }
         
-        public profilePublicationsResponse(Extant.Pubmed.EBIPublicationsService.responseWrapper @return) {
+        public profilePublicationsResponse1(Extant.Pubmed.EBIPublicationsService.responseWrapper @return) {
             this.@return = @return;
         }
     }
@@ -4751,16 +7381,16 @@ namespace Extant.Pubmed.EBIPublicationsService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="getCitationsResponse", WrapperNamespace="http://webservice.cdb.ebi.ac.uk/", IsWrapped=true)]
-    public partial class getCitationsResponse {
+    public partial class getCitationsResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Extant.Pubmed.EBIPublicationsService.responseWrapper @return;
         
-        public getCitationsResponse() {
+        public getCitationsResponse1() {
         }
         
-        public getCitationsResponse(Extant.Pubmed.EBIPublicationsService.responseWrapper @return) {
+        public getCitationsResponse1(Extant.Pubmed.EBIPublicationsService.responseWrapper @return) {
             this.@return = @return;
         }
     }
@@ -4807,16 +7437,16 @@ namespace Extant.Pubmed.EBIPublicationsService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="getReferencesResponse", WrapperNamespace="http://webservice.cdb.ebi.ac.uk/", IsWrapped=true)]
-    public partial class getReferencesResponse {
+    public partial class getReferencesResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Extant.Pubmed.EBIPublicationsService.responseWrapper @return;
         
-        public getReferencesResponse() {
+        public getReferencesResponse1() {
         }
         
-        public getReferencesResponse(Extant.Pubmed.EBIPublicationsService.responseWrapper @return) {
+        public getReferencesResponse1(Extant.Pubmed.EBIPublicationsService.responseWrapper @return) {
             this.@return = @return;
         }
     }
@@ -4868,16 +7498,16 @@ namespace Extant.Pubmed.EBIPublicationsService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="getTextMinedTermsResponse", WrapperNamespace="http://webservice.cdb.ebi.ac.uk/", IsWrapped=true)]
-    public partial class getTextMinedTermsResponse {
+    public partial class getTextMinedTermsResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Extant.Pubmed.EBIPublicationsService.responseWrapper @return;
         
-        public getTextMinedTermsResponse() {
+        public getTextMinedTermsResponse1() {
         }
         
-        public getTextMinedTermsResponse(Extant.Pubmed.EBIPublicationsService.responseWrapper @return) {
+        public getTextMinedTermsResponse1(Extant.Pubmed.EBIPublicationsService.responseWrapper @return) {
             this.@return = @return;
         }
     }
@@ -4929,16 +7559,16 @@ namespace Extant.Pubmed.EBIPublicationsService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="getDatabaseLinksResponse", WrapperNamespace="http://webservice.cdb.ebi.ac.uk/", IsWrapped=true)]
-    public partial class getDatabaseLinksResponse {
+    public partial class getDatabaseLinksResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Extant.Pubmed.EBIPublicationsService.responseWrapper @return;
         
-        public getDatabaseLinksResponse() {
+        public getDatabaseLinksResponse1() {
         }
         
-        public getDatabaseLinksResponse(Extant.Pubmed.EBIPublicationsService.responseWrapper @return) {
+        public getDatabaseLinksResponse1(Extant.Pubmed.EBIPublicationsService.responseWrapper @return) {
             this.@return = @return;
         }
     }
@@ -4959,14 +7589,19 @@ namespace Extant.Pubmed.EBIPublicationsService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=2)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string inlineImages;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string email;
         
         public getSupplementaryFilesRequest() {
         }
         
-        public getSupplementaryFilesRequest(string id, string source, string email) {
+        public getSupplementaryFilesRequest(string id, string source, string inlineImages, string email) {
             this.id = id;
             this.source = source;
+            this.inlineImages = inlineImages;
             this.email = email;
         }
     }
@@ -4975,16 +7610,16 @@ namespace Extant.Pubmed.EBIPublicationsService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="getSupplementaryFilesResponse", WrapperNamespace="http://webservice.cdb.ebi.ac.uk/", IsWrapped=true)]
-    public partial class getSupplementaryFilesResponse {
+    public partial class getSupplementaryFilesResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Extant.Pubmed.EBIPublicationsService.result @return;
         
-        public getSupplementaryFilesResponse() {
+        public getSupplementaryFilesResponse1() {
         }
         
-        public getSupplementaryFilesResponse(Extant.Pubmed.EBIPublicationsService.result @return) {
+        public getSupplementaryFilesResponse1(Extant.Pubmed.EBIPublicationsService.result @return) {
             this.@return = @return;
         }
     }
@@ -5021,16 +7656,16 @@ namespace Extant.Pubmed.EBIPublicationsService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="getFulltextXMLResponse", WrapperNamespace="http://webservice.cdb.ebi.ac.uk/", IsWrapped=true)]
-    public partial class getFulltextXMLResponse {
+    public partial class getFulltextXMLResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Extant.Pubmed.EBIPublicationsService.result @return;
         
-        public getFulltextXMLResponse() {
+        public getFulltextXMLResponse1() {
         }
         
-        public getFulltextXMLResponse(Extant.Pubmed.EBIPublicationsService.result @return) {
+        public getFulltextXMLResponse1(Extant.Pubmed.EBIPublicationsService.result @return) {
             this.@return = @return;
         }
     }
@@ -5067,16 +7702,16 @@ namespace Extant.Pubmed.EBIPublicationsService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="getBookXMLResponse", WrapperNamespace="http://webservice.cdb.ebi.ac.uk/", IsWrapped=true)]
-    public partial class getBookXMLResponse {
+    public partial class getBookXMLResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Extant.Pubmed.EBIPublicationsService.result @return;
         
-        public getBookXMLResponse() {
+        public getBookXMLResponse1() {
         }
         
-        public getBookXMLResponse(Extant.Pubmed.EBIPublicationsService.result @return) {
+        public getBookXMLResponse1(Extant.Pubmed.EBIPublicationsService.result @return) {
             this.@return = @return;
         }
     }
@@ -5103,16 +7738,16 @@ namespace Extant.Pubmed.EBIPublicationsService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listSearchFieldsResponse", WrapperNamespace="http://webservice.cdb.ebi.ac.uk/", IsWrapped=true)]
-    public partial class listSearchFieldsResponse {
+    public partial class listSearchFieldsResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Extant.Pubmed.EBIPublicationsService.responseWrapper @return;
         
-        public listSearchFieldsResponse() {
+        public listSearchFieldsResponse1() {
         }
         
-        public listSearchFieldsResponse(Extant.Pubmed.EBIPublicationsService.responseWrapper @return) {
+        public listSearchFieldsResponse1(Extant.Pubmed.EBIPublicationsService.responseWrapper @return) {
             this.@return = @return;
         }
     }
@@ -5164,16 +7799,87 @@ namespace Extant.Pubmed.EBIPublicationsService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="getLabsLinksResponse", WrapperNamespace="http://webservice.cdb.ebi.ac.uk/", IsWrapped=true)]
-    public partial class getLabsLinksResponse {
+    public partial class getLabsLinksResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Extant.Pubmed.EBIPublicationsService.responseWrapper @return;
         
-        public getLabsLinksResponse() {
+        public getLabsLinksResponse1() {
         }
         
-        public getLabsLinksResponse(Extant.Pubmed.EBIPublicationsService.responseWrapper @return) {
+        public getLabsLinksResponse1(Extant.Pubmed.EBIPublicationsService.responseWrapper @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getDataLinks", WrapperNamespace="http://webservice.cdb.ebi.ac.uk/", IsWrapped=true)]
+    public partial class getDataLinksRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string source;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string category;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string obtainedBy;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string fromDate;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string tags;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string sectionLimit;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string email;
+        
+        public getDataLinksRequest() {
+        }
+        
+        public getDataLinksRequest(string id, string source, string category, string obtainedBy, string fromDate, string tags, string sectionLimit, string email) {
+            this.id = id;
+            this.source = source;
+            this.category = category;
+            this.obtainedBy = obtainedBy;
+            this.fromDate = fromDate;
+            this.tags = tags;
+            this.sectionLimit = sectionLimit;
+            this.email = email;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getDataLinksResponse", WrapperNamespace="http://webservice.cdb.ebi.ac.uk/", IsWrapped=true)]
+    public partial class getDataLinksResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservice.cdb.ebi.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Extant.Pubmed.EBIPublicationsService.responseWrapper @return;
+        
+        public getDataLinksResponse1() {
+        }
+        
+        public getDataLinksResponse1(Extant.Pubmed.EBIPublicationsService.responseWrapper @return) {
             this.@return = @return;
         }
     }
@@ -5206,11 +7912,11 @@ namespace Extant.Pubmed.EBIPublicationsService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Extant.Pubmed.EBIPublicationsService.searchPublicationsResponse Extant.Pubmed.EBIPublicationsService.WSCitationImpl.searchPublications(Extant.Pubmed.EBIPublicationsService.searchPublicationsRequest request) {
+        Extant.Pubmed.EBIPublicationsService.searchPublicationsResponse1 Extant.Pubmed.EBIPublicationsService.WSCitationImpl.searchPublications(Extant.Pubmed.EBIPublicationsService.searchPublicationsRequest request) {
             return base.Channel.searchPublications(request);
         }
         
-        public Extant.Pubmed.EBIPublicationsService.responseWrapper searchPublications(string queryString, string resultType, string cursorMark, string pageSize, string sort, bool synonym, string email) {
+        public Extant.Pubmed.EBIPublicationsService.responseWrapper searchPublications(string queryString, string resultType, string cursorMark, string pageSize, string sort, string synonym, string email) {
             Extant.Pubmed.EBIPublicationsService.searchPublicationsRequest inValue = new Extant.Pubmed.EBIPublicationsService.searchPublicationsRequest();
             inValue.queryString = queryString;
             inValue.resultType = resultType;
@@ -5219,16 +7925,16 @@ namespace Extant.Pubmed.EBIPublicationsService {
             inValue.sort = sort;
             inValue.synonym = synonym;
             inValue.email = email;
-            Extant.Pubmed.EBIPublicationsService.searchPublicationsResponse retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).searchPublications(inValue);
+            Extant.Pubmed.EBIPublicationsService.searchPublicationsResponse1 retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).searchPublications(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.searchPublicationsResponse> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.searchPublicationsAsync(Extant.Pubmed.EBIPublicationsService.searchPublicationsRequest request) {
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.searchPublicationsResponse1> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.searchPublicationsAsync(Extant.Pubmed.EBIPublicationsService.searchPublicationsRequest request) {
             return base.Channel.searchPublicationsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.searchPublicationsResponse> searchPublicationsAsync(string queryString, string resultType, string cursorMark, string pageSize, string sort, bool synonym, string email) {
+        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.searchPublicationsResponse1> searchPublicationsAsync(string queryString, string resultType, string cursorMark, string pageSize, string sort, string synonym, string email) {
             Extant.Pubmed.EBIPublicationsService.searchPublicationsRequest inValue = new Extant.Pubmed.EBIPublicationsService.searchPublicationsRequest();
             inValue.queryString = queryString;
             inValue.resultType = resultType;
@@ -5241,26 +7947,26 @@ namespace Extant.Pubmed.EBIPublicationsService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Extant.Pubmed.EBIPublicationsService.profilePublicationsResponse Extant.Pubmed.EBIPublicationsService.WSCitationImpl.profilePublications(Extant.Pubmed.EBIPublicationsService.profilePublicationsRequest request) {
+        Extant.Pubmed.EBIPublicationsService.profilePublicationsResponse1 Extant.Pubmed.EBIPublicationsService.WSCitationImpl.profilePublications(Extant.Pubmed.EBIPublicationsService.profilePublicationsRequest request) {
             return base.Channel.profilePublications(request);
         }
         
-        public Extant.Pubmed.EBIPublicationsService.responseWrapper profilePublications(string queryString, string profileType, bool synonym, string email) {
+        public Extant.Pubmed.EBIPublicationsService.responseWrapper profilePublications(string queryString, string profileType, string synonym, string email) {
             Extant.Pubmed.EBIPublicationsService.profilePublicationsRequest inValue = new Extant.Pubmed.EBIPublicationsService.profilePublicationsRequest();
             inValue.queryString = queryString;
             inValue.profileType = profileType;
             inValue.synonym = synonym;
             inValue.email = email;
-            Extant.Pubmed.EBIPublicationsService.profilePublicationsResponse retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).profilePublications(inValue);
+            Extant.Pubmed.EBIPublicationsService.profilePublicationsResponse1 retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).profilePublications(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.profilePublicationsResponse> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.profilePublicationsAsync(Extant.Pubmed.EBIPublicationsService.profilePublicationsRequest request) {
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.profilePublicationsResponse1> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.profilePublicationsAsync(Extant.Pubmed.EBIPublicationsService.profilePublicationsRequest request) {
             return base.Channel.profilePublicationsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.profilePublicationsResponse> profilePublicationsAsync(string queryString, string profileType, bool synonym, string email) {
+        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.profilePublicationsResponse1> profilePublicationsAsync(string queryString, string profileType, string synonym, string email) {
             Extant.Pubmed.EBIPublicationsService.profilePublicationsRequest inValue = new Extant.Pubmed.EBIPublicationsService.profilePublicationsRequest();
             inValue.queryString = queryString;
             inValue.profileType = profileType;
@@ -5270,7 +7976,7 @@ namespace Extant.Pubmed.EBIPublicationsService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Extant.Pubmed.EBIPublicationsService.getCitationsResponse Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getCitations(Extant.Pubmed.EBIPublicationsService.getCitationsRequest request) {
+        Extant.Pubmed.EBIPublicationsService.getCitationsResponse1 Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getCitations(Extant.Pubmed.EBIPublicationsService.getCitationsRequest request) {
             return base.Channel.getCitations(request);
         }
         
@@ -5281,16 +7987,16 @@ namespace Extant.Pubmed.EBIPublicationsService {
             inValue.offSet = offSet;
             inValue.pageSize = pageSize;
             inValue.email = email;
-            Extant.Pubmed.EBIPublicationsService.getCitationsResponse retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).getCitations(inValue);
+            Extant.Pubmed.EBIPublicationsService.getCitationsResponse1 retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).getCitations(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getCitationsResponse> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getCitationsAsync(Extant.Pubmed.EBIPublicationsService.getCitationsRequest request) {
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getCitationsResponse1> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getCitationsAsync(Extant.Pubmed.EBIPublicationsService.getCitationsRequest request) {
             return base.Channel.getCitationsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getCitationsResponse> getCitationsAsync(string id, string source, int offSet, string pageSize, string email) {
+        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getCitationsResponse1> getCitationsAsync(string id, string source, int offSet, string pageSize, string email) {
             Extant.Pubmed.EBIPublicationsService.getCitationsRequest inValue = new Extant.Pubmed.EBIPublicationsService.getCitationsRequest();
             inValue.id = id;
             inValue.source = source;
@@ -5301,7 +8007,7 @@ namespace Extant.Pubmed.EBIPublicationsService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Extant.Pubmed.EBIPublicationsService.getReferencesResponse Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getReferences(Extant.Pubmed.EBIPublicationsService.getReferencesRequest request) {
+        Extant.Pubmed.EBIPublicationsService.getReferencesResponse1 Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getReferences(Extant.Pubmed.EBIPublicationsService.getReferencesRequest request) {
             return base.Channel.getReferences(request);
         }
         
@@ -5312,16 +8018,16 @@ namespace Extant.Pubmed.EBIPublicationsService {
             inValue.offSet = offSet;
             inValue.pageSize = pageSize;
             inValue.email = email;
-            Extant.Pubmed.EBIPublicationsService.getReferencesResponse retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).getReferences(inValue);
+            Extant.Pubmed.EBIPublicationsService.getReferencesResponse1 retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).getReferences(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getReferencesResponse> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getReferencesAsync(Extant.Pubmed.EBIPublicationsService.getReferencesRequest request) {
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getReferencesResponse1> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getReferencesAsync(Extant.Pubmed.EBIPublicationsService.getReferencesRequest request) {
             return base.Channel.getReferencesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getReferencesResponse> getReferencesAsync(string id, string source, int offSet, string pageSize, string email) {
+        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getReferencesResponse1> getReferencesAsync(string id, string source, int offSet, string pageSize, string email) {
             Extant.Pubmed.EBIPublicationsService.getReferencesRequest inValue = new Extant.Pubmed.EBIPublicationsService.getReferencesRequest();
             inValue.id = id;
             inValue.source = source;
@@ -5332,7 +8038,7 @@ namespace Extant.Pubmed.EBIPublicationsService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Extant.Pubmed.EBIPublicationsService.getTextMinedTermsResponse Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getTextMinedTerms(Extant.Pubmed.EBIPublicationsService.getTextMinedTermsRequest request) {
+        Extant.Pubmed.EBIPublicationsService.getTextMinedTermsResponse1 Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getTextMinedTerms(Extant.Pubmed.EBIPublicationsService.getTextMinedTermsRequest request) {
             return base.Channel.getTextMinedTerms(request);
         }
         
@@ -5344,16 +8050,16 @@ namespace Extant.Pubmed.EBIPublicationsService {
             inValue.offSet = offSet;
             inValue.pageSize = pageSize;
             inValue.email = email;
-            Extant.Pubmed.EBIPublicationsService.getTextMinedTermsResponse retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).getTextMinedTerms(inValue);
+            Extant.Pubmed.EBIPublicationsService.getTextMinedTermsResponse1 retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).getTextMinedTerms(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getTextMinedTermsResponse> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getTextMinedTermsAsync(Extant.Pubmed.EBIPublicationsService.getTextMinedTermsRequest request) {
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getTextMinedTermsResponse1> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getTextMinedTermsAsync(Extant.Pubmed.EBIPublicationsService.getTextMinedTermsRequest request) {
             return base.Channel.getTextMinedTermsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getTextMinedTermsResponse> getTextMinedTermsAsync(string id, string source, string semanticType, int offSet, string pageSize, string email) {
+        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getTextMinedTermsResponse1> getTextMinedTermsAsync(string id, string source, string semanticType, int offSet, string pageSize, string email) {
             Extant.Pubmed.EBIPublicationsService.getTextMinedTermsRequest inValue = new Extant.Pubmed.EBIPublicationsService.getTextMinedTermsRequest();
             inValue.id = id;
             inValue.source = source;
@@ -5365,7 +8071,7 @@ namespace Extant.Pubmed.EBIPublicationsService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Extant.Pubmed.EBIPublicationsService.getDatabaseLinksResponse Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getDatabaseLinks(Extant.Pubmed.EBIPublicationsService.getDatabaseLinksRequest request) {
+        Extant.Pubmed.EBIPublicationsService.getDatabaseLinksResponse1 Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getDatabaseLinks(Extant.Pubmed.EBIPublicationsService.getDatabaseLinksRequest request) {
             return base.Channel.getDatabaseLinks(request);
         }
         
@@ -5377,16 +8083,16 @@ namespace Extant.Pubmed.EBIPublicationsService {
             inValue.offSet = offSet;
             inValue.pageSize = pageSize;
             inValue.email = email;
-            Extant.Pubmed.EBIPublicationsService.getDatabaseLinksResponse retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).getDatabaseLinks(inValue);
+            Extant.Pubmed.EBIPublicationsService.getDatabaseLinksResponse1 retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).getDatabaseLinks(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getDatabaseLinksResponse> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getDatabaseLinksAsync(Extant.Pubmed.EBIPublicationsService.getDatabaseLinksRequest request) {
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getDatabaseLinksResponse1> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getDatabaseLinksAsync(Extant.Pubmed.EBIPublicationsService.getDatabaseLinksRequest request) {
             return base.Channel.getDatabaseLinksAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getDatabaseLinksResponse> getDatabaseLinksAsync(string id, string source, string database, int offSet, string pageSize, string email) {
+        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getDatabaseLinksResponse1> getDatabaseLinksAsync(string id, string source, string database, int offSet, string pageSize, string email) {
             Extant.Pubmed.EBIPublicationsService.getDatabaseLinksRequest inValue = new Extant.Pubmed.EBIPublicationsService.getDatabaseLinksRequest();
             inValue.id = id;
             inValue.source = source;
@@ -5398,34 +8104,36 @@ namespace Extant.Pubmed.EBIPublicationsService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesResponse Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getSupplementaryFiles(Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesRequest request) {
+        Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesResponse1 Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getSupplementaryFiles(Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesRequest request) {
             return base.Channel.getSupplementaryFiles(request);
         }
         
-        public Extant.Pubmed.EBIPublicationsService.result getSupplementaryFiles(string id, string source, string email) {
+        public Extant.Pubmed.EBIPublicationsService.result getSupplementaryFiles(string id, string source, string inlineImages, string email) {
             Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesRequest inValue = new Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesRequest();
             inValue.id = id;
             inValue.source = source;
+            inValue.inlineImages = inlineImages;
             inValue.email = email;
-            Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesResponse retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).getSupplementaryFiles(inValue);
+            Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesResponse1 retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).getSupplementaryFiles(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesResponse> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getSupplementaryFilesAsync(Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesRequest request) {
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesResponse1> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getSupplementaryFilesAsync(Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesRequest request) {
             return base.Channel.getSupplementaryFilesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesResponse> getSupplementaryFilesAsync(string id, string source, string email) {
+        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesResponse1> getSupplementaryFilesAsync(string id, string source, string inlineImages, string email) {
             Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesRequest inValue = new Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesRequest();
             inValue.id = id;
             inValue.source = source;
+            inValue.inlineImages = inlineImages;
             inValue.email = email;
             return ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).getSupplementaryFilesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Extant.Pubmed.EBIPublicationsService.getFulltextXMLResponse Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getFulltextXML(Extant.Pubmed.EBIPublicationsService.getFulltextXMLRequest request) {
+        Extant.Pubmed.EBIPublicationsService.getFulltextXMLResponse1 Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getFulltextXML(Extant.Pubmed.EBIPublicationsService.getFulltextXMLRequest request) {
             return base.Channel.getFulltextXML(request);
         }
         
@@ -5434,16 +8142,16 @@ namespace Extant.Pubmed.EBIPublicationsService {
             inValue.id = id;
             inValue.source = source;
             inValue.email = email;
-            Extant.Pubmed.EBIPublicationsService.getFulltextXMLResponse retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).getFulltextXML(inValue);
+            Extant.Pubmed.EBIPublicationsService.getFulltextXMLResponse1 retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).getFulltextXML(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getFulltextXMLResponse> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getFulltextXMLAsync(Extant.Pubmed.EBIPublicationsService.getFulltextXMLRequest request) {
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getFulltextXMLResponse1> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getFulltextXMLAsync(Extant.Pubmed.EBIPublicationsService.getFulltextXMLRequest request) {
             return base.Channel.getFulltextXMLAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getFulltextXMLResponse> getFulltextXMLAsync(string id, string source, string email) {
+        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getFulltextXMLResponse1> getFulltextXMLAsync(string id, string source, string email) {
             Extant.Pubmed.EBIPublicationsService.getFulltextXMLRequest inValue = new Extant.Pubmed.EBIPublicationsService.getFulltextXMLRequest();
             inValue.id = id;
             inValue.source = source;
@@ -5452,7 +8160,7 @@ namespace Extant.Pubmed.EBIPublicationsService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Extant.Pubmed.EBIPublicationsService.getBookXMLResponse Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getBookXML(Extant.Pubmed.EBIPublicationsService.getBookXMLRequest request) {
+        Extant.Pubmed.EBIPublicationsService.getBookXMLResponse1 Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getBookXML(Extant.Pubmed.EBIPublicationsService.getBookXMLRequest request) {
             return base.Channel.getBookXML(request);
         }
         
@@ -5461,16 +8169,16 @@ namespace Extant.Pubmed.EBIPublicationsService {
             inValue.id = id;
             inValue.source = source;
             inValue.email = email;
-            Extant.Pubmed.EBIPublicationsService.getBookXMLResponse retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).getBookXML(inValue);
+            Extant.Pubmed.EBIPublicationsService.getBookXMLResponse1 retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).getBookXML(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getBookXMLResponse> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getBookXMLAsync(Extant.Pubmed.EBIPublicationsService.getBookXMLRequest request) {
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getBookXMLResponse1> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getBookXMLAsync(Extant.Pubmed.EBIPublicationsService.getBookXMLRequest request) {
             return base.Channel.getBookXMLAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getBookXMLResponse> getBookXMLAsync(string id, string source, string email) {
+        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getBookXMLResponse1> getBookXMLAsync(string id, string source, string email) {
             Extant.Pubmed.EBIPublicationsService.getBookXMLRequest inValue = new Extant.Pubmed.EBIPublicationsService.getBookXMLRequest();
             inValue.id = id;
             inValue.source = source;
@@ -5479,30 +8187,30 @@ namespace Extant.Pubmed.EBIPublicationsService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Extant.Pubmed.EBIPublicationsService.listSearchFieldsResponse Extant.Pubmed.EBIPublicationsService.WSCitationImpl.listSearchFields(Extant.Pubmed.EBIPublicationsService.listSearchFieldsRequest request) {
+        Extant.Pubmed.EBIPublicationsService.listSearchFieldsResponse1 Extant.Pubmed.EBIPublicationsService.WSCitationImpl.listSearchFields(Extant.Pubmed.EBIPublicationsService.listSearchFieldsRequest request) {
             return base.Channel.listSearchFields(request);
         }
         
         public Extant.Pubmed.EBIPublicationsService.responseWrapper listSearchFields(string email) {
             Extant.Pubmed.EBIPublicationsService.listSearchFieldsRequest inValue = new Extant.Pubmed.EBIPublicationsService.listSearchFieldsRequest();
             inValue.email = email;
-            Extant.Pubmed.EBIPublicationsService.listSearchFieldsResponse retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).listSearchFields(inValue);
+            Extant.Pubmed.EBIPublicationsService.listSearchFieldsResponse1 retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).listSearchFields(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.listSearchFieldsResponse> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.listSearchFieldsAsync(Extant.Pubmed.EBIPublicationsService.listSearchFieldsRequest request) {
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.listSearchFieldsResponse1> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.listSearchFieldsAsync(Extant.Pubmed.EBIPublicationsService.listSearchFieldsRequest request) {
             return base.Channel.listSearchFieldsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.listSearchFieldsResponse> listSearchFieldsAsync(string email) {
+        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.listSearchFieldsResponse1> listSearchFieldsAsync(string email) {
             Extant.Pubmed.EBIPublicationsService.listSearchFieldsRequest inValue = new Extant.Pubmed.EBIPublicationsService.listSearchFieldsRequest();
             inValue.email = email;
             return ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).listSearchFieldsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Extant.Pubmed.EBIPublicationsService.getLabsLinksResponse Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getLabsLinks(Extant.Pubmed.EBIPublicationsService.getLabsLinksRequest request) {
+        Extant.Pubmed.EBIPublicationsService.getLabsLinksResponse1 Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getLabsLinks(Extant.Pubmed.EBIPublicationsService.getLabsLinksRequest request) {
             return base.Channel.getLabsLinks(request);
         }
         
@@ -5514,16 +8222,16 @@ namespace Extant.Pubmed.EBIPublicationsService {
             inValue.offSet = offSet;
             inValue.pageSize = pageSize;
             inValue.email = email;
-            Extant.Pubmed.EBIPublicationsService.getLabsLinksResponse retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).getLabsLinks(inValue);
+            Extant.Pubmed.EBIPublicationsService.getLabsLinksResponse1 retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).getLabsLinks(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getLabsLinksResponse> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getLabsLinksAsync(Extant.Pubmed.EBIPublicationsService.getLabsLinksRequest request) {
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getLabsLinksResponse1> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getLabsLinksAsync(Extant.Pubmed.EBIPublicationsService.getLabsLinksRequest request) {
             return base.Channel.getLabsLinksAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getLabsLinksResponse> getLabsLinksAsync(string id, string source, string providerId, int offSet, string pageSize, string email) {
+        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getLabsLinksResponse1> getLabsLinksAsync(string id, string source, string providerId, int offSet, string pageSize, string email) {
             Extant.Pubmed.EBIPublicationsService.getLabsLinksRequest inValue = new Extant.Pubmed.EBIPublicationsService.getLabsLinksRequest();
             inValue.id = id;
             inValue.source = source;
@@ -5532,6 +8240,43 @@ namespace Extant.Pubmed.EBIPublicationsService {
             inValue.pageSize = pageSize;
             inValue.email = email;
             return ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).getLabsLinksAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Extant.Pubmed.EBIPublicationsService.getDataLinksResponse1 Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getDataLinks(Extant.Pubmed.EBIPublicationsService.getDataLinksRequest request) {
+            return base.Channel.getDataLinks(request);
+        }
+        
+        public Extant.Pubmed.EBIPublicationsService.responseWrapper getDataLinks(string id, string source, string category, string obtainedBy, string fromDate, string tags, string sectionLimit, string email) {
+            Extant.Pubmed.EBIPublicationsService.getDataLinksRequest inValue = new Extant.Pubmed.EBIPublicationsService.getDataLinksRequest();
+            inValue.id = id;
+            inValue.source = source;
+            inValue.category = category;
+            inValue.obtainedBy = obtainedBy;
+            inValue.fromDate = fromDate;
+            inValue.tags = tags;
+            inValue.sectionLimit = sectionLimit;
+            inValue.email = email;
+            Extant.Pubmed.EBIPublicationsService.getDataLinksResponse1 retVal = ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).getDataLinks(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getDataLinksResponse1> Extant.Pubmed.EBIPublicationsService.WSCitationImpl.getDataLinksAsync(Extant.Pubmed.EBIPublicationsService.getDataLinksRequest request) {
+            return base.Channel.getDataLinksAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Extant.Pubmed.EBIPublicationsService.getDataLinksResponse1> getDataLinksAsync(string id, string source, string category, string obtainedBy, string fromDate, string tags, string sectionLimit, string email) {
+            Extant.Pubmed.EBIPublicationsService.getDataLinksRequest inValue = new Extant.Pubmed.EBIPublicationsService.getDataLinksRequest();
+            inValue.id = id;
+            inValue.source = source;
+            inValue.category = category;
+            inValue.obtainedBy = obtainedBy;
+            inValue.fromDate = fromDate;
+            inValue.tags = tags;
+            inValue.sectionLimit = sectionLimit;
+            inValue.email = email;
+            return ((Extant.Pubmed.EBIPublicationsService.WSCitationImpl)(this)).getDataLinksAsync(inValue);
         }
     }
 }

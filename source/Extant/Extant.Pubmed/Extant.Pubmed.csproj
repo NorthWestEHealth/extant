@@ -75,34 +75,37 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getBookXMLResponse.datasource">
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getBookXMLResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getCitationsResponse.datasource">
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getCitationsResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getDatabaseLinksResponse.datasource">
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getDatabaseLinksResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getFulltextXMLResponse.datasource">
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getDataLinksResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getLabsLinksResponse.datasource">
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getFulltextXMLResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getReferencesResponse.datasource">
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getLabsLinksResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesResponse.datasource">
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getReferencesResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getTextMinedTermsResponse.datasource">
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getSupplementaryFilesResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.listSearchFieldsResponse.datasource">
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.getTextMinedTermsResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.profilePublicationsResponse.datasource">
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.listSearchFieldsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.profilePublicationsResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.responseWrapper.datasource">
@@ -111,10 +114,16 @@
     <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.result.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.searchPublicationsResponse.datasource">
+    <None Include="Service References\EBIPublicationsService\Extant.Pubmed.EBIPublicationsService.searchPublicationsResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\EBIPublicationsService\soap.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EBIPublicationsService\soap1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EBIPublicationsService\soap2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\EBIPublicationsService\swaref.xsd">
