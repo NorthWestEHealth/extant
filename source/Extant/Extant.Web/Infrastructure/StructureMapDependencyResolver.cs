@@ -39,16 +39,9 @@ namespace Extant.Web.Infrastructure
 
         public object GetService(Type serviceType)
         {
-            // special handling of IPubMedService due to need to cache results between requests.
-            if (serviceType == typeof(Pubmed.IPubmedService))
-            {
-                if(Context.Current.Session[PubmedServiceInstanceKey] == null) Context.Current.Session.Add(PubmedServiceInstanceKey, _container.GetInstance(typeof(Pubmed.IPubmedService)));
-                return Context.Current.Session[PubmedServiceInstanceKey];
-            }
-            
             IContainer current = getContainer();
-            
-            if (serviceType == typeof(IContainer)) return current;
+
+            if (serviceType.Equals(typeof(IContainer))) return current;
 
             object instance = current.TryGetInstance(serviceType);
 
@@ -63,13 +56,6 @@ namespace Extant.Web.Infrastructure
 
         public IEnumerable<object> GetServices(Type serviceType)
         {
-            // special handling of IPubMedService due to need to cache results between requests.
-            if (serviceType == typeof(Pubmed.IPubmedService))
-            {
-                if (Context.Current.Session[PubmedServiceInstanceKey] == null) Context.Current.Session.Add(PubmedServiceInstanceKey, _container.GetInstance(typeof(Pubmed.IPubmedService)));
-                return new List<object> { Context.Current.Session[PubmedServiceInstanceKey] };
-            }
-
             return getContainer().GetAllInstances(serviceType).Cast<object>();
         }
 

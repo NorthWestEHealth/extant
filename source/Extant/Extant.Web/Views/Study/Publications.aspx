@@ -120,7 +120,7 @@
             $('#save-pubmed-results').click(function () {
                 $('#selected-publications li').each(function () {
                     var index = $('#publications ul li').length;
-                    var item = $(this).clone();
+                    var item = $(this).detach();
                     var title = item.find('a').text();
                     var url = item.find('a').attr('href');
                     var pmid = url.substr(url.lastIndexOf('/') + 1);

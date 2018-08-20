@@ -45,5 +45,8 @@ namespace Extant.Web
             log4net.Config.XmlConfigurator.Configure();
         }
 
+        protected void Session_Start() {
+            Context.Session["SessionStared"] = true;
+        }
     }
 }

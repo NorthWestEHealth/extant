@@ -11,18 +11,23 @@ using System.Web.Mvc;
 using Extant.Pubmed;
 using Extant.Web.Models;
 using NWeH.Paging;
+using Context = System.Web.HttpContext;
 
 namespace Extant.Web.Controllers
 {
     public class PubmedController : Controller
     {
         private readonly IPubmedService PubmedService;
+        private const string PubmedServiceInstanceKey = "SessionScopedPubmedServiceInstance";
 
         private const int DefaultPageSize = 5;
 
         public PubmedController(IPubmedService pubmedService)
         {
-            PubmedService = pubmedService;
+            // EBIPubmedService requires http session scoping to enable caching of results and reduce round trips and response size from EBI servers
+
+            if (Context.Current.Session[PubmedServiceInstanceKey] == null) Context.Current.Session[PubmedServiceInstanceKey] = pubmedService;
+            PubmedService = (IPubmedService) Context.Current.Session[PubmedServiceInstanceKey];
         }
 
         [HttpGet]

@@ -10,7 +10,7 @@
 <h2>Edit User</h2>
 
     <% using (Html.BeginForm(null, null, FormMethod.Post, new{@autocomplete="off"})) { %>
-        <%: Html.ValidationSummary(true, "Editing the account was unsuccessful. Please correct the errors and try again.") %>
+        <%: Html.ValidationSummary(false, "Editing the account was unsuccessful. Please correct the errors and try again.") %>
         <fieldset class="withborder">
             <legend>User Details</legend>
             <%: Html.LabelValidationAndTextBoxFor(m => m.UserName, new { @class = "login" }, true )%>
@@ -36,6 +36,7 @@
     }
 %>
                 </div>
+                <%: Html.LabelValidationAndTextBoxFor(m => m.Affiliation, null, false) %>
             </div>
         </fieldset>
 <%  if ( Model.HasAdminRole ){ %>
