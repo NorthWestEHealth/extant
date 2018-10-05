@@ -161,7 +161,7 @@ namespace Extant.Pubmed
             {
                 Id = r.pmid;
                 Title = r.title;
-                Authors = r.authorList.Select(a => a.fullName).ToList();
+                Authors = r.authorList == null? new List<string> { r.authorString } : r.authorList.Select(a => a.fullName).ToList();
                 Journal = r.journalTitle;
                 PublicationDate = r.firstPublicationDate;
                 if (r.meshHeadingList == null || r.meshHeadingList.Length == 0) MeshTerms = new List<string> { };
