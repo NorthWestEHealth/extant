@@ -351,6 +351,8 @@ namespace Extant.Web.Controllers
             if (file == null) return new HttpStatusCodeResult(StatusCode.InternalServerError);
 
             file.IsApproved = true;
+            StudyRepo.Save(s);
+
             return new HttpStatusCodeResult(StatusCode.NoContent);
         }
 
@@ -369,7 +371,8 @@ namespace Extant.Web.Controllers
             {
                 ad.File.IsApproved = true;
             }
-            
+
+            StudyRepo.Save(s);
             return new HttpStatusCodeResult(StatusCode.NoContent);
         }
 
