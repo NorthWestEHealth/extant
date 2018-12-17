@@ -160,7 +160,8 @@ namespace Extant.Data.Repositories
                 .SetString("hubLeadRole", Constants.HubLeadRole)
                 .SetInt32("daid", daid)
                 .List<User>();
-            return result;
+            
+            return result.Concat(GetUsersInRole(Constants.AdministratorRole));
         }
     }
 }
