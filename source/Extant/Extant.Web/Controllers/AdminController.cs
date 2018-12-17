@@ -31,16 +31,18 @@ namespace Extant.Web.Controllers
         private readonly IRoleRepository RoleRepo;
         private readonly IDataItemRepository DataItemRepo;
         private readonly IMailer Mailer;
+        private readonly IRepository<FileUpload> FileUploadRepo;
 
         public AdminController(IStudyRepository studyRepo, IDiseaseAreaRepository diseaseAreaRepo,
-            IDataItemRepository dataItemRepo, IUserRepository userRepo, IRoleRepository roleRepo, 
-            IMailer mailer)
+            IDataItemRepository dataItemRepo, IUserRepository userRepo, IRoleRepository roleRepo,
+            IRepository<FileUpload> fileRepo, IMailer mailer)
         {
             StudyRepo = studyRepo;
             DiseaseAreaRepo = diseaseAreaRepo;
             UserRepo = userRepo;
             RoleRepo = roleRepo;
             DataItemRepo = dataItemRepo;
+            FileUploadRepo = fileRepo;
             Mailer = mailer;
         }
 
@@ -167,7 +169,7 @@ namespace Extant.Web.Controllers
         public ActionResult AddUser(IPrincipal principal)
         {
             var diseaseAreas = principal.IsInRole(Constants.AdministratorRole)
-                                   ? DiseaseAreaRepo.GetAllPublished()
+                                   ? DiseaseAreaRepo.GetAll()
                                    : UserRepo.GetByEmail(principal.Identity.Name).DiseaseAreas;
             var model = new AddUserModel
                             {
@@ -351,7 +353,7 @@ namespace Extant.Web.Controllers
             if (file == null) return new HttpStatusCodeResult(StatusCode.InternalServerError);
 
             file.IsApproved = true;
-            StudyRepo.Save(s);
+            FileUploadRepo.Save(file);
 
             return new HttpStatusCodeResult(StatusCode.NoContent);
         }
@@ -363,13 +365,25 @@ namespace Extant.Web.Controllers
             Study s = StudyRepo.Get(StudyId);
             if (s == null) return new HttpStatusCodeResult(StatusCode.InternalServerError);
 
-            if (s.PatientInformationLeaflet != null) s.PatientInformationLeaflet.IsApproved = true;
-            if (s.ConsentForm != null) s.ConsentForm.IsApproved = true;
-            if (s.DataAccessPolicy != null) s.DataAccessPolicy.IsApproved = true;
+            if (s.PatientInformationLeaflet != null) {
+                s.PatientInformationLeaflet.IsApproved = true;
+                FileUploadRepo.Save(s.PatientInformationLeaflet);
+            }
+
+            if (s.ConsentForm != null) {
+                s.ConsentForm.IsApproved = true;
+                FileUploadRepo.Save(s.ConsentForm);
+            }
+
+            if (s.DataAccessPolicy != null) {
+                s.DataAccessPolicy.IsApproved = true;
+                FileUploadRepo.Save(s.DataAccessPolicy);
+            }
 
             foreach(AdditionalDocument ad in s.AdditionalDocuments)
             {
                 ad.File.IsApproved = true;
+                FileUploadRepo.Save(ad.File);
             }
 
             StudyRepo.Save(s);
