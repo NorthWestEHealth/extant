@@ -3,8 +3,9 @@
 // Copyright (c) North West e-Health 2011. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------
-using System;
+using System.Web;
 using System.Web.Mvc;
+using Extant.Data;
 using Extant.Data.Entities;
 
 namespace Extant.Web.Infrastructure
@@ -21,6 +22,7 @@ namespace Extant.Web.Infrastructure
                 theFile.InputStream.Read(fileUpload.FileData, 0, theFile.ContentLength);
                 fileUpload.FileName = theFile.FileName;
                 fileUpload.MimeType = theFile.ContentType;
+                fileUpload.IsApproved = HttpContext.Current.User.IsInRole(Constants.AdministratorRole);
                 return fileUpload;
             }
             return null;

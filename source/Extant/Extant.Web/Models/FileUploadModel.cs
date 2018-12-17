@@ -14,5 +14,7 @@ namespace Extant.Web.Models
         public string FileSize { get; set; }
 
         public string MimeType { get; set; }
+
+        public bool IsApproved { get; set; }
     }
 }

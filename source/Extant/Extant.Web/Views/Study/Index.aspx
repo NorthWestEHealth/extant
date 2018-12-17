@@ -129,14 +129,14 @@
         <div class="fieldset">
             <span class="legend">Files</span>
             <p><strong>Patient Information Leaflet: </strong> 
-<%  if (null != Model.PatientInformationLeaflet){ %>
+<%  if (null != Model.PatientInformationLeaflet && Model.PatientInformationLeaflet.IsApproved){ %>
             <a href="/Study/File/<%:Model.PatientInformationLeaflet.Id %>">Download</a> (<%:Model.PatientInformationLeaflet.FileSize %>)
 <%  } else { %>
             N/A
 <%  } %>
             </p>
             <p><strong>Consent Form: </strong> 
-        <% if (null != Model.ConsentForm){ %>
+        <% if (null != Model.ConsentForm && Model.ConsentForm.IsApproved){ %>
             <a href="/Study/File/<%:Model.ConsentForm.Id %>">Download</a> (<%:Model.ConsentForm.FileSize %>)
         <% } else {%>
             N/A
@@ -144,7 +144,7 @@
             </p>
             <p><strong>Has Data Access Policy: </strong><%:Model.HasDataAccessPolicy %></p>
             <p><strong>Data Access Policy: </strong> 
-        <% if (null != Model.DataAccessPolicy){ %>
+        <% if (null != Model.DataAccessPolicy && Model.DataAccessPolicy.IsApproved){ %>
             <a href="/Study/File/<%:Model.DataAccessPolicy.Id %>">Download</a> (<%:Model.DataAccessPolicy.FileSize%>)
         <% } else {%>
             N/A
@@ -156,11 +156,13 @@
 %>
             <p><strong>Additional Files</strong></p>
 <%
-        foreach (var file in Model.AdditionalDocuments)
-        {
+    foreach (var file in Model.AdditionalDocuments)
+    {
+        if (file.File.IsApproved) {
 %>
             <p><%:file.Description %> (<%:file.DocumentType %>) - <a href="/Study/File/<%:file.File.Id %>">Download</a> (<%:file.File.FileSize%>)</p>
 <%
+            }
         }
     }
 %>
