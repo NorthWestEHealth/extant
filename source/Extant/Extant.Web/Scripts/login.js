@@ -2,12 +2,10 @@
 var loginDialog;
 var loginCountdown = null;
 
-function loginCountDown() {
+function loginCountDown(sessionLength) { // sessionlength now provided based on Auth Ticket expiration
     if (loginCountDown != null)
         window.clearInterval(loginCountdown);
 
-    // sessionLength needs to be set to half of the Forms authentication timeout.
-    var sessionLength = 15;
     var startTime = ~ ~(+(new Date()) / 1000);
     loginCountdown = setInterval(function () {
         var now = ~ ~(+(new Date()) / 1000);

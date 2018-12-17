@@ -31,7 +31,7 @@
         $('button').button();
         $('#reauthenticate-form').ajaxForm({
             success: function () {
-                loginCountDown();
+                loginCountDown(60);
                 loginDialog.dialog('close');
             },
             error: function () {

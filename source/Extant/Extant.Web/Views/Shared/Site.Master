@@ -65,7 +65,7 @@
             });
             <% } %>
             <% if (HttpContext.Current.User.Identity.IsAuthenticated) { %>
-            loginCountDown();
+            loginCountDown(<%= Math.Floor(((Context.User.Identity as FormsIdentity).Ticket.Expiration - DateTime.Now).TotalMinutes).ToString() %>);
             <% } %>
         });
     </script>
