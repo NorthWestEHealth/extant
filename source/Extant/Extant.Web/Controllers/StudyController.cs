@@ -484,7 +484,7 @@ namespace Extant.Web.Controllers
         public ActionResult ByDataItem(int _id)
         {
             var dataItem = DataItemRepo.Get(_id);
-            var results = StudyRepo.FindByDataField(dataItem.DataItemName);
+            var results = StudyRepo.FindByDataField(dataItem.DataItemName).Where(s => s.Published);
             return PartialView(new StudiesByDataItemModel
                                    {
                                        DataItemName = dataItem.DataItemName,

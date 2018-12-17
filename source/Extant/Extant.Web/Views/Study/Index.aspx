@@ -65,7 +65,7 @@
             
 <% if (!string.IsNullOrEmpty(Model.PortfolioNumber)){ %>            
             <p><strong>UKCRN ID:</strong> 
-            <a href="http://public.ukcrn.org.uk/Search/StudyDetail.aspx?StudyID=<%:Model.PortfolioNumber %>" target="_blank" title="Click here to open the study's page on the UKCRN Portfolio"><%:Model.PortfolioNumber %></a>
+            <%:Model.PortfolioNumber %>
             </p>
 <% } %>            
         </div>
