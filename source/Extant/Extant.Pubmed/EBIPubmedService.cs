@@ -19,11 +19,10 @@ namespace Extant.Pubmed
         // cache to hold results
         private Dictionary<string, EBIPubMedDetailedResult> cache;
 
-        // maintenance variabled for managing cache
+        // maintenance variables for managing cache
         private string cachedQueryTerm = "";
         private string cachedQueryLastCursorMark = "";
         private int cachedQueryItemCount = 0;
-        private bool cachedQueryResultsComplete = false;
         private int minItemsToCache = 25; // minimum result prefetch
 
         // default client search values
@@ -39,7 +38,7 @@ namespace Extant.Pubmed
 
         void RefreshCache(string term)
         {
-            cache.Clear(); cachedQueryItemCount = 0; cachedQueryLastCursorMark = ""; cachedQueryResultsComplete = false;
+            cache.Clear(); cachedQueryItemCount = 0; cachedQueryLastCursorMark = dCusorMark;
 
             cachedQueryTerm = term;
         }
@@ -66,61 +65,46 @@ namespace Extant.Pubmed
 
         public IEnumerable<PubmedResult> Search(string term, int page, int pageSize, out int count)
         {
-            // if last page of results is < pageSize we will need to copy fewer results from cache.
-            int outputSize = pageSize;
-            string resultsToReturn = Math.Max(pageSize, minItemsToCache).ToString();
 
-            if (term != cachedQueryTerm)
-            {
+            // check if we've cached this query before; if not, clean the cache and profile the new query's resultset.
+            if (term != cachedQueryTerm) {
 
                 RefreshCache(term);
 
                 responseWrapper profile = client.profilePublications(term, "source", dUseSynonyms, dEmail);
                 cachedQueryItemCount = profile.profileList.source.Where(p => p.name == "MED").First().count;
-
-                if (cachedQueryItemCount > 0)
-                {
-                    responseWrapper results = client.searchPublications(term, dResultType, dCusorMark, resultsToReturn, dSort, dUseSynonyms, dEmail);
-
-                    foreach (result r in results.resultList.Where(r => r.source == "MED"))
-                    {
-                        cache.Add(r.pmid, new EBIPubMedDetailedResult(r));
-                    }
-
-                    // results sets which are smaller than resultsToReturn still set a cursor mark, so need to use counts to determine correct cache settings:
-                    if (results.resultList.Length < int.Parse(resultsToReturn)) cachedQueryResultsComplete = true;
-                    else cachedQueryLastCursorMark = results.nextCursorMark;
-                }
-                else
-                {
-                    cachedQueryResultsComplete = true; // if the query returns no results it's obviously complete!
-                }
-
             }
-            else if (((page + 1) * pageSize) > cache.Count && !cachedQueryResultsComplete)
-            {
-                // we retrieve a minimum of 25 items to reduce the number of round trips to the EBI service in the case of low page sizes
-                // if pagesize is bigger than the minimum value it will be used instead so we always retrieve either enough values to fulfil the request,
-                // or as many values as are left to be returned from the EBI service.
-                responseWrapper newItems = client.searchPublications(term, dResultType, cachedQueryLastCursorMark, resultsToReturn, dSort, dUseSynonyms, dEmail);
 
-                // add new items to the cache. We don't need to update the Count as this is based off the profile counts not the individual query counts or cache size.
-                foreach (result r in newItems.resultList.Where(r => r.source == "MED"))
-                {
+            count = cachedQueryItemCount;
+
+            if (count == 0) return new List<PubmedResult>(); // there's no results to fetch!
+
+            int lastRequiredRecord = Math.Min(cachedQueryItemCount, (page + 1) * pageSize); 
+
+            // as results are not always PubMed, we should aim to retrieve the most results possible from the query
+
+            // fill the cache in a loop as Pubmed are a subset of returned results and a single pass may not retrieve enough results:
+            while (cache.Count < lastRequiredRecord) {
+
+                int resultsToReturn = Math.Max(lastRequiredRecord - cache.Count, minItemsToCache);
+
+                responseWrapper results = client.searchPublications(term, dResultType, cachedQueryLastCursorMark, resultsToReturn.ToString(), dSort, dUseSynonyms, dEmail);
+
+                foreach (result r in results.resultList.Where(r => r.source == "MED")) {
                     cache.Add(r.pmid, new EBIPubMedDetailedResult(r));
                 }
 
-                // update flags/cursor to indicate whether the results set is complete
-                if (newItems.nextCursorMark == cachedQueryLastCursorMark) cachedQueryResultsComplete = true;
-                else cachedQueryLastCursorMark = newItems.nextCursorMark;
+                // Sanity check - if we retrieve less results than requested but the cache isn't sufficiently full something has gone wrong!
+                if (results.resultList.Length < resultsToReturn && cache.Count < lastRequiredRecord) throw new Exception(String.Format("All results returned but cache not filled - profiling error in EBIPubMedService for query \"{0}\"", term));
+
+                cachedQueryLastCursorMark = results.nextCursorMark;
             }
 
-            // check whether we can serve full request from cache and update output size if not:
-            if (cache.Count - (page * pageSize) < pageSize) outputSize = cache.Count - (page * pageSize);
+            // check whether we can serve full request from cache and set output size accordingly:
+            int outputSize = Math.Min(cache.Count - (page * pageSize), pageSize);
 
             // serve request from cache:
 
-            count = cachedQueryItemCount;
             PubmedResult[] output = new PubmedResult[outputSize];
             Array.Copy(cache.Values.Select(e => e.PubmedResult).ToArray(), page * pageSize, output, 0, outputSize);
             return output.ToList();
