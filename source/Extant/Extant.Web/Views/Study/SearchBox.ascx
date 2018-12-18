@@ -9,13 +9,17 @@
         <div class="form-row">
             <input type="text" name="term" class="search" value="<%:Model.Term %>" />
             <button type="submit">Search</button>
-            <span class="link" id="show-filters"><%: Model.FiltersUsed ? "Hide" : "Show" %> filters</span>
-            <span class="help-icon" id="search-help-link" title="Click here to see help information about searching">?</span>
         </div>
-        <div id="filters" class="narrow" <%= !Model.FiltersUsed ? "style=\"display:none\"" : "" %>>
+        <div>
+            <span><strong>Filters: </strong></span>
+            <span class="link smaller" id="show-filters">Hide filters</span>
+            <span class="help-icon" id="search-help-link" title="Click here to see help information about searching">?</span>
+
+        </div>
+        <div id="filters" class="narrow">
             <div class="form-row">
                 <label>Disease Area</label>
-                <select name="da" <%= !Model.FiltersUsed ? "disabled=\"disabled\"" : "" %>>
+                <select name="da">
                     <option value="">Any</option>
 <% 
     foreach ( var da in Model.DiseaseAreas)
@@ -29,7 +33,7 @@
             </div>
             <div class="form-row">
                 <label>Study Design</label>
-                <select name="sd" <%= !Model.FiltersUsed ? "disabled=\"disabled\"" : "" %>>
+                <select name="sd">
                     <option value="">Any</option>
 <%
     foreach ( var sd in StudyDesign.Observational.EnumSelectList())
@@ -43,7 +47,7 @@
             </div>
             <div class="form-row">
                 <label>Status</label>
-                <select name="st" <%= !Model.FiltersUsed ? "disabled=\"disabled\"" : "" %>>
+                <select name="st">
                     <option value="">Any</option>
 <%
     foreach ( var st in StudyStatus.Recruiting.EnumSelectList())
@@ -57,7 +61,7 @@
             </div>
             <div class="form-row">
                 <label>Samples</label>
-                <select name="s" <%= !Model.FiltersUsed ? "disabled=\"disabled\"" : "" %>>
+                <select name="s">
                     <option value="">Any</option>
 <% 
     foreach (var s in new[] { "DNA", "Serum", "Plasma", "Whole Blood", "Saliva", "Tissue", "Cell", "Other" })
