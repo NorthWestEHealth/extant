@@ -2,7 +2,7 @@
 <%@ Import Namespace="Extant.Data.Entities" %>
 <%@ Import Namespace="Extant.Web.Helpers" %>
 
-<p>Enter some search terms, or alternatively use the <a href="/Study/SearchAdvanced">Advanced Search</a></p>
+<p>Enter some search terms below</p>
 
 <form method="get" action="/Study/Search">
     <fieldset>
