@@ -23,6 +23,7 @@ namespace Extant.Data.Repositories
         IEnumerable<Study> GetDiseaseAreasStudies(int[] daIds, int page, int pagesize, out int total);
         IEnumerable<Study> Find(string query, int page, int size, out int count);
         IEnumerable<Study> Find(string term, string diseaseArea, string studyDesign, string studyStatus, string samples, int page, int size, out int count);
+        IEnumerable<Study> Find(string term, string field, string diseaseArea, string studyDesign, string studyStatus, string samples, int page, int size, out int count);
         IEnumerable<Study> Find(AdvancedSearch search, int page, int size, out int count, out string query);
         IEnumerable<Study> FindByDataField(string dataField);
         IEnumerable<Study> GetLatestStudies(int number);
@@ -83,7 +84,12 @@ namespace Extant.Data.Repositories
                                 .List<Study>();
         }
 
-        public IEnumerable<Study> Find(string term, string diseaseArea, string studyDesign, string studyStatus, string samples, int page, int size, out int count)
+
+        public IEnumerable<Study> Find(string term, string diseaseArea, string studyDesign, string studyStatus, string samples, int page, int size, out int count) {
+            return Find(term, "AllFields", diseaseArea, studyDesign, studyStatus, samples, page, size, out count);
+        }
+
+        public IEnumerable<Study> Find(string term, string field, string diseaseArea, string studyDesign, string studyStatus, string samples, int page, int size, out int count)
         {
             if (string.IsNullOrEmpty(term) && string.IsNullOrEmpty(diseaseArea) && string.IsNullOrEmpty(studyDesign) && 
                 string.IsNullOrEmpty(studyStatus) && string.IsNullOrEmpty(samples))
@@ -97,7 +103,7 @@ namespace Extant.Data.Repositories
             var firstTerm = true;
             if ( !string.IsNullOrEmpty(term))
             {
-                queryBuilder.AppendFormat("AllFields:({0})", term);
+                queryBuilder.AppendFormat("{1}:({0})", term, field);
                 firstTerm = false;
             }
             if ( !string.IsNullOrEmpty(diseaseArea) )

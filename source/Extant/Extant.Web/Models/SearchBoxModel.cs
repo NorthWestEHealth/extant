@@ -11,6 +11,8 @@ namespace Extant.Web.Models
     {
         public string Term { get; set; }
 
+        public string Field { get; set; }
+
         public int? DiseaseArea { get; set; }
 
         public int? StudyDesign { get; set; }

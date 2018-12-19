@@ -9,7 +9,7 @@
 
 <h2>Search Results</h2>
 
-<% Html.RenderPartial("SearchBox", new SearchBoxModel{ Term = Model.Term, DiseaseArea = Model.DiseaseArea, StudyDesign = Model.StudyDesign, 
+<% Html.RenderPartial("SearchBox", new SearchBoxModel{ Term = Model.Term, Field = Model.Field, DiseaseArea = Model.DiseaseArea, StudyDesign = Model.StudyDesign, 
                                                        StudyStatus = Model.StudyStatus, Samples = Model.Samples, DiseaseAreas = Model.DiseaseAreas }); %>
 
 <div class="topborder">

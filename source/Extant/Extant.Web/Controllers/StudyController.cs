@@ -379,16 +379,17 @@ namespace Extant.Web.Controllers
         [HttpGet]
         [OutputCache(NoStore = true, Duration = 0, VaryByParam = "*")]
         [RequireQueryStringValue("term")]
-        public ActionResult Search(string term, int? da, StudyDesign? sd, StudyStatus? st, string s, int? page, int? pagesize)
+        public ActionResult Search(string term, string field, int? da, StudyDesign? sd, StudyStatus? st, string s, int? page, int? pagesize)
         {
             int count;
             var diseaseArea = da.HasValue ? DiseaseAreaRepo.Get(da.Value).DiseaseAreaName : null;
             var studyDesign = sd.HasValue ? sd.Value.ToString() : null;
             var studyStatus = st.HasValue ? st.Value.ToString() : null;
-            var results = StudyRepo.Find(term, diseaseArea, studyDesign, studyStatus, s, (page ?? 1) - 1, pagesize ?? DefaultPagesize, out count);
+            var results = StudyRepo.Find(term, field, diseaseArea, studyDesign, studyStatus, s, (page ?? 1) - 1, pagesize ?? DefaultPagesize, out count);
             var model = new SearchResultsModel
                             {
                                 Term = term,
+                                Field = field,
                                 DiseaseArea = da,
                                 StudyDesign = (int?)sd,
                                 StudyStatus = (int?)st,
@@ -412,9 +413,9 @@ namespace Extant.Web.Controllers
         /// </summary>
         [HttpGet]
         [OutputCache(NoStore = true, Duration = 0, VaryByParam = "*")]
-        public ActionResult SearchResults(string term, int? da, StudyDesign? sd, StudyStatus? st, string s, int? page, int? pagesize)
+        public ActionResult SearchResults(string term, string field, int? da, StudyDesign? sd, StudyStatus? st, string s, int? page, int? pagesize)
         {
-            return Search(term, da, sd, st, s, page, pagesize);
+            return Search(term, field, da, sd, st, s, page, pagesize);
         }
 
         [HttpGet]

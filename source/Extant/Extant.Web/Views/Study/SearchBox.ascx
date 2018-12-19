@@ -2,12 +2,22 @@
 <%@ Import Namespace="Extant.Data.Entities" %>
 <%@ Import Namespace="Extant.Web.Helpers" %>
 
-<p>Enter some search terms below</p>
-
 <form method="get" action="/Study/Search">
     <fieldset>
         <div class="form-row">
-            <input type="text" name="term" class="search" value="<%:Model.Term %>" />
+            <label for="term">Search for </label><input type="text" name="term" id="term" class="search" value="<%:Model.Term %>" />
+            <label for="field"> in </label><select name="field" id="field">
+                <% foreach (var item in new KeyValuePair<string,string>[] {
+                        new KeyValuePair<string, string>("AllFields", "Any Field"),
+                        new KeyValuePair<string, string>("StudyName", "Study Name"),
+                        new KeyValuePair<string, string>("Description", "Study Description"),
+                        new KeyValuePair<string, string>("DataItems.DataItemName", "Data Items")
+                    }) {
+                        bool selected = String.IsNullOrEmpty(Model.Field) ? item.Key == "AllFields" : item.Key == Model.Field;
+                        %>
+                <option value="<%= item.Key %>"<%= selected? " selected=\"selected\" ": "" %>><%= item.Value %></option>
+                <%  } %>
+            </select>
             <button type="submit">Search</button>
         </div>
         <div>
