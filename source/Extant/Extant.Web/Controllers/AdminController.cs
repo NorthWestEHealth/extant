@@ -108,8 +108,10 @@ namespace Extant.Web.Controllers
         {
             var user = UserRepo.Get(_id);
             var model = Mapper.Map<User, EditUserModel>(user);
-            model.AllDiseaseAreas =
-                Mapper.Map<IEnumerable<DiseaseArea>, IEnumerable<DiseaseAreaBasicModel>>(DiseaseAreaRepo.GetAllPublished());
+            model.AllDiseaseAreas = Mapper.Map<IEnumerable<DiseaseArea>, IEnumerable<DiseaseAreaBasicModel>>(
+                principal.IsInRole(Constants.AdministratorRole) ? DiseaseAreaRepo.GetAll() : UserRepo.GetByEmail(principal.Identity.Name).DiseaseAreas
+            );
+
             model.HasAdminRole = principal.IsInRole(Constants.AdministratorRole);
             return View(model);
         }
