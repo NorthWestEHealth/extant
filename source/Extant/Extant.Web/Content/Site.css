@@ -687,6 +687,9 @@ div.split div.right
 
 img.ui-datepicker-trigger { cursor: pointer; }
 
+p.standout, span.standout {
+    color: #dd1c1c;
+}
 
 /* Study display */
 

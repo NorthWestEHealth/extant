@@ -16,6 +16,11 @@
 
     <fieldset class="withborder">
         <legend>Files</legend>
+        <div id="add-files-warning">
+            <p class="standout">These files will be made available for public download immediately when you publish a study for the first time or when you save changes to an existing published study.</p>
+            <p>In accordance with our <%: Html.ActionLink("terms of use", "Terms", "Home") %> and <%: Html.ActionLink("upload guide", "About", "Home" %>, please check the content of any files carefully before upload.</p>
+            <p>Please take care <strong>NOT</strong> to include any <strong>personally identifiable</strong> information or materials for which you do not own copyright.</p>
+        </div>
         <%: Html.LabelValidationAndFileFor(m => m.PatientInformationLeaflet, null, false)%>
         <%: Html.LabelValidationAndFileFor(m => m.ConsentForm, null, false)%>
         <%: Html.LabelValidationAndYesNoRadioFor(m => m.HasDataAccessPolicy)%>

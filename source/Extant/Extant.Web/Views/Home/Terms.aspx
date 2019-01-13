@@ -10,14 +10,14 @@
     <ol>
         <li>
             <h3>WHAT'S IN THESE TERMS?</h3>
-            <p>These terms tell you the rules for using <a href="/">wwww.msksearch.manchester.ac.uk</a> (<strong>our site</strong>).</p>
+            <p>These terms tell you the rules for using our website <a href="/">www.msksearch.manchester.ac.uk</a> (<strong>our site</strong>).</p>
         </li>
 
         <li>
             <h3>WHO WE ARE AND HOW TO CONTACT US</h3>
             <p>The UK-RiME Data Catalogue software was developed as part of a collaboration between Arthritis Research UK, Arthritis Research UK Centre for Epidemiology and North West eHealth. Updates to the software have been carried out by Research IT Services at The University of Manchester.</p>
-            <p>www.msksearch.manchester.ac.uk is a site operated by the Arthritis Research UK Centre for Epidemiology at The University of Manchester (“We”). The University of Manchester (‘the University’) is a higher education institution (Royal Charter Number: RC000797) and an exempt charity. Our address at the University is UK Research in Musculoskeletal Epidemiology, Centre for Musculoskeletal Research, 2nd floor, Stopford Building, The University of Manchester, Oxford Road, Manchester, M13 9PT.</p>
-            <p>To contact us, please contact the site administrator or telephone us on 0161 275 5499</p>
+            <p>www.msksearch.manchester.ac.uk is a site operated by the Arthritis Research UK Centre for Epidemiology at The University of Manchester (“We”). The University of Manchester (‘the University’) is a higher education institution (Royal Charter Number: RC000797) and an exempt charity. Our address at the University is UK Research in Musculoskeletal Epidemiology (UK-RiME), Centre for Musculoskeletal Research, 2nd floor, Stopford Building, The University of Manchester, Oxford Road, Manchester, M13 9PT.</p>
+            <p>To contact us, please contact the site administrator or telephone us on 0161 275 7313</p>
         </li>
 
         <li>
@@ -84,7 +84,7 @@
         <li>
             <h3>USER-GENERATED CONTENT IS NOT APPROVED BY US</h3>
             <p>Our site may include information and materials uploaded by other users of the site, including to bulletin boards and blogs. This information and these materials have not been verified or approved by us. The views expressed by other users on our site do not represent our views or values.</p>
-            <p>If you wish to complain about information and materials uploaded by other users please notify the site administrator.</p>
+            <p>If you wish to complain about information and materials uploaded by other users please notify the site administrator. <strong>Personal data must not be uploaded to our site. If you do so in error, please notify our site administrator within 24 hours.</strong></p>
         </li>
         <li>
             <h3>OUR RESPONSIBILITY FOR LOSS OR DAMAGE SUFFERED BY YOU</h3>
@@ -112,7 +112,7 @@
             <h3>UPLOADING CONTENT TO OUR SITE</h3>
             <p>Whenever you make use of a feature that allows you to upload content to our site, or to make contact with other users of our site, you must comply with the content standards set out in the University’s acceptable use policy.</p>
             <p>You warrant that any such contribution complies with those standards, and you will be liable to us and indemnify us for any breach of that warranty. This means you will be responsible for any loss or damage we suffer as a result.</p>
-            <p>You must exercise reasonable care to ensure that any content you upload is original and does not breach any applicable laws including defamation, libel and/or copyright. With regard to any material which you upload for which you do not hold copyright, you declare that you have the permission of the copyright owner to grant the University the rights set out in these terms of use. You further declare that such third-party owned material is clearly identified and acknowledged within the content. If the University receives proof of copyright violation or evidence of other malpractice, the material will be investigated by the University and appropriate action will be taken. </p>
+            <p>You must exercise reasonable care to ensure that any content you upload is original and does not breach any applicable laws including defamation, libel and/or copyright, and data protection. <strong>Personal data must not be uploaded to our site. If you do so in error, please notify our site administrator within 24 hours.</strong> With regard to any material which you upload for which you do not hold copyright, you declare that you have the permission of the copyright owner to grant the University the rights set out in these terms of use. You further declare that such third-party owned material is clearly identified and acknowledged within the content. If the University receives proof of copyright violation or evidence of other malpractice, the material will be investigated by the University and appropriate action will be taken. </p>
             <p>Any content you upload to our site will be considered non-confidential and non-proprietary. You retain all of your ownership rights in your content, but you are required to grant us and other users of our site a licence to use, store and copy that content and to distribute and make it available to third parties. The rights you license to us are described in the ‘Rights you are giving us to use material you upload’ section below. </p>
             <p>We also have the right to disclose your identity to any third party who is claiming that any content posted or uploaded by you to our site constitutes a violation of their intellectual property rights, or of their right to privacy.</p>
             <p>We have the right to remove any posting you make on our site if, in our opinion, your post does not comply with the content standards set out in the University’s acceptable use policy.</p>
