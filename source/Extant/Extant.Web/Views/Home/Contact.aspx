@@ -10,7 +10,7 @@
     <h3> Contact Us </h3>
     <p> If you have any comments, questions or queries, please contact the site administrator: </p>
 <h4>Site Administrator</h4>
-<p>UKRiME Site Administrator <br />Arthritis Research UK Centre for Epidemiology <br />Tel: &nbsp;+44 (0)161 2755499 <br/>
+<p>UKRiME Site Administrator <br />Arthritis Research UK Centre for Epidemiology <br />Tel: &nbsp;+44 (0)161 275 7313 <br/>
   email: <a href="mailto:msksearch@manchester.ac.uk"> UKRiME Site Administrator</a></p>
     </div>
 
