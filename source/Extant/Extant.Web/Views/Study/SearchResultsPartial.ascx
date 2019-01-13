@@ -13,7 +13,7 @@
 
 <div class="pager">
     <%=Html.AjaxPager(Model.Studies.PageSize, Model.Studies.PageIndex, Model.Studies.TotalItemCount, "search-results",
-                        new { controller = "Study", action = "SearchResults", term = Model.Term, da = Model.DiseaseArea, 
+                        new { controller = "Study", action = "SearchResults", term = Model.Term, field = Model.Field, da = Model.DiseaseArea, 
                               sd = Model.StudyDesign, st = Model.StudyStatus, s = Model.Samples })%>
 </div>
 
