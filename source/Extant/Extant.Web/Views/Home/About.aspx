@@ -42,7 +42,7 @@
         <h4>Changing your mind.</h4>
         <p>If you  would like to remove your account and delete your data (withdraw your consent), please email msksearch@manchester.ac.uk) or write to us at the address below.</p>
         <p>
-            John McBeth <br />
+            Denise Faulkner <br />
             Arthritis Research UK Centre for Epidemiology <br />
             2nd Floor, Stopford Building<br />
             Oxford Road <br />
@@ -51,20 +51,18 @@
         </p>
 
         <h3>Cookies</h3>
-        <p>&ldquo;Cookies&rdquo; are small text files that web sites use to store settings and information. The University uses cookies as described in the <a href="https://www.manchester.ac.uk/discover/privacy-information/data-protection/website-privacy-notice/">website privacy notice</a>. IN addition, UK-RiME MSKSearch uses the following cookies to provide you with services:</p>
+        <p>&ldquo;Cookies&rdquo; are small text files that web sites use to store settings and information. The University uses cookies as described in the <a href="https://www.manchester.ac.uk/discover/privacy-information/data-protection/website-privacy-notice/">website privacy notice</a>. In addition, UK-RiME MSKSearch uses the following cookies to provide you with services:</p>
         <ul><li><strong>.ASPXAUTH</strong>: used to show that you are logged in to the website.</li>
             <li><strong>AcceptCookieNotice</strong>: used to determine whether to show the cookie warning notice at the top of this site.</li>
         </ul>
         <p>For further information on how your data is used, how we maintain the security of your information and your rights to access information we hold on you, please contact <a href="mailto:<%= ConfigurationManager.AppSettings["SupportEmail"] %>">the site administrator</a>. </p>
-        <p>If you wish to delete your account at any time, please contact <a href="mailto:<%= ConfigurationManager.AppSettings["SupportEmail"] %>">the site administrator</a>. 
-        We will keep your information for a period of up to one year after your account is closed or the system is removed from service, unless you request that your data be deleted.</p>
- 
+         
         <h3>Upload Guide</h3>
         <p>When creating  a study profile on our site, you may upload additional files to provide supporting information such as consent forms, patient information sheets and a data access policy. Please note that only blank templates should be uploaded.</p>
         <p>You must not misuse our site by:</p>
         <ol>
             <li>Uploading material for which you do not own the copyright/have appropriate permission from the copyright holder. </li>
-            <li>Upoading any personally identifiable information.</li>
+            <li>Uploading any personally identifiable information.</li>
             <li>Introducing viruses or other material that is technologically harmful. </li>
         </ol>
  
@@ -72,7 +70,7 @@
         <p>We do not guarantee that our site will be secure or free from bugs or viruses.   You are responsible for configuring your information technology, computer programmes and platform to access our site. You should use your own virus protection software and check all content that you download from our site before using it.</p>
 	<h2>Acknowledgements</h2>
         <p>With thanks to: Professor Wendy Thomson, Professor Will Dixon, Dr Gillian Armitt, Arthritis Research UK, North West eHealth and Jim McGrath (Research Software Engineer). </p>   
-        <p>We would also particularly like to thank Lauren Hewitt, Alex Oldroyd and  Dr Jennifer Humphreys for their help developing and reviewing disease area checklists.</p>    
+        <p>We would also particularly like to thank Lauren Hewitt, Dr Alex Oldroyd and  Dr Jennifer Humphreys for their help developing and reviewing disease area checklists.</p>    
         <h2>Funding</h2>
 	<p>This project was supported by a research grant from <a href="http://www.arthritisresearchuk.org/">Arthritis Research UK</a>:</p>
         <img src="/Images/Logos/aruk_logo.png"  alt="aruk logo">
