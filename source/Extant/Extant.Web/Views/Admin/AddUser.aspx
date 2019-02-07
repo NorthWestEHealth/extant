@@ -15,6 +15,7 @@
             <legend>User Details</legend>
             <%: Html.LabelValidationAndTextBoxFor(m => m.UserName, new { @class = "login" }, true )%>
             <%: Html.LabelValidationAndTextBoxFor(m => m.Email, new { @class = "login" }, true)%>
+            <%: Html.LabelValidationAndTextBoxFor(m => m.Affiliation, new { @class = "login" }, true) %>
             <div class="form-row">
                 <label>Disease Areas <span class="required">*</span></label>
             </div>
